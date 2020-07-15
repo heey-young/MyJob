@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+html {font-size: 10px; height: 100%;}
+body {position: relative; width: 100%; min-width: 320px; height: 100%; background-color: #fff; color: #111; word-break: break-all; -webkit-text-size-adjust: none;}
+body,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,p,figure,form,fieldset,legend,input,label,textarea,legend,button,table,td,th,button, select {margin: 0; padding: 0; font-family: "Roboto","Noto Sans","Apple SD Gothic Neo","맑은 고딕","Malgun Gothic",sans-serif; font-size: 14px; font-weight: 400; color: #111; line-height: 1.5;}
+fieldset,iframe,img {border: 0}
+img {vertical-align: top;}
+ol,ul {list-style: none;}
+table {border-collapse: collapse; table-layout: fixed;}
+article,aside,footer,header,nav,main,sec,tion,summary,details,hgroup,figure,figcaption {display: block;}
+button {overflow: visible; border: 0; background: none; color: inherit; line-height: inherit; cursor: pointer;}
+a {color: #111; text-decoration: none;}
+a:active, a:hover {text-decoration: none;}
+address,caption,cite,code,dfn,em,i,var {font-style: normal; font-weight: normal;}
+strong, h1,h2,h3 {font-weight: 700;}
+:focus {outline-style: dotted; outline-color: #31aae6; outline-width:2px; outline-offset: -1px}
+li {list-style: none;}

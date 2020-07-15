@@ -1,0 +1,299 @@
+﻿@charset "utf-8";
+
+/*
+Header : z-index:20, TOP button : z-index:20, Left Slide Menu : z-index:30, mLayer/fLayer : z-index:100, Basic Layer:10 이하 사용
+Basic Font Size : 14px;
+Html Font Size : 10px(1rem) - margin, padding
+기준해상도 : 360px(최소해상도 320)
+*/
+
+/* 로그인 */
+.sp_login:after {content: ""; display: inline-block; -webkit-appearance: none; appearance: none; -webkit-background-color: transparent; background-color: transparent; background-image: url(../image/sp_login.png); background-repeat: no-repeat; background-size: 400px auto; vertical-align: middle;}
+.sp_login.ic_logo:after {width: 145px; height: 59px; background-position: 0 -125px;}
+.sp_login.ic_findid:after {width: 35px; height: 37px; background-position: 0 0;}
+.sp_login.ic_idcheck:after {width: 65px; height: 47px; background-position: -40px 0;}
+.sp_login.ic_resetpw:after {width: 30px; height: 36px; background-position: -105px 0;}
+.sp_login.ic_resetpw_b:after {width: 75px; height: 61px; background-position: -40px -60px;}
+.sp_login.ic_toggle:after {width: 15px; height: 15px; margin-bottom: 3px; background-position: -385px 0;}
+.sp_login.ic_arrow:after {width: 7px; height: 11px; background-position: -350px 0;}
+.done .sp_login.ic_arrow:after, .active .sp_login.ic_arrow:after {background-position: -350px -55px;}
+
+.login_wrap {position: relative; margin: 0;}
+.form_box .btn_area.pwd {margin: 15px 0 25px;}
+.form_box .btn_area.pwd .btn_small {width: auto;}
+.f_group .cert_btn_area {position: absolute; right: 0; top: 13px; z-index: 2;}
+.f_group.sms input {padding-right: 76px;}
+.f_group.cert input {padding-right: 40px;}
+.f_group span.cert_time {position: absolute; right: 0; top: 0; z-index: 2; font-size: 1.3rem; color: #31aae6; line-height: 5.4rem;}
+.auto_login {margin-top: 25px;}
+
+/* 로그인>휴대폰번호/아이디 */
+.login_wrap {display: table; width: 100%;}
+.login_wrap h1 {width: 100%; padding-top: 70px; background-color: #fff; text-align: center;}
+.login_wrap h1 .ic_logo {display: inline-block; width: 145px; height: 59px;} 
+.box.type_login {margin: 40px 50px 0; padding: 0;}
+.box.type_login .tc_box {padding: 0;}
+.login_wrap .auto_login {margin: 20px 0 29px;}
+.login_wrap .auto_login .ui_chk {font-size: 1.4rem; color: #000;}
+.link_login {text-align: center;}
+.link_login:after {display: block; content: ""; clear: both;}
+.link_login ul {display: inline-block;}
+.link_login li {display: table-cell;}
+.link_login li a {position: relative; display: block; width: 100%; padding: 5px 9px 5px 11px; color: #717171; text-align: center; letter-spacing: -0.1rem; line-height: 1; white-space: nowrap;}
+.link_login li a:before {position: absolute; left: 0; top: 50%; display: inline-block; content:""; margin-top: -6.5px; width: 1px; height: 13px; border-left: 1px solid #ccc; vertical-align: top;}
+.link_login li:first-child a {padding-left: 0;}
+.link_login li:last-child a {padding-right: 0;}
+.link_login li:first-child a:before {display: none;}
+
+/* 로그인>진행안내 */
+.sp_login.ic_time:after {width: 14px; height: 14px; margin-bottom: 3.5px; background-position: 0 -55px;}
+.sp_login.ic_stat01:after {width: 60px; height: 60px; margin-bottom: 0.6rem; background-position: -165px 0;}
+.sp_login.ic_stat02:after {width: 60px; height: 60px; margin-bottom: 0.6rem; background-position: -225px 0;}
+.sp_login.ic_stat03:after {width: 60px; height: 60px; margin-bottom: 0.6rem; background-position: -285px 0;}
+.active .sp_login.ic_stat01:after,.done .sp_login.ic_stat01:after {background-position: -165px -60px;}
+.active .sp_login.ic_stat02:after,.done .sp_login.ic_stat02:after {background-position: -225px -60px;}
+.active .sp_login.ic_stat03:after,.done .sp_login.ic_stat03:after {background-position: -285px -60px;}
+
+.open_step ul {display: table; width: 100%; padding-top: 35px; padding-bottom: 17px;}
+.open_step li {position: relative; display:table-cell; width: 33%; text-align: center;}
+.open_step li .sp_login.ic_arrow {position: absolute; top: 18px; right: -4px;}
+.open_step li p {font-size: 1.3rem; color: #717171; font-weight: 700;}
+.open_step li.active p {color: #111;}
+.open_step li .msg {position: absolute; top: -34px; left: 50%; width: 100%; text-align: center;}
+.open_step li:first-child .msg {left: 50%; width: 100%;}
+.open_step .msg .txt {display: inline-block; height: 23px; margin: 0 -10px; padding: 0 6px; border: 1px solid #dadada; border-radius: 3px; background-color: #fff; font-size: 1.2rem; color: #717171; white-space: nowrap; line-height: 2.1rem;}
+.open_step .active .msg .txt {border: 1px solid #31aae6; background-color: #31aae6; color: #fff; font-weight: 700;}
+.open_step .msg .arrow_up {z-index: 2;}
+.open_time {position: relative; margin-top: 3px; width: 100%;}
+.open_time .txt_time_guide {position: absolute; right: 0; top: 1px; font-size: 1.2rem; color: #258dc1; font-weight: 400; text-align: right;}
+.open_time:after {content:""; display: block; clear: both;}
+.open_time dt {margin-bottom: 7px; padding-bottom: 8px; border-bottom: 1px solid #545044; font-size: 1.3rem; font-weight: 700; color: #111;}
+.open_time dt i {margin-right: 6px; margin-bottom: 0; height: 14px;}
+.open_time dd {position: relative; margin-top: 4px; padding-left: 8px; font-size: 1.2rem; color: #717171; font-weight: 400; }
+.open_time dd strong {margin-right: 5px; color: #444;}
+.open_time dd strong:before {position: absolute; left: 0; top: 7px;}
+.open_time dd .t_color03 {font-weight: 700;}
+.open_time dd:last-child .t_color03 {display: block; margin-left: 62px;}
+
+.open_time dd strong:before,
+.message01:before,
+.message02:before,
+.list.type_addsv>li:before,
+.list.type_addsv2>li:before,
+.list.micropay01>li:before,
+.list.type_chargeinfo>li:before,
+.list.type_chargeinfo li .dp_2 li:before,
+.list.type_welfare li:before,
+.list.type_info li .dp_1 li:before,
+.list.type_useguide li.dot:before,
+.box.type_useguide .list.type_useguide li:before,
+.charge_lte .list.type_chargeinfo .dp_1 li:before,
+.charge_lte .list.type_chargeinfo .dp_2 li:before,
+.message.type_info_b .txt_help p.type_dot:before,
+.box.type_guide dt:before,
+.roaming_detail h3:before {content: ""; display: inline-block; width: 3px; height: 6px; margin-right: 6px; -webkit-appearance:none; appearance:none; -webkit-background-color:transparent; background-color:transparent; background-image: url(../image/ico_dot.png); background-repeat: no-repeat; background-size: 3px auto; vertical-align: middle;}
+.open_time dd strong:after {display: inline-block; content:""; width: 1px; height: 9px; margin-left: 5px; margin-right: 1px; border-right: 1px solid #e2e2e2;}
+
+
+/* 로그인>아이디 찾기 */
+.box.type_help {position: relative; margin: 25px 18px 0; padding: 18px 70px 18px 28px; background-color: #f8f8f8; font-size: 1.3rem; color: #717171; letter-spacing: -0.45px;}
+.ic_findid, .ic_resetpw {position: absolute; right: 28px; top: 50%; display: inline-block; width: 35px; height: 37px; margin-top: -19px;}
+.box.type_help strong {color: #111; font-weight: 700;}
+.box.type_login.findid {margin: 16px 18px; padding-top: 0;}
+.box.type_login.findid .tabs_content .f_group.jumin {margin-top: 0;}/* 주민등록번호 입력 TOP 여백 */
+.box.type_login.findid h3 {padding-bottom: 14px; font-size: 1.6rem;}
+.box.type_login.findid .btn.btn_small {min-width: 64px;}
+.ic_idcheck {display: inline-block; width: 65px; height: 47px; margin-left: 4px;}    
+.box.type_idcheck {padding: 57px 100px; text-align: center;}
+.box.type_idcheck h4 {margin-top: 20px; color: #717171; font-weight: 400;}
+.box.type_idcheck .txt_idcheck {font-size: 2rem; color: #111; font-weight: 700;}
+.box.type_idcheck .txt_link {margin-top: 21px;}
+.box.type_idcheck .txt_link .btn_resetpw {position: relative; display: inline-block; font-size: 1.2rem; color: #717171;}
+.box.type_idcheck .txt_link .btn_resetpw:after {position: absolute; bottom: 1px; display: block; content: ""; width: 100%; border-bottom: 1px solid #717171;}
+.box.type_idcheck .btn_area {margin-top: 60px;}
+
+/* 로그인>비밀번호 재설정 */
+.box.type_login.resetpw {margin: 16px 18px; padding-top: 0;}
+.box.type_login.resetpw h3 {padding-bottom: 14px; font-size: 1.6rem;}
+.box.type_login.resetpw .btn.btn_small {min-width: 64px;}
+.ic_resetpw_b {display: inline-block; width: 75px; height: 61px; margin-top: 32px; margin-bottom: 26px;}
+.icon_area {text-align: center;}
+
+/* 로그인>비밀번호 재설정>신용카드 선택 */
+.f_group.card,.f_group.jumin {display: table; width: 100%; height: 55px;}
+.tabs_content .f_group.card {margin-top: 10px;}
+.tabs_content .f_group.jumin {margin-top: 0;}
+.type_masking .i_masking {display: table; width: 100%; text-align: right;}
+.i_dash {display: inline-block; width: 6px; height: 1px; border-top: 2px solid #111; font-size: 0;  line-height: 0; color: transparent; text-align: center; vertical-align: middle;}
+.cardno_wrap {position: absolute; left: 55px; top: 0; width: calc(100% - 55px); height: 55px;}
+.cardno_wrap.type_masking {border-bottom: 1px solid #e2e2e2; overflow: hidden;}
+.cardno_wrap.type_masking.error {border-bottom: 2px solid #ec4135 !important;}
+.cardno_wrap.type_masking.error input {color: #ec4135;}
+.cardno_wrap.type_masking input {width: 50px; border: 0; text-align: center;}
+.juminno_wrap {position: absolute; left: 0; top: 0; width: 100%; height: 55px;}
+.juminno_wrap.type_masking {border-bottom: 1px solid #e2e2e2;}
+.juminno_wrap.type_masking.error {border-bottom: 2px solid #ec4135 !important;}
+.juminno_wrap.type_masking.error input {color: #ec4135;}
+.juminno_wrap.type_masking input {width: 90px; background-color: transparent; border: 0; text-align: center;}
+.f_group .pwd_wrap {position: relative;}
+.f_group .pwd_wrap .txt_pwd {position: absolute; right: 0; top: 50%; width: 30px; height: 12px; margin-top: -5px; background-image: none; font-size: 0; line-height: 0;}
+.f_group .pwd_wrap .txt_pwd:after {display: block;; width: 30px; height: 12px; margin-top: -2px; background-position: 0 -75px;}
+.f_group .pwd_wrap label input[type="number"],
+.f_group .pwd_wrap label input[type="password"] {padding-right: 35px;}
+
+/* 로그인>신용카드 인증 */
+.login_wrap .card_cert_wrap {padding: 0;}
+
+/* 사이드메뉴 */
+.sp_sidemenu:after {display: inline-block; content: ""; background-image: url(../image/sp_sidemenu.png); background-repeat: no-repeat; background-size: 250px auto;}
+.ic_usimjoin,.ic_chargeinfo,.ic_chargecalc,.ic_benefit,.ic_notice,.ic_applyinfo,.ic_selfopening,.ic_event,.ic_roaming, .ic_ccenter{position: relative; display: inline-block; height: 37px;}
+.ic_usimjoin:after {width: 30px; height: 27px; background-position: 0 0;}/*통신가입*/
+.ic_chargeinfo:after {width: 30px; height: 27px; background-position: -50px 0;}/*요금제*/
+.ic_chargecalc:after {width: 30px; height: 27px; background-position: -150px 0;}/*예상요금계산*/
+.ic_benefit:after {width: 30px; height: 27px; background-position: -100px 0;}/*할인혜택*/
+.ic_applyinfo:after {width: 30px; height: 27px;background-position: -200px 0;}/*신청정보*/
+.ic_selfopening:after {width: 30px; height: 27px; background-position: 0 -30px;}/*셀프개통*/
+.ic_event:after {width: 30px; height: 27px;background-position: -50px -30px;}/*이벤트*/
+.ic_roaming:after {width: 30px; height: 27px;background-position: -100px -30px;}/*로밍*/
+.ic_ccenter:after {width: 30px; height: 27px;background-position: -150px -30px;}/*고객센터*/
+.ic_chargetype,.ic_chargeinq,.ic_friend,.ic_addserv,.ic_smallpay,.ic_meminfo,.ic_guide,.ic_xlife {position: relative; display: inline-block; width: 22px; height: 21px; margin-top: -2px; margin-left: 22px; margin-right: 10px; vertical-align: middle;}
+.ic_voiceps {position: relative; display: inline-block; width: 25px; height: 24px; margin-top: -6px; margin-left: 20px; margin-right: 10px; vertical-align: middle;}
+
+.ic_chargetype:after {position: absolute; top: 0; left: 0; width: 22px; height: 21px; background-position: -50px -90px;}/*요금제*/
+.ic_chargeinq:after {position: absolute; top: 0; left: 0; width: 22px; height: 21px; background-position: 0 -60px;}/*요금제조회/변경*/
+.ic_friend:after {position: absolute; top: 0; left: 0; width: 22px; height: 21px; background-position: -100px -90px;}/*친구결합*/
+.ic_addserv:after {position: absolute; top: 0; left: 0; width: 22px; height: 21px; background-position: -50px -60px;}/*부가서비스 */
+.ic_smallpay:after {position: absolute; top: 0; left: 0; width: 22px; height: 21px; background-position: -100px -60px;}/*소액결제*/
+.ic_meminfo:after {position: absolute; top: 0; left: 0; width: 22px; height: 21px; background-position: -150px -60px;}/*회원정보관리*/
+.ic_guide:after {position: absolute; top: 0; left: 0; width: 22px; height: 21px; background-position: -200px -60px;}/*이용안내*/
+.ic_xlife:after {position: absolute; top: 0; left: 0; width: 22px; height: 21px; background-position: 0 -90px;}/*Liiv M X 라이프*/
+.ic_voiceps:after {position: absolute; top: 0; left: 0; width: 25px; height: 24px; background-position: -150px -90px;}/*보이스피싱*/
+
+.ic_login {display: inline-block; width: 45px; height: 45px;}
+.ic_login:after {margin-top: 11px; width: 20px; height: 22px; background-position: 0 -120px;}/*로그인*/
+.ic_logout {display: inline-block; width: 45px; height: 45px;}
+.ic_logout:after {margin-top: 11px; width: 20px; height: 22px; background-position: -50px -120px;}/*로그아웃*/
+.ic_phoneadd {display: inline-block; width: 45px; height: 45px;}
+.ic_phoneadd:after {margin-top: 11px; width: 24px; height: 24px; background-position: -150px -120px;}/*회선추가*/
+.ic_close {display: inline-block; width: 45px; height: 45px; text-align: center;}
+.ic_close:after {margin-top: 13px; width: 17px; height: 17px; background-position: -100px -120px;}/*닫기*/
+
+.layer_menu .menu_area {position: fixed; top: 0; left: 0; z-index: 30; display: flex; flex-direction: column; width: 100%; height: 100%; background-color: #fff;}
+.layer_menu {position: relative;}
+.menu_area .side_link {position: relative; display: table; width: 100%; height: 54px; font-size: 1.6rem; line-height: 52px; color: #000;}
+.menu_area .side_link:after {position: absolute; right: 20px; top: 50%; width: 9px; height: 14px; margin-top: -7px; background-position: -50px 0;}
+.menu_area .side_link.btn_accordion:after {right: 18px; width: 14px; height: 14px; background-position: -50px -100px;}
+.menu_area .side_link.btn_accordion.active:after {right: 18px; width: 14px; height: 14px; background-position: -75px -100px;}
+.menu_area .side_link span {display: inline-block; padding-top: 2px;}
+.menu_area {background-color: #f6f6f6; overflow: auto}
+.menu_area .user_box {position: relative; flex: none;}
+.menu_area .user_box .u_profile {padding: 17px 18px; background-color: #31aae6;}
+.menu_area .user_box .u_profile .u_info {font-size: 1.5rem; color:#fff; font-weight: 700;}
+.menu_area .user_box .u_profile .u_info .u_txt {display: inline-block; margin-top: 4px; margin-bottom: 5px;}
+.menu_area .user_box .u_profile .u_info .u_name {font-size: 1.9rem; font-weight: 700; color: #fff;}
+.menu_area .user_box .u_profile .u_info .u_nick {margin-left: 8px; font-size: 1.5rem; font-weight: 400;}
+.menu_area .user_box .u_profile .u_info .u_app_date {margin-top: 3px; margin-bottom: 6px; font-size: 1.3rem; color: #a7def9; font-weight: 400;}
+.menu_area .user_box .u_profile .u_info .phone_selectbox.type2+.u_app_date {margin-top: -6px; margin-bottom: 3px;}
+.menu_area .user_box .u_profile .u_info .u_app_date em {margin-right: 4px;}
+.menu_area .user_box .u_profile .u_info .u_phone_num {font-size: 2.2rem; font-weight: 700;}
+.menu_area .user_box .phone_selectbox.type2 {margin-top: 9px;}
+.menu_area .user_box .phone_selectbox .num_using {border: 1px solid #fff; color: #31aae6;}
+.menu_area .user_box .btn_toggle_n:after {background-position: -75px -75px;}
+
+.menu_area .u_menu {position: relative; margin: 0; padding: 27px 0 22px; background-color: #fff; border-bottom: 1px solid #ddd; letter-spacing: -0.03rem;}
+.menu_area .u_menu:after {position: absolute; left: 0; bottom: -8px; display: block; content:""; width: 100%; height: 7px; background-color: #eceff4;}
+.menu_area .u_menu ul:after {display: block; content:""; clear: both;}
+.menu_area .u_menu li {position: relative; float: left; display: inline-block; width: 25%; text-align: center;}
+.menu_area .u_menu li a {display: block;}
+.menu_area .u_menu li a p {font-size: 1.5rem; color: #000;}
+.menu_area .notice_num {position: absolute; top: 0; z-index: 2; height: 20px; margin-top: -2px; margin-left: 13px; padding: 0 6px; border: 1px solid #1d1a05; border-radius: 10px; background-color: #f46600; font-size: 1.1rem; color: #fff; font-weight: 700; line-height: 2rem; text-align: center;}
+.menu_area .main_menu {flex: 1; margin-top: 7px; padding-bottom: 30px;}
+.menu_area .main_menu li {border-bottom: 1px solid #dadada;}
+.menu_area .main_menu li:first-child {border-top: 1px solid #dadada;}
+.menu_area .main_menu .cont_accordion {padding-top: 11px; padding-bottom: 11px; border-top: 1px solid #dadada;}
+.menu_area .main_menu .cont_accordion li {display: block; border: 0;}
+.menu_area .main_menu .cont_accordion li a {width: 100%; display: inline-block; padding: 10px 18px 10px 54px; font-size: 1.5rem; color: #000;}
+.layer_menu .serv_menu {flex: none; width: 100%; height: 30px; background-color: #dadada;}
+.layer_menu .serv_menu ul {float: right; margin-right: 8px;}
+.layer_menu .serv_menu ul:after {display: block; content:""; clear: both;}
+.layer_menu .serv_menu ul li {float: left; position: relative; display: inline-block;}
+.layer_menu .serv_menu ul li:first-child:before {display: none;}
+.layer_menu .serv_menu ul li:before {position: absolute; left: 0; top: 50%; display: inline-block; height: 11px; content: ""; margin-top: -6px; border-left: 1px solid #b5b5b5;}
+.layer_menu .serv_menu ul li a {font-size: 1.2rem; color: #717171; padding: 4.5px 10px 4.5px 11px; line-height: 3rem;}
+.layer_menu .serv_menu ul li a strong {color: #444;}
+.menu_area .btn_login,.menu_area .btn_logout {position: absolute; top: 9px; right: 49px;}
+.menu_area .btn_phoneadd {position: absolute; top: 9px; right: 94px; }
+
+/* 신청 현황 */
+.applydetail_wrap {margin-bottom: 7px; padding-bottom: 0;}
+.ad_confirm .ac_title {display: inline-block; width: 100%; margin: 30px 0 0; padding: 0 18px;}
+.ad_confirm .ac_title h3 {font-size: 1.7rem;}
+.list.type_apply {margin-bottom: 0;}
+.list.type_apply li {position: relative; border-bottom: 8px solid #eceff4;}
+.list.type_apply li:after {position: absolute; bottom: 0; display: block; content:""; width: 100%; height: 8px; margin: 0; padding:0; border-bottom: 1px solid #ddd;}
+.list.type_apply li:last-child {border-bottom: 0;}
+.list.type_apply li:last-child:after {display: none;} 
+.list.type_apply li:first-child .apply_detail {margin-top: 3px;}
+.box.type_ad {margin: 0; padding: 0 18px 18px;}
+.box.type_ad .list {margin: 0; padding: 15px 0 0 0;}
+.box.type_ad .list li {border: 0;}
+.box.type_ad .list>li {margin-top: 10px;}
+.box.type_ad .list li a {padding: 0;}
+.box.type_ad .list li img {width: 100%;}
+.apply_detail {margin: 9px 18px 0;}
+.apply_detail .info_group {padding: 20px 0 18px; width: 100%;}
+.apply_detail .info_group strong {display: table-cell; width: 27%;}
+.apply_detail .info_group p {display: table-cell; width: 73%; line-height: 1; text-align: right;}
+.apply_detail .info_group.apply_type strong {font-size: 1.5rem; color: #111; font-weight: 700; white-space: nowrap;}
+.apply_detail .info_group.apply_type p {font-size: 1.6rem; color: #111; font-weight: 700;}
+.apply_detail .info_group.apply_type {border-bottom: 1px solid #545044;}
+.apply_detail .info_group.apply_pay {display: block; text-align: right;}
+.apply_detail .info_group.apply_pay strong {display: block; width: 100%; margin-bottom: 15px; text-align: left;}
+.apply_detail .info_group.apply_pay p {display: block; width: 100%; text-align: right;} 
+.btn_small.delv {margin-left: 8px; margin-top: -6px; vertical-align: top;}
+.txt_help.type_apply {margin: 12px 0 2px;}
+.apply_detail .fc_address {display: block;}
+.apply_detail .fc_address strong {display: block; width: 100%; margin-bottom: 1.5rem;}
+.apply_detail .fc_address p {display: block; width: 100%; text-align: right;}
+
+/* 신청 현황>계약표준안내 팝업 */
+.contract_info {padding: 25px 18px;}
+.contract_info .c_summary {padding: 17px 25px; background-color: #f6f6f6;}
+.contract_info .c_summary .c_phone_sum,
+.contract_info .c_summary .c_charge_sum {color: #717171;}
+.contract_info .c_summary .c_phone_sum strong,
+.contract_info .c_summary .c_charge_sum strong {display: inline-block; font-weight: 700; color: #111;}
+.contract_info .c_summary .c_phone_sum strong:after,
+.contract_info .c_summary .c_charge_sum strong:after {display: inline-block; content: ""; height: 9px; margin: 6px 6px 0; border-right: 1px solid #b8b8b8; vertical-align: top;}
+.contract_info .c_summary .txt_help {margin-top: 10px; padding-top: 13px; border-top: 1px solid #e2e2e2;}
+.contract_info .c_summary .txt_help p {font-weight: 700;}
+.contract_info .c_summary .txt_help p:before {font-size: 1.2rem; font-weight: 400;}
+.contract_info .c_notice {margin-top: 22px;}
+.contract_info .c_notice h4 {font-size: 1.6rem; font-weight: 700;}
+.contract_info .c_notice .list.type_info {margin-bottom: 0;}
+.contract_info .c_notice .list.type_info li {margin-top: 8px; font-size: 1.3rem; color: #444;}
+.contract_info .c_notice .list.type_info li.point {color: #31aae6;}
+
+/* 신청 현황>결합상품안내 팝업 */
+.prd_info {margin: 0; padding: 10px 18px 18px;}
+.list.type_c_prd {margin-bottom: 0;}
+.list.type_c_prd li {padding: 20px 0 16px;}
+.list.type_c_prd li:last-child {border: 0;}
+.list.type_c_prd .prd_title {position: relative; height: 32px;}
+.list.type_c_prd .prd_title h5 {font-size: 1.6rem; color: #111; font-weight: 700; line-height: 3rem;}
+.list.type_c_prd .prd_title .btn_small {position: absolute; right: 0; top: 0;}
+.list.type_c_prd .prd_detail {padding: 0;}
+.list.type_c_prd .prd_detail li {padding: 0; border: 0; text-align: left;}
+.list.type_c_prd .prd_detail li .prd_price {color: #258dc1;}
+.sp_common.ic_dot:before {content:""; display: inline-block; width: 3px; height: 3px; margin-right: 5px; margin-bottom: 3px; -webkit-appearance:none; appearance:none; -webkit-background-color:transparent; background-color:transparent; background-image: url(../image/sp_common.png); background-repeat: no-repeat; background-size: 200px auto; vertical-align: middle; background-position: -100px -100px;}
+
+@media only screen and (max-device-width : 359px) {/* iPhone5 & 5S(320x454)) */ 
+    .box.type_login {margin: 40px 40px 0;}     
+    .open_time dd {float: none; display: block; width: 100%;}
+    .open_time dd:last-child {float: none; display: block; width: 100%; text-align: left;}
+    .link_login li a {padding: 2px 10px 0 11px;} 
+    .ic_findid, .ic_resetpw {right: 15px;}
+    .f_group.card .cardno_wrap.type_masking input {width: 40px;}
+    .menu_area .u_menu li a p {font-size: 1.4rem; letter-spacing: -0.7px;}
+  
+}

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="설명">
+    <!-- SNS -->
+    <meta property="og:title" content="제목">
+    <meta property="og:description" content="설명">
+    <meta property="og:image" content="대표 이미지">
+    <meta property="og:url" content="표준 링크(같은 콘텐츠를 가리키는 여러 개의 URL 중 대표 URL)">
+    <meta name="twitter:title" content="제목">
+    <meta name="twitter:description" content="설명">
+    <meta name="twitter:image" content="대표 이미지">
+    <meta name="twitter:card" content="트위터 카드 타입">
+    <link rel="apple-touch-icon-precomposed" href="../resource/image/">
+    <title>Liiv M : 공통UI</title>
+    <link rel="stylesheet" type="text/css" href="../resource/css/lib/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="../resource/css/common.css">
+
+    <style>
+        body {
+            padding: 20px;
+            font-size: 15px;
+            letter-spacing: -0.045em;
+        }
+
+        body,
+        li,
+        span,
+        strong,
+        p {
+            font-size: 15px;
+        }
+
+        section {
+            margin: 30px 0;
+        }
+
+        .box {
+            margin: 10px 0 20px;
+            border: 1px solid #ddd;
+            background-color: #f5f5f5;
+            padding: 30px;
+        }
+
+        ul li {
+            list-style-type: circle
+        }
+
+        ol {
+            margin: 10px 0;
+        }
+
+        ol li ol {
+            margin: 10px 0 30px;
+        }
+
+        ol li:last-child ol:last-child {
+            margin-bottom: 10px;
+        }
+
+        ol li {
+            margin: 5px 20px 10px;
+            list-style-type: decimal;
+            font-weight: 700;
+        }
+
+        ol li strong {
+            display: inline-block;
+            min-width: 250px;
+        }
+
+        ol li li strong {
+            color: cornflowerblue;
+        }
+
+        ol li li {
+            margin: 5px 20px;
+            list-style-type: lower-alpha
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+
+        .txt_comm {
+            color: green;
+        }
+
+        .txt_red {
+            color: red
+        }
+    </style>
+</head>
+
+<body>
+
+    <dl style="display: none">
+        <dt>tit</dt>
+        <dd>타이틀</dd>
+        <dt>gnb, lnb, snb</dt>
+        <dd>네비게이션</dd>
+        <dt>tab</dt>
+        <dd>탭</dd>
+        <dt>tbl</dt>
+        <dd>테이블</dd>
+        <dt>lst</dt>
+        <dd>목록</dd>
+        <dt>viw</dt>
+        <dd>상세</dd>
+        <dt>mod</dt>
+        <dd>수정</dd>
+        <dt>del</dt>
+        <dd>삭제</dd>
+        <dt>reg</dt>
+        <dd>작성</dd>
+        <dt>frm</dt>
+        <dd>폼</dd>
+        <dt>btn</dt>
+        <dd>버튼</dd>
+        <dt>box</dt>
+        <dd>박스</dd>
+        <dt>ico</dt>
+        <dd>아이콘</dd>
+        <dt>line</dt>
+        <dd>선</dd>
+        <dt>thumb</dt>
+        <dd>섬네일</dd>
+        <dt>page</dt>
+        <dd>페이징</dd>
+        <dt>bnr</dt>
+        <dd>배너</dd>
+        <dt>txt</dt>
+        <dd>텍스트</dd>
+        <dt>emp</dt>
+        <dd>강조</dd>
+        <dt>link</dt>
+        <dd>링크</dd>
+        <dt>pop</dt>
+        <dd>팝업</dd>
+        <dt>lyr</dt>
+        <dd>레이어</dd>
+    </dl>
+
+
+
+    <section>
+        <h3>아이콘</h3>
+        <div class="box">
+            <p class="txt_comm" style="display: none"><strong>※</strong> </p>
+            <ol>
+                <li><strong>통이미지-Sprites 기능 사용</strong>
+                    <ol>
+                        <li><strong>공통 - "sp_comm ico_네이밍"</strong><span class="txt_red">&lt;i class="sp_comm ico_tel"&gt;&lt;/i&gt;</span></li>
+                        <li><strong>섹션 - "sp_섹션명 ico_네이밍"</strong><span class="txt_red">&lt;i class="sp_login ico_pw"&gt;&lt;/i&gt;</span></li>
+                    </ol>
+                </li>
+                <li><strong>개별이미지</strong>
+                    <ol>
+                        <li><strong>ico_네이밍"</strong> <span class="txt_red">&lt;i class="ico_map"&gt;&lt;/i&gt;</span></li>
+
+                    </ol>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <h3>버튼</h3>
+        <div class="box">
+            <p class="txt_comm" style="display: none"><strong>※</strong> </p>
+            <ol>
+                <li><strong>기본 사이즈</strong>
+                    <ol>
+                        <li><strong>기본</strong> <span class="txt_red">&lt;button type="button" class="btn_default"&gt;기본버튼&lt;/button&gt;</span></li>
+                        <li><strong>배경색강조1</strong> <span class="txt_red">&lt;button type="button" class="btn_default emp_bck"&gt;배경색강조1버튼&lt;/button&gt;</span></li>
+                        <li><strong>배경색강조2</strong> <span class="txt_red">&lt;button type="button" class="btn_default emp_bck2"&gt;배경색강조2버튼&lt;/button&gt;</span></li>
+                        <li><strong>텍스트강조1</strong> <span class="txt_red">&lt;button type="button" class="btn_default emp_txt"&gt;텍스트강조1버튼&lt;/button&gt;</span></li>
+                        <li><strong>텍스트강조2</strong> <span class="txt_red">&lt;button type="button" class="btn_default emp_txt2"&gt;텍스트강조2버튼&lt;/button&gt;</span></li>
+                    </ol>
+                </li>
+                <li><strong>스몰 사이즈</strong>
+                    <ol>
+                        <li><strong>기본</strong> <span class="txt_red">&lt;button type="button" class="btn_default small"&gt;스몰사이즈버튼&lt;/button&gt;</span></li>
+                        <li><strong>배경색 포인트1</strong> <span class="txt_red">&lt;button type="button" class="btn_default small emp_bck"&gt;배경색강조1버튼&lt;/button&gt;</span></li>
+                        <li><strong>배경색 포인트2</strong> <span class="txt_red">&lt;button type="button" class="btn_default small emp_bck2"&gt;배경색강조2버튼&lt;/button&gt;</span></li>
+                        <li><strong>텍스트 포인트1</strong> <span class="txt_red">&lt;button type="button" class="btn_default small emp_txt"&gt;텍스트강조1버튼&lt;/button&gt;</span></li>
+                        <li><strong>텍스트 포인트2</strong> <span class="txt_red">&lt;button type="button" class="btn_default small emp_txt2"&gt;텍스트강조2버튼&lt;/button&gt;</span></li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <h3>FORM</h3>
+        <div class="box">
+
+            <ol>
+                <li><strong>선택(라디오버튼)</strong>
+                    <ol> 
+                        <li><label class="ui_rdo"><input type="radio" name="rdo1">Normal</label></li>
+                        <li><label class="ui_rdo"><input type="radio" name="rdo1" checked>Checked</label></li>
+                        <li><label class="ui_rdo"><input type="radio" name="rdo1" disabled>Disabled</label></li>
+                    </ol>                   
+                </li>
+                <li><strong>선택(체크박스)</strong>
+                    <ol>
+                        <li><label class="ui_chk"><input type="checkbox">Normal</label></li>
+                        <li><label class="ui_chk"><input type="checkbox" checked>Checked</label></li>
+                        <li><label class="ui_chk"><input type="checkbox" disabled>DISABLED</label></li>
+                        <li><label class="ui_chk"><input type="checkbox" checked disabled>Checked Disabled</label></li>
+                    </ol>
+                </li>
+                <li>
+                    <strong>셀렉트박스</strong>
+                    <ol>
+                        <li>
+                            <div class="f_group">
+                                <label><span class="txt">통신사</span>
+                                    <select>
+                                        <option>선택</option>
+                                        <option selected>SK Telecom+ # $ %</option>
+                                        <option>테스트3</option>
+                                        <option>테스트4</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="f_group">
+                                <label><span class="txt">통신사</span>
+                                    <select disabled>
+                                        <option>선택</option>
+                                        <option selected>SK Telecom</option>
+                                        <option>테스트3</option>
+                                        <option>테스트4</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </li>
+                    </ol>    
+                   
+                </li>
+                <li>
+                    <strong>INPUT</strong>
+                    <ol>
+                        <li>
+                            <div class="f_group">
+                                <label><span class="txt">input 유형1 :</span><input type="text" class="w100p"></label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="f_group">
+                                <label><span class="txt">input 유형1 :</span><input type="text" class="w100p"></label>
+                            </div>
+                        </li>    
+                        <li>    
+                            <div class="f_group">
+                                <label><span class="txt">input 유형4 :</span><input type="text" class="error w100p"></label>
+                            </div>
+                            
+                            <div class="txt_error"><i class="sp_common ic_error"></i>휴대폰번호를 입력해주세요.</div>
+                        </li>                   
+                        <li>
+
+                            <div class="search_box">
+                                <div class="f_group">
+                                    <label><input type="text" class="w100p" placeholder="국가명 입력"></label>
+                                    <button type="button" class="sp_common btn_search_pop"><span class="blind">검색</span></button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                   
+
+                            <div class="search_box">
+                                <div class="f_group">
+                                    <label><span class="blind">주소검색</span><input type="text" value="삼성로 107길 36" placeholder="도로명+건물번호, 건물명, 지번 입력"></label>
+                                    <button type="button" class="sp_common btn_del"><span class="blind">키워드 삭제</span></button>
+                                    <button type="button" class="sp_common btn_search_pop2"><span class="blind">검색</span></button>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>                    
+                </li>
+                
+                <li>
+                    <strong>TOGGLE SWITCH</strong>                  
+                        <ol>
+                            <li>
+                                <label class="ui_switch">
+                                    <input type="checkbox" checked>
+                                    <div class="chk_ani"><span class="chk_off">OFF</span><span class="chk_on">ON</span></div>
+                                    </label>
+                            </li>
+                            <li>
+                        
+                                <label class="ui_switch type_txt">
+                                    <input type="checkbox" checked>
+                                    <div class="chk_ani"><span class="chk_off">OFF</span><span class="chk_on">ON</span></div>
+                                </label>
+
+                            </li>
+                        </ol>    
+                    </li>
+                <li>
+                    <strong>DATEPICKER</strong>
+                    <ol>
+                        <li>
+                                <div class="f_group datepicker">
+                                    <label><span class="txt">이용 시작일</span><input type="text" id="datepicker" placeholder="날짜선택"></label>
+                                </div>
+                            </li>
+                        </ol> 
+                </li>
+
+                <li>
+                    <strong>TEXTAREA</strong>                        
+                    <ol>                        
+                            <li>
+                            <div class="f_group">
+                                <textarea name="c_text" id="c_text" cols="10" rows="5" title="textarea제목" placeholder="내용입력"></textarea>
+                            </div>
+                            </li>
+                        </ol>    
+                    </li>
+            </ol>
+        </div>
+    </section>
+    
+    <section>
+        <h3>TAB</h3>
+        <div class="box">            
+            <ul class="tab_nav">                
+                <li class="active"><a href="tc1" data-click="tab">tab1</a></li>
+                <li><a href="tc2" data-click="tab">tab2</a></li>
+                <li><a href="tc3" data-click="tab">tab3</a></li>
+            </ul>
+            <div class="tab_content">
+                <div id="tc1" class="box_tc active">      
+                    tab1 content
+                    <ul class="tab_nav">                
+                        <li><a href="inner_tc1" data-click="tab">inner tab1</a></li>
+                        <li class="active"><a href="inner_tc2" data-click="tab">inner tab2</a></li>
+                    </ul>
+                    <div class="tab_content">
+                        <div id="inner_tc1" class="box_tc active">inner tab1 content</div>
+                        <div id="inner_tc2" class="box_tc">inner tab2 content</div>
+                    </div>
+                    
+                </div>
+                <div id="tc2" class="box_tc">tab2 content</div>
+                <div id="tc3" class="box_tc">tab3 content</div>
+            </div>
+            
+        </div>
+    </section>   
+    <section>
+        <h3>데이타 없을 경우</h3>
+        <div class="box">    
+
+            <!-- 검색 결과 없을 경우 -->
+            <div class="nodata">
+                <i class="sp_common ic_nodata"></i>
+                <p>검색 결과가 없습니다.</p>
+            </div>
+            <!-- //검색 결과 없을 경우 -->
+
+        </div>
+    </section>    
+       
+
+    <section>
+        <h3>LAYER POPUP</h3>
+        <div class="box">        
+            <ol>
+                <li><button type="button" onclick="modalLayer.show('dimmedLayer1')">DIMMED LAYER- TYPE 1(아이콘-안내)</button>
+                </li>
+                <li><button type="button" onclick="modalLayer.show('dimmedLayer2')">DIMMED LAYER- TYPE 2(아이콘-확인)</button>
+                </li>
+                <li><button type="button" onclick="modalLayer.show('dimmedLayer3')">DIMMED LAYER- TYPE 3(아이콘-경고)</button>
+                </li>
+                <li><button type="button" onclick="modalLayer.show('dimmedLayer4')">DIMMED LAYER- TYPE 4(타이틀영역에 텍스트 처리)</button>
+                </li>
+                <li><button type="button" onclick="fullLayer.show('fullLayer')">FULL LAYER</button>
+                </li>               
+            </ol>
+        </div>
+    </section>    
+
+    <section>
+        <h3>선택한 폰번호 가져오기</h3>
+        <div class="box">   
+
+                <div class="phone_selectbox">
+                    <div class="lyr_num_list">
+                        <div class="num_using_wrap">
+                            <p><span class="num_using">이용중</span><span class="num_default" title="선택된 전화번호">010-8887-9991</span></p>
+                        </div>
+                        <ul>
+                            <li class="num_init"><button type="button" class="sp_common btn_toggle_n"><span class="blind">선택</span></button></li>
+                            <li class="selected"><button type="button">010-8888-9991</button></li>
+                            <!--- 선택 된 전화번호 -->
+                            <li><button type="button">010-8888-9992</button></li>
+                            <li><button type="button">010-8888-9993</button></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+    </section>
+   
+    
+        <strong>BIG 버튼1개</strong>
+        <div class="btn_area">
+            <button type="button" class="btn btn_default">버튼명 2-확인</button>
+        </div>
+        <br><br>
+        <strong>BIG 버튼2개</strong>
+        <div class="btn_area">
+            <button type="button" class="btn_default emp_bck">버튼명 1-취소</button>
+            <button type="button" class="btn_default">버튼명 2-확인</button>
+        </div>
+        <br><br>
+    
+    <strong>BIG 버튼3개</strong>
+        <div class="btn_area">
+            <button type="button" class="btn_default emp_bck">버튼명 1-취소</button>
+            <button type="button" class="btn_default">버튼명 2-확인</button>
+            <button type="button" class="btn_default">버튼명 2-확인</button>
+        </div>
+        <br><br>
+    
+    
+        <strong>BIG 버튼2개- ":disabled"</strong>
+        <div class="btn_area">
+            <button type="button" class="btn_default">다음</button>
+            <button type="button" class="btn_default" disabled>다음</button>
+        </div>
+        <br><br>
+        <strong>BIG 버튼2개- ".disabled" (클래스 추가 형태)</strong>
+        <div class="btn_area">
+            <button type="button" class="btn_default">다음</button>
+            <button type="button" class="btn_default disabled">다음</button>
+        </div>
+        <br><br>
+        <strong>SMALL</strong>
+        <div>
+            <button type="button" class="btn_default small">비밀번호 재설정</button>
+            <button type="button" class="btn_default small disabled">비밀번호 재설정</button>
+            <button type="button" class="btn_default small" disabled>비밀번호 재설정</button>
+        </div>
+
+
+    <!-- 딤처리 된 레이어 팝업 : 아이콘(안내) -->
+    <div id="dimmedLayer1" class="mlayer_pop">
+        <div class="layer_content">
+            <div class="layer_header">
+                <h3 class="title"><i class="sp_common ic_info"></i></h3>
+            </div>
+            <div class="layer_body">
+                <div class="message">
+                    국민은행 계좌 미 보유 고객으로 계좌 개설 후 통신 가입이 가능합니다.
+                </div>
+            </div>
+            <div class="btn_area">
+                <button type="button" class="btn" data-dismiss="modal">취소</button>
+                <button type="button" class="btn btn_default">계좌개설</button>
+            </div>
+            <button type="button" class="btn_close_layer" data-dismiss="modal"><span>닫기</span></button>
+        </div>
+    </div>
+
+    <!-- 딤처리 된 레이어팝업 : 아이콘(확인) -->
+    <div id="dimmedLayer2" class="mlayer_pop">
+        <div class="layer_content">
+            <div class="layer_header">
+                <h3 class="title"><i class="sp_common ic_check"></i></h3>
+            </div>
+            <div class="layer_body">
+                <p class="message"> 메세지 영역 </p>
+            </div>
+            <div class="btn_area">
+                <button type="button" class="btn btn_default">확인</button>
+            </div>
+
+            <button type="button" class="btn_close_layer" data-dismiss="modal"><span>닫기</span></button>
+        </div>
+    </div>
+
+    <!-- 딤처리 된 레이어 팝업 : 아이콘(경고) -->
+    <div id="dimmedLayer3" class="mlayer_pop">
+        <div class="layer_content">
+            <div class="layer_header">
+                <h3 class="title"><i class="sp_common ic_info"></i></h3>
+            </div>
+            <div class="layer_body">
+                <div class="message">
+                    메세지 영역
+                </div>
+            </div>
+            <div class="btn_area">
+                <button type="button" class="btn btn_default">확인</button>
+            </div>
+            <button type="button" class="btn_close_layer" data-dismiss="modal"><span>닫기</span></button>
+        </div>
+    </div>
+
+    <!-- 딤처리 된 레이어팝업 : 텍스트 -->
+    <div id="dimmedLayer4" class="mlayer_pop">
+        <div class="layer_content">
+            <div class="layer_header">
+                <h3 class="title">비밀번호 인증</h3>
+            </div>
+            <div class="layer_body">
+                <div class="message"> 메세지 영역 </div>
+            </div>
+            <div class="btn_area">
+                <button type="button" class="btn btn_white" data-dismiss="modal">취소</button>
+                <button type="button" class="btn btn_default">확인</button>
+            </div>
+
+            <button type="button" class="btn_close_layer" data-dismiss="modal"><span>닫기</span></button>
+        </div>
+    </div>
+
+    <!-- full_layer -->
+    <div id="fullLayer" class="flayer_pop">
+        <div class="flayer_wrap">
+            <div class="layer_header">
+                <h3 class="title">풀팝업타이틀1</h3>
+                <button type="button" class="sp_common btn_close_layer" data-dismiss="modal"><span>닫기</span></button>
+            </div>
+            <div class="layer_body">
+
+                <!-- 팝업 내용-->
+                <div style="height:1000px"> 팝업내용1<button type="button" onclick="modalLayer.show('dimmedLayer3')">DIMMED LAYER- TYPE 3(타이틀영역에 텍스트 처리)</button></div>
+                <!-- //팝업 내용-->
+
+                <div class="btn_area">
+                    <button type="button" class="btn btn_default">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // full_layer -->
+
+
+    <script type="text/javascript" src="../resource/js/lib/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../resource/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../resource/js/common.js"></script>
+    <script>
+        $("#datepicker").datepicker();
+    </script>
+</body></html>
