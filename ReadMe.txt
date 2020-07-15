@@ -29,5 +29,7 @@ GitHub desktop으로 작업(추천)
 
 Current repository, Current branch 확인 
 
-Fetch origin 클릭 후 Summary 입력(수정/추가 관련 코멘트) Commit to master 클릭(파일 업데이트 정보 코멘트 작성) 
+1. Fetch origin 클릭 후 Summary 입력(수정/추가 관련 코멘트) Commit to master 클릭(파일 업데이트 정보 코멘트 작성) 
+2. Push  origin 클릭 하면 업로드 완료
 
+1-2단계 순서대로 해야 수정된 파일이 업로드 됨
