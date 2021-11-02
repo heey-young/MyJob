@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Affix</title>
+    <link rel="stylesheet" href="../../dist/css/bootstrap.min.css">
+    <script src="../assets/js/jquery/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  <style type="text/css">
+    /* reset */
+body {
+	-webkit-text-size-adjust:none; 
+	-moz-text-size-adjust:none;
+	overflow-y:scroll
+}
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio,  select, textarea,
+video { margin: 0;  padding: 0;  border: 0;  outline: 0;  vertical-align: middle;  background: transparent; font-weight:300; font-family:"Noto","맑은 고딕",Dotum,Arial,Helvetica,AppleGothic,sans-serif; color:#333; box-sizing:border-box; text-align:inherit}
+ul, ol, li, dl, dd, dt { margin:0; padding:0; list-style:none; }
+a {text-decoration:none; font-size:inherit; line-height:inherit; color:inherit; font-weight:inherit}
+
+.inner{width:1000px; min-width:1000px; margin:0 auto}
+.inner:after{content:"";display:block;clear:both}
+.pr{position:relative}
+
+.header{background:#eee; position:absolute; top:0; left:0; width:100%; height:100px; border-bottom:1px solid #e1e1e1;z-index:2;min-width:1000px}
+.header .logo{margin-top:25px; float:left}
+.header .logo a{display:block;width:100px; height:50px; line-height:50px; font-size:20px; text-align:center; background:#666; color:#fff;}
+.header nav{display:block; padding:30px 0 0 250px}
+.header nav > ul > li{float:left; height:70px; }
+.header nav > ul > li > a{padding:0 40px;height:70px;line-height:40px; display:block}
+.header nav .sub{display:none; position:absolute; top:100px; width:100%; left:0; height:40px; background:#CF3;min-width:1000px}
+.header nav .sub.s1 ul{margin-left:260px}
+.header nav .sub.s2 ul{margin-left:360px}
+.header nav .sub.s3 ul{margin-left:460px}
+.header nav .sub.s4 ul{margin-left:560px}
+.header nav .sub ul > li{float:left}
+.header nav .sub ul > li > a{display:block; height:40px; line-height:40px; margin-left:20px; font-size:13px}
+.header nav .sub ul > li:first-child > a{margin-left:0}
+.header nav > ul > li.on > a{background:#888; color:#fff}
+.header nav > ul > li.on .sub{display:block}
+.header nav .sub ul > li > a{padding:0 10px}
+.header nav .sub ul > li.on > a{background:#ff0000}
+.header .gi{float:right; font-size:12px; margin-top:15px}
+.header .gi a{display:inline-block; height:15px; line-height:15px; border-left:1px solid #ccc; padding-left:10px; margin-left:10px; float:left}
+.header .gi a:first-child{border:0}
+
+.contents{margin-top:100px}
+.contents .inner{height:700px; background:#9F9}
+
+/* tablet */
+@media screen and (max-width:1024px) {
+  .inner{width:768px; min-width:768px;}
+  .header{min-width:768px}
+  .header nav .sub{min-width:768px}
+  .header nav{padding-left:120px}
+  .header nav .sub.s1 ul{margin-left:130px}
+  .header nav .sub.s2 ul{margin-left:230px}
+  .header nav .sub.s3 ul{margin-left:230px}
+  .header nav .sub.s4 ul{margin-left:430px}
+}
+/* mobile */
+@media screen and (max-width:768px) {
+  /* layout */
+  .inner{width:100%; min-width:100%;}
+  .header{min-width:100%}
+  .header nav .sub{min-width:100%}
+  
+  /* nav */
+  .header{height:70px}
+  .header nav > ul{display:none}
+  .header .logo{margin:0;width:100%}
+  .header .logo a{height:70px; width:300px; line-height:70px; margin:0 auto}
+  .header .gi{position:absolute; right:0; top:10px; margin:0}
+  .header .gi a{margin:0 0 0 3px; padding:0; border:0; height:50px; line-height:50px; width:60px; text-align:center; background:#e2e2e2}
+  .header nav .btn_ham{display:block; width:70px; height:70px; background:#e2e2e2 url('http://www.blakecarpetcleaningtx.com/images/hamburger.png') no-repeat center center; background-size:90% auto; position:absolute; top:0;left:0}
+  
+  .contents{margin-top:70px}
+  
+  /* nav.on*/
+  .header.on{height:100%; background:none;}
+  .header.on nav .btn_ham{position:fixed;z-index:3; background-image:url('https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/png/512/android-close.png')}
+  .header.on nav{position:fixed;top:0;left:0;bottom:0;padding:0; right:0;background:url('http://www.narrowpathplumbing.com/wp-content/uploads/2014/03/background-black-60-opacity-1024x102.png'); z-index:2}
+  .header.on nav > ul{display:block; width:480px; background:#333; position:absolute; top:0; left:0; bottom:0}
+  .header.on nav > ul > li:first-child{margin-top:70px}
+  .header.on nav > ul > li{float:none; height:auto}
+  .header.on nav > ul > li > a{height:60px; line-height:60px; background:#999}
+  .header.on nav .sub{position:relative; height:auto; top:auto; left:auto}
+  .header.on nav .sub ul > li{float:none}
+  .header.on nav .sub.s1 ul,
+  .header.on nav .sub.s2 ul,
+  .header.on nav .sub.s3 ul,
+  .header.on nav .sub.s4 ul{margin-left:0px}
+  .header.on nav .sub ul > li > a{margin-left:0;padding-left:10px}
+}
+  </style>
+
+  <title>navi by serkee</title>
+
+  
+    
+
+
+
+
+<script>
+$(window).load(function(){
+$(function(){
+  var $nav = $('.header nav > ul')
+	var $nav_li = $('.header nav > ul > li')
+	$nav_li.on("mouseenter focusin", function(){
+  	$nav_li.removeClass('on')
+  	$(this).addClass('on')
+  })
+  $nav.on("mouseleave focusout", function(){
+  	$(this).find('> li').removeClass('on')
+    navi_active_fn()
+  })
+  $nav_li.last().find('.sub ul > li').last().on("keydown", function(e){
+  	if(!e.shiftKey && e.keyCode == 9) $nav_li.removeClass('on')
+  })
+  
+  $nav_li.find('.sub ul > li').on("mouseenter focusin", function(e){
+  	$nav_li.find('.sub ul > li').removeClass('on')
+  	$(this).addClass('on')
+  }).on("mouseleave focusout", function(e){						
+  	$(this).removeClass('on')
+  })
+  
+  //백탭처리
+  $nav_li.find(' > a').on("keydown",function(e){
+  	if(e.shiftKey && e.keyCode == 9) {
+    	$this = $(this)						
+      $this.parent().removeClass('on')
+    	$i = $this.parent().index()
+      if($i){
+      	$li = $nav_li.eq($i-1)
+        $li.addClass('on')
+        $li.find('li').last().focus()
+      }
+    }
+  })
+  $('.gi > a').on("keydown",function(e){
+  	if(e.shiftKey && e.keyCode == 9) {
+    	$li = $nav_li.last()
+      $li.addClass('on')
+      $li.find('li').last().focus()
+    }
+  })
+  
+  //활성화 처리
+  var $depth1 = Number(pageNum.substr(0,2))-1
+  var $depth2 = Number(pageNum.substr(2,2))-1
+
+  var navi_active_fn = function(){
+  	if(!pageNum) return false;
+  	$nav_li.eq($depth1).addClass('on')
+    $nav_li.eq($depth1).find('.sub ul > li').eq($depth2).addClass('on')
+  }
+  
+  navi_active_fn()
+  
+  /*햄버거*/
+  $('.header nav .btn_ham').on("click",function(e){
+  	$('.header').toggleClass('on')	
+  })
+})
+
+
+
+
+
+})
+
+</script>
+
+  
+</head>
+
+<body>
+  <script>pageNum = "0202"</script>
+<div class="header">
+  <div class="inner">
+    <h1 class="logo">
+      <a href="#">logo</a>
+    </h1>
+    <nav>
+      <a href="javascript:" class="btn_ham"></a><!--모바일용 햄버거 버튼-->
+      <ul>
+        <li><a href="#">depth1</a>
+          <div class="sub s1">
+            <div class="inner">
+              <ul>
+                <li><a href="#">sub1_1</a></li>
+                <li><a href="#">sub1_2</a></li>
+                <li><a href="#">sub1_3</a></li>
+                <li><a href="#">sub1_4</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li><a href="#">depth2</a>
+          <div class="sub s2">
+            <div class="inner">
+              <ul>
+                <li><a href="#">sub2_1</a></li>
+                <li><a href="#">sub2_2</a></li>
+                <li><a href="#">sub2_3</a></li>
+                <li><a href="#">sub2_4</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li><a href="#">depth3</a>
+          <div class="sub s3">
+            <div class="inner">
+              <ul>
+                <li><a href="#">sub3_1</a></li>
+                <li><a href="#">sub3_2</a></li>
+                <li><a href="#">sub3_3</a></li>
+                <li><a href="#">sub3_4</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li><a href="#">depth4</a>
+          <div class="sub s4">
+            <div class="inner">
+              <ul>
+                <li><a href="#">sub4_1</a></li>
+                <li><a href="#">sub4_2</a></li>
+                <li><a href="#">sub4_3</a></li>
+                <li><a href="#">sub4_4</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    
+    <div class="gi">
+      <a href="#">home</a>
+      <a href="#">login</a>
+    </div>
+    
+  </div>
+</div>
+<div class="contents">
+  <div class="inner pr">
+    contents
+  </div>
+</div>
+  
+  <script>
+  // tell the embed parent frame the height of the content
+  if (window.parent && window.parent.parent){
+    window.parent.parent.postMessage(["resultsFrame", {
+      height: document.body.getBoundingClientRect().height,
+      slug: "opuemkx4"
+    }], "*")
+  }
+</script>
+
+</body>
+
+</html>
+

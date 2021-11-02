@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>입출력테이블</title>
+    <!--<link href="../../dist/css/bootstrap.min.css" rel="stylesheet">-->
+    
+    <link href="../../assets/css/jquery/jquery-ui.css" rel="stylesheet">
+    <link href="../../assets/css/style.css" rel="stylesheet">
+    
+    <script src="../../assets/js/jquery/jquery.js"></script>
+    <script src="../../assets/js/jquery/jquery-ui.js"></script>  
+    <script src="../../dist/js/bootstrap.js"></script>    
+    <script src="../../assets/js/design.js"></script>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- skip navigation -->
+        <div id="go-skip">
+            <h2 class="hidden">바로가기 링크</h2>
+            <ul>
+                <li><a href="#gnb"><span>GNB메뉴 바로가기</span></a></li>
+                <li><a href="#lnb"><span>LNB메뉴 바로가기</span></a></li>
+                <li><a href="#container"><span>본문으로 바로가기</span></a></li>
+            </ul>
+        </div>
+        <!-- //skip navigation -->
+        <div id="header">
+            <header>
+                <h1><a href="#url">LOGO</a></h1>
+                <nav>
+                    <ul id="gnb">
+                        <li> <a href="#">link 1</a>
+                            <ul class="sub">
+                                <li><a href="#">sub link 1</a></li>
+                                <li><a href="#">sub link 1</a></li>
+                                <li><a href="#">sub link 1</a></li>
+                                <li><a href="#">sub link 1</a></li>
+                            </ul>
+                        </li>
+                        <li> <a href="#">link 2</a>
+                            <ul class="sub">
+                                <li><a href="#">sub link 2</a></li>
+                                <li><a href="#">sub link 2</a></li>
+                                <li><a href="#">sub link 2</a></li>
+                                <li><a href="#">sub link 2</a></li>
+                            </ul>
+                        </li>
+                        <li> <a href="#">link 3</a>
+                            <ul class="sub">
+                                <li><a href="#">sub link 3</a></li>
+                                <li><a href="#">sub link 3</a></li>
+                                <li><a href="#">sub link 3</a></li>
+                                <li><a href="#">sub link 3</a></li>
+                            </ul>
+                        </li>
+                        <li> <a href="#">link 4</a>
+                            <ul class="sub">
+                                <li><a href="#">sub link 4</a></li>
+                                <li><a href="#">sub link 4</a></li>
+                                <li><a href="#">sub link 4</a></li>
+                                <li><a href="#">sub link 4</a></li>
+                            </ul>
+                        </li>
+                        <li> <a href="#">link 5</a>
+                            <ul class="sub">
+                                <li><a href="#">sub link 5</a></li>
+                                <li><a href="#">sub link 5</a></li>
+                                <li><a href="#">sub link 5</a></li>
+                                <li><a href="#">sub link 5</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+        <div id="lnb">
+            <iframe src="lnb.html" frameborder="0"></iframe>     
+        </div>
+        <div id="container">
+            <button type="button" class="btn-sidebar-toggle">MENU</button>
+            <div class="contents">
+                <div class="page-title">
+                    <h1>테이블 - 입/출력</h1> </div>
+                <div class="page-wrap">
+                    <div class="titleBlock">
+                        <div class="text">
+                            <h2>타이틀</h2></div>
+                        <div class="button">
+                            <div class="button-group">
+                                <button type="button" class="btn-sm em"><span>신규</span></button>
+                                <button type="button" class="btn-sm"><span>수정</span></button>
+                                <button type="button" class="btn-sm nega"><span>삭제</span></button>
+                                <button type="button" class="btn-sm"><span>저장</span></button>
+                            </div>
+                            <div class="vLine"></div>
+                            <div class="button-group">
+                                <button type="button" class="btn-sm"><span>엑셀</span></button>
+                                <button type="button" class="btn-sm"><span>View</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <form action="" method="">
+                        <div class="dataBlock">
+                            <table class="detailTable">
+                                <colgroup>
+                                    <col style="width:15%" />
+                                    <col style="width:35%" />
+                                    <col style="width:15%" />
+                                    <col style="width:35%" /> </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">
+                                            <label for="조건1">조건1</label>
+                                        </th>
+                                        <td>
+                                            <div class="search-group">
+                                                <input type="text" name="조건1" id="조건1" readonly placeholder="검색...">
+                                                <button type="button"><i class="ico-search"></i>검색</button>
+                                            </div>
+                                        </td>
+                                        <th scope="row">
+                                            <label for="조건2">조건2</label>
+                                        </th>
+                                        <td>
+                                            <div class="form-group">
+                                                <input type="text" name="조건2" id="조건2">
+                                                <button type="button" class="btn-sm"><span>등록</span></button>
+                                                <button type="button" class="btn-sm"><span>삭제</span></button>
+                                                <button type="button" class="btn-sm nega"><span>취소</span></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <label for="조건3">조건3</label>
+                                        </th>
+                                        <td>
+                                            <input type="radio" name="조건31" id="조건31">
+                                            <label for="조건31">체크1</label>
+                                            <input type="radio" name="조건32" id="조건32">
+                                            <label for="조건32">체크2</label>
+                                        </td>
+                                        <th scope="row">10</th>
+                                        <td>진행</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">10</th>
+                                        <td>
+                                            <input type="checkbox">
+                                            <label for="">체크1</label>
+                                            <input type="checkbox">
+                                            <label for="">체크2</label>
+                                        </td>
+                                        <th scope="row">10</th>
+                                        <td>진행</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">10</th>
+                                        <td>
+                                            <select class="w100p">
+                                                <optgroup label="선택그룹1">
+                                                    <option>선택1</option>
+                                                    <option>선택1</option>
+                                                </optgroup>
+                                                <optgroup label="선택그룹2">
+                                                    <option>선택1</option>
+                                                    <option>선택1</option>
+                                                </optgroup>
+                                            </select>
+                                        </td>
+                                        <th scope="row">10</th>
+                                        <td>진행</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">10</th>
+                                        <td>
+                                            <select multiple class="w100p" size="5" disabled="disabled">
+                                                <option>선택</option>
+                                                <option>선택</option>
+                                                <option>선택</option>
+                                                <option>선택</option>
+                                            </select>
+                                        </td>
+                                        <th scope="row">10</th>
+                                        <td>진행</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">10</th>
+                                        <td>
+                                            <input type="text" class="w100p" value="text" disabled="disabled"> </td>
+                                        <th scope="row">10</th>
+                                        <td>진행</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" rowspan="2">10</th>
+                                        <td>
+                                            <input type="text" class="w100p"> </td>
+                                        <th scope="row">10</th>
+                                        <td>진행</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" class="w100p"> </td>
+                                        <th scope="row">10</th>
+                                        <td>진행</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Textarea</th>
+                                        <td colspan="3">
+                                            <textarea cols="50" rows="5" style="width:100%;"> 구조물 각 부분간의 상관적인 비례 관계를 위한 기준 척도를 말한다. 한옥의 방의 크기를 15자, 18자, 21자 등으로 구획한 치수들도 이에 대한 보기이다. 서양 고대 건축에서는 모든 구조에 적용되어 일정한 비율을 유지하도록 하기 위해 원기둥의 지름이나 반지름의 길이를 기준으로 삼았다. [네이버 지식백과] 모듈 [module] (한글글꼴용어사전, 2000. 12. 25., 세종대왕기념사업회)</textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">10</th>
+                                        <td colspan="3">
+                                            <div class="table-wrap">
+                                                <table class="listTable">
+                                                    <colgroup>
+                                                        <col style="width:*" /> </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th></th>
+                                                            <th></th>
+                                                            <th></th>
+                                                            <th></th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="dataBlock-control">
+                            <div class="left">
+                                <button type="button" class="btn-sm em"><span>신규</span></button>
+                            </div>
+                            <div class="center">
+                                <div class="button-group">
+                                    <button type="button" class="btn-sm em"><span>신규</span></button>
+                                    <button type="button" class="btn-sm"><span>수정</span></button>
+                                    <button type="button" class="btn-sm nega"><span>삭제</span></button>
+                                    <button type="button" class="btn-sm"><span>저장</span></button>
+                                </div>
+                                <div class="vLine"></div>
+                                <div class="button-group">
+                                    <button type="button" class="btn-sm"><span>엑셀</span></button>
+                                    <button type="button" class="btn-sm"><span>View</span></button>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="button-group">
+                                    <button type="button" class="btn-sm"><i class="ico-arrow-left"></i><span>이전페이지</span></button>
+                                    <button type="button" class="btn-sm"><span>목록</span></button>
+                                    <button type="button" class="btn-sm"><span>다음페이지</span><i class="ico-arrow-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>목록 테이블</title>
+    <!--<link href="../../dist/css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="../../assets/css/jquery/jquery-ui.css" rel="stylesheet">
+    <link href="../../assets/css/style.css" rel="stylesheet">
+    <script src="../../assets/js/jquery/jquery.js"></script>
+    <script src="../../assets/js/jquery/jquery-ui.js"></script>
+    <script src="../../dist/js/bootstrap.js"></script>
+    <script src="../../assets/js/design.js"></script>
+    <style>
+        .fixed-table-container {
+            width: 100%;
+            height: 200px;
+            border: 1px solid #000;
+            position: relative;
+            padding-top: 30px;
+            /* header-bg height값 */
+        }
+        
+        .header-bg {
+            background: skyblue;
+            height: 30px;
+            /* header-bg height값 */
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            border-bottom: 1px solid #000;
+        }
+        
+        .table-wrapper {
+            overflow-x: hidden;
+            overflow-y: auto;
+            height: 100%;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        td {
+            border-bottom: 1px solid #ccc;
+            padding: 5px;
+        }
+        
+        td+td {
+            border-left: 1px solid #ccc;
+        }
+        
+        th {
+            padding: 0px;
+            /* reset */
+        }
+        
+        .th-text {
+            position: absolute;
+            top: 0;
+            width: inherit;
+            line-height: 30px;
+            /* header-bg height값 */
+            border-left: 1px solid #000;
+        }
+        
+        th:first-child .th-text {
+            border-left: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- skip navigation -->
+        <div id="go-skip">
+            <h2 class="hidden">바로가기 링크</h2>
+            <ul>
+                <li><a href="#gnb"><span>GNB메뉴 바로가기</span></a></li>
+                <li><a href="#lnb"><span>LNB메뉴 바로가기</span></a></li>
+                <li><a href="#container"><span>본문으로 바로가기</span></a></li>
+            </ul>
+        </div>
+        <!-- //skip navigation -->
+        <div id="header">
+            <header>
+                <h1><a href="#url">LOGO</a></h1>
+                <nav>
+                    <ul id="gnb">
+                        <li> <a href="#">link 1</a>
+                            <ul class="sub">
+                                <li><a href="#">sub link 1</a></li>
+                                <li><a href="#">sub link 1</a></li>
+                                <li><a href="#">sub link 1</a></li>
+                                <li><a href="#">sub link 1</a></li>
+                            </ul>
+                        </li>
+                        <li> <a href="#">link 2</a>
+                            <ul class="sub">
+                                <li><a href="#">sub link 2</a></li>
+                                <li><a href="#">sub link 2</a></li>
+                                <li><a href="#">sub link 2</a></li>
+                                <li><a href="#">sub link 2</a></li>
+                            </ul>
+                        </li>
+                        <li> <a href="#">link 3</a>
+                            <ul class="sub">
+                                <li><a href="#">sub link 3</a></li>
+                                <li><a href="#">sub link 3</a></li>
+                                <li><a href="#">sub link 3</a></li>
+                                <li><a href="#">sub link 3</a></li>
+                            </ul>
+                        </li>
+                        <li> <a href="#">link 4</a>
+                            <ul class="sub">
+                                <li><a href="#">sub link 4</a></li>
+                                <li><a href="#">sub link 4</a></li>
+                                <li><a href="#">sub link 4</a></li>
+                                <li><a href="#">sub link 4</a></li>
+                            </ul>
+                        </li>
+                        <li> <a href="#">link 5</a>
+                            <ul class="sub">
+                                <li><a href="#">sub link 5</a></li>
+                                <li><a href="#">sub link 5</a></li>
+                                <li><a href="#">sub link 5</a></li>
+                                <li><a href="#">sub link 5</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+        <div id="lnb">
+            <iframe src="lnb.html" frameborder="0"></iframe>
+        </div>
+        <div id="container">
+            <button type="button" class="btn-sidebar-toggle">MENU</button>
+            <div class="contents">
+                <div class="page-title">
+                    <h1>테이블-목록 샘플</h1>
+                </div>
+                <div class="page-wrap">
+                    <div class="titleBlock">
+                        <div class="text">
+                            <h2>타이틀</h2>
+                        </div>
+                        <div class="button">
+                            <div class="button-group">
+                                <button type="button" class="btn-sm em"><span>신규</span></button>
+                                <button type="button" class="btn-sm"><span>수정</span></button>
+                                <button type="button" class="btn-sm nega"><span>삭제</span></button>
+                                <button type="button" class="btn-sm"><span>저장</span></button>
+                            </div>
+                            <div class="vLine"></div>
+                            <div class="button-group">
+                                <button type="button" class="btn-sm"><span>엑셀</span></button>
+                                <button type="button" class="btn-sm"><span>View</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dataBlock">
+                        <div class="fixed-table-container">
+                            <div class="header-bg"></div>
+                            <div class="table-wrapper">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th width="20%">
+                                                <!-- %넓이 값을 지정을 위해 div를 포함시켰다. -->
+                                                <div class="th-text">제목1</div>
+                                            </th>
+                                            <th width="30%">
+                                                <div class="th-text">제목2</div>
+                                            </th>
+                                            <th width="50%">
+                                                <div class="th-text">제목3</div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <style>
+                        table {
+                            border: solid 1px #D5D5D5;
+                            border-collapse: collapse;
+                            width: 100%;
+                        }
+                        
+                        table td {
+                            border: 1px solid #D5D5D5;
+                            font-size: 12px;
+                            padding: 7px 5px;
+                        }
+                        
+                        table th {
+                            background-color: #EEE;
+                            border-right: 1px solid #D5D5D5;
+                            font-size: 13.5px;
+                            line-height: 120%;
+                            font-weight: bold;
+                            padding: 8px 5px;
+                            text-align: left;
+                        }
+                        
+                        .ui-resizable {
+                            position: relative;
+                        }
+                        
+                        .ui-resizable-handle {
+                            display: block;
+                            font-size: 0.1px;
+                            position: absolute;
+                            z-index: 99999;
+                        }
+                        
+                        .ui-resizable-s {
+                            background: #EEEEEE url(../images/grippie.png) no-repeat scroll center 2px;
+                            border-top: 1px solid #CCCCCC;
+                            bottom: -5px;
+                            cursor: s-resize;
+                            height: 14px;
+                            left: 0;
+                            width: 100%;
+                        }
+
+                    </style>
+                    <table id="yourTableID2" width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <colgroup>
+                            <col style="width:33%" />
+                            <col style="width:34%" />
+                            <col style="width:33%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>Check out this header</th>
+                                <th>Look here's another one</th>
+                                <th>Wow, look at me!</th>
+                            </tr>
+
+                            <tr>
+                                <th>Check out this header</th>
+                                <th>Look here's another one</th>
+                                <th>Wow, look at me!</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Some content goes in here</td>
+                                <td>Praesent vitae ligula nec orci pretium vestibulum</td>
+                                <td>Maecenas tempus dictum libero</td>
+                            </tr>
+                            <tr>
+                                <td>Quisque in wisi quis orci tincidunt fermentum</td>
+                                <td>Mauris aliquet mattis metus</td>
+                                <td>Etiam eu ante non leo egestas nonummy</td>
+                            </tr>
+                            <tr>
+                                <td>Some content goes in here</td>
+                                <td>Praesent vitae ligula nec orci pretium vestibulum</td>
+                                <td>Maecenas tempus dictum libero</td>
+                            </tr>
+                            <tr>
+                                <td>Quisque in wisi quis orci tincidunt fermentum</td>
+                                <td>Mauris aliquet mattis metus</td>
+                                <td>Etiam eu ante non leo egestas nonummy</td>
+                            </tr>
+                            <tr>
+                                <td>Some content goes in here</td>
+                                <td>Praesent vitae ligula nec orci pretium vestibulum</td>
+                                <td>Maecenas tempus dictum libero</td>
+                            </tr>
+                            <tr>
+                                <td>Quisque in wisi quis orci tincidunt fermentum</td>
+                                <td>Mauris aliquet mattis metus</td>
+                                <td>Etiam eu ante non leo egestas nonummy</td>
+                            </tr>
+                            <tr>
+                                <td>Some content goes in here</td>
+                                <td>Praesent vitae ligula nec orci pretium vestibulum</td>
+                                <td>Maecenas tempus dictum libero</td>
+                            </tr>
+                            <tr>
+                                <td>Quisque in wisi quis orci tincidunt fermentum</td>
+                                <td>Mauris aliquet mattis metus</td>
+                                <td>Etiam eu ante non leo egestas nonummy</td>
+                            </tr>
+                            <tr>
+                                <td>Some content goes in here</td>
+                                <td>Praesent vitae ligula nec orci pretium vestibulum</td>
+                                <td>Maecenas tempus dictum libero</td>
+                            </tr>
+                            <tr>
+                                <td>Quisque in wisi quis orci tincidunt fermentum</td>
+                                <td>Mauris aliquet mattis metus</td>
+                                <td>Etiam eu ante non leo egestas nonummy</td>
+                            </tr>
+                            <tr>
+                                <td>Some content goes in here</td>
+                                <td>Praesent vitae ligula nec orci pretium vestibulum</td>
+                                <td>Maecenas tempus dictum libero</td>
+                            </tr>
+                            <tr>
+                                <td>Quisque in wisi quis orci tincidunt fermentum</td>
+                                <td>Mauris aliquet mattis metus</td>
+                                <td>Etiam eu ante non leo egestas nonummy</td>
+                            </tr>
+                            <tr>
+                                <td>Some content goes in here</td>
+                                <td>Praesent vitae ligula nec orci pretium vestibulum</td>
+                                <td>Maecenas tempus dictum libero</td>
+                            </tr>
+                            <tr>
+                                <td>Quisque in wisi quis orci tincidunt fermentum</td>
+                                <td>Mauris aliquet mattis metus</td>
+                                <td>Etiam eu ante non leo egestas nonummy</td>
+                            </tr>
+                            <tr>
+                                <td>Some content goes in here</td>
+                                <td>Praesent vitae ligula nec orci pretium vestibulum</td>
+                                <td>Maecenas tempus dictum libero</td>
+                            </tr>
+                            <tr>
+                                <td>Quisque in wisi quis orci tincidunt fermentum</td>
+                                <td>Mauris aliquet mattis metus</td>
+                                <td>Etiam eu ante non leo egestas nonummy</td>
+                            </tr>
+                            <tr>
+                                <td>Some content goes in here</td>
+                                <td>Praesent vitae ligula nec orci pretium vestibulum</td>
+                                <td>Maecenas tempus dictum libero</td>
+                            </tr>
+                            <tr>
+                                <td>Quisque in wisi quis orci tincidunt fermentum</td>
+                                <td>Mauris aliquet mattis metus</td>
+                                <td>Etiam eu ante non leo egestas nonummy</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div style="clear:both;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+<style>
+    
+    .fixed { position:fixed; background:green; border-bottom:1px dotted black;}
+    
+    </style>
+<table id="example">
+    <thead>
+        <tr>
+            <th>First</th>
+            <th>Second</th>
+            <th>Third</th>
+            <th>Fourth</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+    <tr><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+        
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+    </tbody>
+</table>
+
+    <script>
+        
+(function($) { 
+    $.fn.fixedHeader = function(options) {
+        var settings = { 
+            selector: 'thead:first',
+            cssClass: 'fixed',
+            fixTo: 0
+        };
+ 
+        var _fixHeader = function(obj) { 
+            var header = $(obj.selector, obj.elem);
+            if(header) {
+                var parent =  header.parents('table:first') || header.parent();
+                (parent && parent.css({ borderCollapse: 'collapse'}) );
+ 
+                var data = header.data('fixedHeader') || header.data('fixedHeader', { 
+                        top: header.offset().top,
+                        width: parent.find('tr:eq(1)').width(),
+                        cells: parent.find('tr:eq(1) > td'),
+                        processed: false
+                    });
+                var top = data.top - $(document).scrollTop();
+                if( top < 0 ) {
+                    header.addClass(obj.css);    
+                    if(!data.processed){
+                        header.width(data.width);
+                        for(var i = 0; i<data.cells.length;i++) {
+                            $('th:eq('+i+')', header).width($(data.cells[i]).width());
+                        }
+                    }
+ 
+                } else { 
+                    header.removeClass(obj.css); 
+                }
+            }        
+        };
+        return this.each(function() {
+            var self = this;
+            if("object" === typeof options) {
+                $.extend(settings, options);
+            }
+            if($(self).parents('table:first')){
+                $(window).bind('scroll.fixedHeader', function() {
+                    _fixHeader({ 
+                        elem: self,
+                        selector: settings.selector,
+                        css: settings.cssClass,
+                        top: settings.fixTo
+                    });
+                });
+            }
+        });
+    };
+})(jQuery);
+        
+$(function() {
+    var table = $('#example');
+    
+    $('thead:not(thead:eq(0))').remove();
+    table.fixedHeader();
+});
+});//]]> 
+        
+        
+
+
+
+
+
+
+
+        (function($) {
+            $.chromatable = {
+                // Default options
+                defaults: {
+                    //specify a pixel dimension, auto, or 100%
+                    width: "900px",
+                    height: "300px",
+                    scrolling: "yes"
+                }
+            };
+            $.fn.chromatable = function(options) {
+                // Extend default options
+                var options = $.extend({}, $.chromatable.defaults, options);
+                return this.each(function() {
+                    // Add jQuery methods to the element
+                    var $this = $(this);
+                    var $uniqueID = $(this).attr("ID") + ("wrapper");
+                    //Add dimentsions from user or default parameters to the DOM elements
+                    $(this).css('width', options.width).addClass("_scrolling");
+                    $(this).wrap('<div class="scrolling_outer"><div id="' + $uniqueID + '" class="scrolling_inner"></div></div>');
+                    $(".scrolling_outer").css({
+                        'position': 'relative'
+                    });
+                    $("#" + $uniqueID).css({
+                        'border': '1px solid #CCCCCC',
+                        'overflow-x': 'hidden',
+                        'overflow-y': 'auto',
+                        'padding-right': '17px'
+                    });
+                    $("#" + $uniqueID).css('height', options.height);
+                    $("#" + $uniqueID).css('width', options.width);
+                    // clone an exact copy of the scrolling table and add to DOM before the original table
+                    // replace old class with new to differentiate between the two
+                    $(this).before($(this).clone().attr("id", "").addClass("_thead").css({
+                        'width': 'auto',
+                        'display': 'block',
+                        'position': 'absolute',
+                        'border': 'none',
+                        'border-bottom': '1px solid #CCC',
+                        'top': '1px'
+                    }));
+                    // remove all children within the cloned table after the thead element
+                    $('._thead').children('tbody').remove();
+                    $(this).each(function($this) {
+                        // if the width is auto, we need to remove padding-right on scrolling container	
+                        if (options.width == "100%" || options.width == "auto") {
+                            $("#" + $uniqueID).css({
+                                'padding-right': '0px'
+                            });
+                        }
+                        if (options.scrolling == "no") {
+                            $("#" + $uniqueID).before('<a href="#" class="expander" style="width:100%;">Expand table</a>');
+                            $("#" + $uniqueID).css({
+                                'padding-right': '0px'
+                            });
+                            $(".expander").each(function(int) {
+                                $(this).attr("ID", int);
+                                $(this).bind("click", function() {
+                                    $("#" + $uniqueID).css({
+                                        'height': 'auto'
+                                    });
+                                    $("#" + $uniqueID + " ._thead").remove();
+                                    $(this).remove();
+                                });
+                            });
+                            //this is dependant on the jQuery resizable UI plugin
+                            $("#" + $uniqueID).resizable({
+                                handles: 's'
+                            }).css("overflow-y", "hidden");
+                        }
+                    });
+                    // Get a relative reference to the "sticky header"
+                    $curr = $this.prev();
+                    // Copy the cell widths across from the original table
+                    $("thead:eq(0)>tr th", this).each(function(i) {
+                        $("thead:eq(0)>tr th:eq(" + i + ")", $curr).width($(this).width());
+                    });
+                    //check to see if the width is set to auto, if not, we don't need to call the resizer function
+                    if (options.width == "100%" || "auto") {
+                        // call the resizer function whenever the table width has been adjusted
+                        $(window).resize(function() {
+                            resizer($this);
+                        });
+                    }
+                });
+            };
+            // private function to temporarily hide the header when the browser is resized
+            function resizer($this) {
+                // Need a relative reference to the "sticky header"
+                $curr = $this.prev();
+                $("thead:eq(0)>tr th", $this).each(function(i) {
+                    $("thead:eq(0)>tr th:eq(" + i + ")", $curr).width($(this).width());
+                });
+            };
+        })(jQuery);
+
+    </script>
+    <script>
+        // 헤더고정 테이블 스크롤
+        $(function() {
+            $("#yourTableID2").chromatable({
+                width: "100%",
+                height: "200px",
+                scrolling: "yes"
+            });
+        });
+
+    </script>
+</body>
+
+</html>
