@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+/* accordion */
+
+#nav {
+    display: block;
+    width: 500px;
+    margin: 0 auto;
+   
+}
+#nav,
+#nav ul {
+     list-style: none;
+}
+#nav > li > a {
+    display: block;
+    padding: 16px 18px;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #eee;
+    text-decoration: none;
+    background-color: #3d3d46;    
+}
+
+#nav > li > a:hover,
+#nav > li > a.open {
+    color: #eee;
+    border-bottom-color: #384f76;
+    background-color: #ed1178;   
+}
+
+#nav li ul {
+    display: none;
+    background: #eee;
+
+}
+
+#nav li ul li a {
+    display: block;
+    background: none;
+    padding: 10px 0px;
+    padding-left: 30px;
+    font-size: 1.1em;
+    text-decoration: none;
+    font-weight: bold;
+    color: #222;
+
+}
+
+#nav li ul li a:hover {
+    background: #ccc;
+}

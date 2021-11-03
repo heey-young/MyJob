@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+/* progress */
+
+.progress {
+    overflow: hidden;
+    height: 50px;
+    margin: 0;
+    background: #eee;
+}
+
+
+.progress > h3 {
+    float: left;
+    position: relative;
+    z-index: 2;
+    width: 100px;
+    height: 50px;
+    margin: 0 15px 0 0;
+    padding: 0;
+    background: #8991a3;
+    color: #fff;
+    line-height: 46px;
+    text-align: center
+}
+
+.progress ol {
+    float: left;
+    margin: 0;
+    padding: 0
+}
+
+.progress li {
+    list-style: none;
+}
+
+
+.progress li,
+.progress li div {
+    background: url(../images/bg_progress.png) no-repeat;
+    white-space: nowrap;
+}
+
+.progress li {
+    float: left;
+    margin: 0 0 0 -30px;
+    padding: 0 0 0 15px;
+    background-position: -285px 0
+}
+
+
+
+.progress li div {   
+    display: table;
+    height: 50px;
+    padding: 0 20px 0 5px;
+    background-position: 100% top;
+    text-align:center;
+}
+
+.progress li div span {   
+    display: table-cell;
+    vertical-align: middle;
+    padding:0 30px 0 20px;
+   
+}
+
+.progress li.active {
+    position: relative;
+    z-index: 1;
+    background-position: 0 100%;
+    color: #fff
+}
+
+.progress li.active div {
+    background: url(../images/bg_progress.png) no-repeat 100% 100%;
+    padding:0;
+
+}
+.progress li.active div span {padding:0 30px 0 20px; text-align:center;}

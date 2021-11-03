@@ -1,0 +1,132 @@
+@charset "utf-8";
+
+/* chart */
+
+.chart-wrap {
+    border: 1px solid #ccc;
+    position: relative;
+    height: 230px;
+    padding: 40px 20px 20px 20px;
+}
+
+.bar-chart {
+    /*height:200px*/
+    width: 100%;
+    height: 200px;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.bar-chart.minus {
+    /* height:100px, +-둘다 있을 경우 */
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.bar-chart dt {
+    /* width:100px */
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 100px;
+    height: 20px;
+}
+
+.bar-chart.minus dt {
+    /* width:100px */
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 100px;
+    height: 20px;
+}
+
+.bar-chart dd {
+    /*height:200px*/
+    position: relative;
+    margin: 0 0 30px -105px;
+    padding: 0;
+    display: inline-block;
+    width: 100px;
+    height: 200px;
+}
+
+.bar-chart.minus dd {
+    position: relative;
+    margin: 0 0 130px -105px;
+    padding: 0;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+
+.bar-chart div {
+    /* bar 가운데 정렬 */
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    width: 50%;
+    margin-left: 25%;
+    font-size: 0
+}
+
+.bar-chart dd div em {
+    position: absolute;
+    left: 0;
+    top: -20px;
+    width: 100%;
+    height:20px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center
+}
+
+.bar-chart.minus div em {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.bar-chart.minus .plus em {
+    top: -20px
+}
+
+.bar-chart.minus .minus {
+    top: 100%; 
+}
+
+.bar-chart.minus .minus em {
+    top: 100%;;
+}
+
+.bar-chart dd div.bar01 {
+    background-color: #F34D78;
+}
+
+.bar-chart dd div.bar02 {
+    background-color: #72747C;
+}
+
+.bar-chart dd div.bar03 {
+    background-color: #bcdce6;
+}
+
+
+
+
+
+#graph {
+  stroke-dasharray: 630px;
+  stroke-dashoffset: 630px;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}

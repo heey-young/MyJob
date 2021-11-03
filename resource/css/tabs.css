@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+/* Tabs */
+
+.tabsBox {   
+    margin: 0;
+}
+
+.tabsBox:after {
+    content: "";
+    display: block;
+    clear: both
+}
+
+.tabsBox>.tabs-menu li {
+    float: left;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #c1c1c1;
+    padding: 5px 30px;
+    font-weight: bold;
+    background-color: #eee;
+    cursor: pointer;
+    border-bottom: none;
+}
+
+.tabsBox>.tabs-menu li.active {
+    position: relative;
+    background-color: #fff;
+}
+
+.tabsBox>.tabs-contents {
+    float: left;
+    width: 100%;
+    clear: both;
+    margin-top: -1px;
+}
+
+.tabsBox>.tabs-contents .cont {
+    padding: 10px;
+    border: 1px solid #c1c1c1;
+}
+
+
+/* inner tabs contents */
+
+.tabsBox.inner > .tabs-menu li {
+    float: left;
+    text-align: center;
+    white-space: nowrap;
+    padding: 5px 30px;
+    font-weight: bold;
+    color: #45494f;
+    border: 1px solid #c1c1c1;
+    background-color: #eeee;
+    cursor: pointer;
+    border-bottom: none;
+}
+
+.tabsBox.inner>.tabs-menu li.active {
+    position: relative;
+    background-color: #fff;
+}
+
+.tabsBox.inner>.tabs-contents {
+    float: left;
+    width: 100%;
+    clear: both;
+    margin-top: -1px;
+}
+
+.tabsBox.inner>.tabs-contents .cont {
+    padding: 15px;
+    border: 1px solid #c1c1c1;
+}

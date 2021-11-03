@@ -1,0 +1,231 @@
+@charset "utf-8";
+
+/* table */
+
+.dataTable {
+    margin: 0;    
+    border-top: 2px solid #444;
+  
+}
+
+.dataTable > .list {    
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-bottom:1px solid #777;/* IE7 */
+    
+}
+
+.dataTable > .list tr > th {
+    border: 1px solid #c1c1c1;
+    border-top: none;   
+    padding: 3px 4px;
+    height: 32px;
+    background-color: #f5f5f5;
+}
+.dataTable > .list tbody {border-bottom:1px solid #777;}
+
+.dataTable > .detail tr> td .list th {
+    border: 1px solid #c1c1c1;
+    text-align: center;
+    padding: 2px 2px;
+    height: 32px;
+    background-color: #f5f5f5;
+}
+.dataTable > .list tr:first-child td {border-top:none}
+.dataTable > .list tr > td,
+.dataTable > .detail tr> td .list td {
+    border: 1px solid #ccc;
+    border-bottom:none;    
+    padding: 2px 10px;
+    height: 28px;
+    text-align: center;
+}
+
+.dataTable > .detail {
+    width: 100%;
+}
+
+.dataTable > .detail .list {
+    width: 100%;
+    border-top: 2px solid #444;
+    border-bottom: 1px solid #ccc;
+}
+
+.dataTable  .detail tr > th {
+    border: 1px solid #c1c1c1;
+    padding: 2px 10px;
+    height: 31px;
+    text-align: left;
+    background-color: #f5f5f5;
+}
+
+.dataTable  .detail tbody > tr:first-child > th,
+.dataTable  .detail tbody > tr:first-child > td {
+    border-top: none;
+}
+
+.dataTable > .detail tr > td {
+    border: 1px solid #ccc;
+    padding: 2px 5px;
+}
+
+.dataTable  .control {
+    margin: 10px auto;
+    width: 100%;
+    display: table;
+}
+
+.dataTable  .control .left {
+    display: table-cell;
+}
+
+.dataTable > .control .right {
+    display: table-cell;
+    text-align: right;
+}
+
+.dataTable  .control .center {
+    display: table-cell;
+    text-align: center;
+}
+
+.dataTable .fixedHeader {
+    border: none;
+    position: relative;
+}
+
+.dataTable .fixedBody {
+    margin: 0;
+    border-bottom: none;
+    position: relative;
+}
+
+.dataTable .fixedBody .list {
+    table-layout: fixed;
+}
+
+.dataTable.scroll .fixedHeader {
+    background-color: #f5f5f5;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box
+}
+
+.dataTable .fixedHeader .list {
+    border-bottom: none;
+    table-layout: fixed;
+}
+
+.dataTable.scroll .fixedHeader .list {
+    width: calc(100% - 18px);
+    border-bottom: none;
+}
+
+.dataTable.scroll .fixedBody {
+    height: 153px;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    border-top: 1px solid #ccc;
+    border-bottom: 2px solid #777;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    margin-top: -1px;
+    background: #f8f8f8;
+}
+
+.dataTable.scroll .fixedBody .list {
+    background: #fff;
+    border: none;
+    margin-left: -1px;
+}
+
+.dataTable.scroll .fixedBody tbody tr:first-child {
+    border-top: none;
+}
+
+
+/* 페이징 */
+
+.paging {
+    padding: 15px 0;
+    line-height: normal;
+    text-align: center
+}
+
+.paging a,
+.paging strong {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    margin: 0 -3px;
+    padding: 1px 8px;
+    border-left: 1px solid #d6d6d6;
+    border-right: 1px solid #d6d6d6;
+    background-color: #fff;
+    font: bold 12px/16px Tahoma, Sans-serif;
+    color: #323232;
+    text-decoration: none;
+    vertical-align: top
+}
+
+.paging a:hover,
+.paging a:active,
+.paging a:focus {
+    background-color: #f8f8f8
+}
+
+.paging strong {
+    color: #ed1178;
+    text-decoration: underline;
+}
+
+.paging .direction {
+    border: 0;
+    font-weight: normal;
+    color: #767676;
+    text-decoration: none !important;
+    z-index: 1
+}
+
+.paging .direction:hover,
+.paging .direction:active,
+.paging .direction:focus {
+    color: #323232;
+    background-color: #fff
+}
+
+.paging .prev {
+    border-left: 0
+}
+
+.paging .next {
+    border-right: 0
+}
+
+.paging .direction span {
+    display: inline-block;
+    position: relative;
+    top: 4px;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: top
+}
+
+.paging .prev span {
+    *left: -4px;
+    margin-right: 1px;
+    border: 3px solid;
+    border-top: solid #fff;
+    border-bottom: solid #fff;
+    border-left: 0
+}
+
+.paging .next span {
+    margin-left: 1px;
+    border: 3px solid;
+    border-top: solid #fff;
+    border-bottom: solid #fff;
+    border-right: 0
+}
