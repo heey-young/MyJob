@@ -24,8 +24,18 @@
     <title>레이아웃</title>
     <link rel="stylesheet" type="text/css" href="../resource/css/lib/jquery-ui.min.css">
     <link rel="stylesheet" type="text/css" href="../resource/css/common.css">
+	 <link rel="stylesheet" type="text/css" href="../resource/css/style.css">
+
     <style>
                
+		.ui_accordion ul {border-top: 1px solid #ddd;}
+		.ul_accordion li {border-bottom: 1px solid #ddd;}
+		.ui_accordion li .btn_accordion {width: 100%; padding: 10px 20px; text-align: left;}
+		.btn_accordion.active {font-weight: 700;}
+		.accordion_cont {display: none; padding: 20px; background-color: #f5f5f5; border-top: 1px solid #ddd;}
+		.accordion_cont.active {display: block;}
+		
+		
 				
     </style>
 </head>
@@ -65,6 +75,67 @@
             <div class="contents">
                 <div class="page-title">
                     <h1>어코디언메뉴</h1> </div>
+				
+				<div class="ui_accordion t1">
+					<ul>
+						<li>
+							<a href="#" class="btn_accordion">이용안내 상세보기</a>
+							<div class="accordion_cont">내용</div>
+						</li>
+						<li>
+							<a href="#" class="btn_accordion">이용안내 상세보기</a>
+							<div class="accordion_cont">내용</div>
+						</li>
+						<li>
+							<a href="#" class="btn_accordion">이용안내 상세보기</a>
+							<div class="accordion_cont">내용</div>
+						</li>
+						<li>
+							<a href="#" class="btn_accordion">이용안내 상세보기</a>
+							<div class="accordion_cont">내용</div>
+						</li>
+						<li>
+							<a href="#" class="btn_accordion">이용안내 상세보기</a>
+							<div class="accordion_cont">내용</div>
+						</li>
+						<li>
+							<a href="#" class="btn_accordion">이용안내 상세보기</a>
+							<div class="accordion_cont">내용</div>
+						</li>
+					</ul>
+					
+				</div>
+                
+				
+				<div class="ui_accordion t2">
+					<ul>
+						<li>
+							<a href="#" class="btn_accordion">이용안내 상세보기</a>
+							<div class="accordion_cont">내용</div>
+						</li>
+						<li>
+							<a href="#" class="btn_accordion">이용안내 상세보기</a>
+							<div class="accordion_cont">내용</div>
+						</li>
+						<li>
+							<a href="#" class="btn_accordion">이용안내 상세보기</a>
+							<div class="accordion_cont">내용</div>
+						</li>
+						<li>
+							<a href="#" class="btn_accordion">이용안내 상세보기</a>
+							<div class="accordion_cont">내용</div>
+						</li>
+						<li>
+							<a href="#" class="btn_accordion">이용안내 상세보기</a>
+							<div class="accordion_cont">내용</div>
+						</li>
+						<li>
+							<a href="#" class="btn_accordion">이용안내 상세보기</a>
+							<div class="accordion_cont">내용</div>
+						</li>
+					</ul>
+					
+				</div>
                 <div class="page-wrap">
                     <nav>
                         <ul id="nav">
@@ -124,6 +195,13 @@
                 </div>
             </div>
         </div>
+	
+	
+    <script type="text/javascript" src="../resource/js/lib/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../resource/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../resource/js/common_new.js"></script>
+
+
     <script type="text/javascript">       
        
         $(function () { //어코디언메뉴
@@ -146,6 +224,41 @@
             });
         });
     </script>
+	
+	<script>
+	  $(".ui_accordion").each(function (){
+		  if($(this).hasClass('t1') === true){
+			  
+			  var acc_btn = $(this).find('.btn_accordion');
+			  acc_btn.click(function(e){
+				  e.preventDefault();
+				  if($(this).hasClass('active')) {
+					  slideUp();				  
+				  }else{
+					  slideUp();
+					  $(this).addClass('active').next().slideDown();
+				  }
+				  function slideUp(){
+					  acc_btn.removeClass('active').next().slideUp()
+				  };
+				  
+			  });
+		  }else if($(this).hasClass('t2') === true){
+			  var acc_btn2 = $(this).find('.btn_accordion');
+			  acc_btn2.click(function(e){
+				  e.preventDefault();
+				  if($(this).hasClass('active')){
+					  $(this).removeClass('active');					  
+				  }else{
+						  $(this).addClass('active');
+					  }
+				  $(this).next().slideToggle();
+			  });
+			  
+		  }	  
+	  });
+	
+	</script>
 </body>
 
 </html>
