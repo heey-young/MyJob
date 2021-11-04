@@ -1,43 +1,10 @@
 @charset "utf-8";
 
 /* layout */
-
-#container {
-    background-color: #fff;
-    margin: 0;
-    padding: 0;
-    margin-left: 200px;
-}
-
-#container .contents {
-    margin: 0;
-    padding: 0;
-    position: relative;
-}
-
-#container .contents .page-title {
-    margin: 0;
-    padding: 0;
-    height: 49px;
-    border-bottom: 1px dotted #ccc;
-}
-
-#container .contents .page-title h1 {
-    display: inline-block;
-    margin-left: 18px;
-    font-size: 18px;
-    line-height: 50px;
-}
-
-#container .contents .page-title p {}
-
-#container .contents .page-wrap {
-    margin: 20px;
-}
+#wrap {display: table; width: 100%; border: 1px solid red;}
 
 
 /* header */
-
 #go-skip {
     height: 45px
 }
@@ -179,18 +146,48 @@
 /* //header */
 
 
-/* left menu */
+#container { 
+    display: table-cell; border:2px solid red;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    
+}
 
+#container .contents {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+#container .contents .page-title {
+    margin: 0;
+    padding: 0;
+    height: 49px;
+    border-bottom: 1px dotted #ccc;
+}
+
+#container .contents .page-title h1 {
+    display: inline-block;
+    margin-left: 18px;
+    font-size: 18px;
+    line-height: 50px;
+}
+
+#container .contents .page-title p {}
+
+#container .contents .page-wrap {
+    margin: 20px;
+}
+
+/* left menu */
 #lnb {
+    display: table-cell;
     margin: 0;
     padding: 0;
     width: 199px;
-    position: absolute;
-    top: 45px;
-    left: 0;
-    bottom: 0;
-    border-right: 1px solid #999;
-    background: #eee;
+    
+   background: #2a3542;
     overflow: hidden;
     z-index: 2;
 }
@@ -278,7 +275,7 @@
 
 .info-box {
     /*참고*/
-    background-color: #f8f8f8;
+    /background-color: #f8f8f8;
     border: 1px solid #eee;
     border-left: 5px solid #ed1178;
     margin-bottom: 20px;
