@@ -2,51 +2,11 @@
 
 /* accordion */
 
-#nav {
-    display: block;
-    width: 500px;
-    margin: 0 auto;
-   
-}
-#nav,
-#nav ul {
-     list-style: none;
-}
-#nav > li > a {
-    display: block;
-    padding: 16px 18px;
-    font-size: 1.3em;
-    font-weight: bold;
-    color: #eee;
-    text-decoration: none;
-    background-color: #3d3d46;    
-}
-
-#nav > li > a:hover,
-#nav > li > a.open {
-    color: #eee;
-    border-bottom-color: #384f76;
-    background-color: #ed1178;   
-}
-
-#nav li ul {
-    display: none;
-    background: #eee;
-
-}
-
-#nav li ul li a {
-    display: block;
-    background: none;
-    padding: 10px 0px;
-    padding-left: 30px;
-    font-size: 1.1em;
-    text-decoration: none;
-    font-weight: bold;
-    color: #222;
-
-}
-
-#nav li ul li a:hover {
-    background: #ccc;
-}
+      
+		.ui_accordion ul {border: 1px solid #ddd;}
+		.ui_accordion li {border-bottom: 1px solid #ddd;}
+		.ui_accordion li .btn_accordion {display: block; width: 100%; padding: 10px 20px; text-align: left;}
+		.btn_accordion.active {font-weight: 700;}
+		.accordion_cont {display: none; padding: 20px; background-color: #f5f5f5; border-top: 1px solid #ddd;}
+		.accordion_cont.active {display: block;}
+		

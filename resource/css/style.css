@@ -2,9 +2,11 @@
 
 /* ////////////////////////////////////////////////////////////////////////////////*/
 
-@import "layout.css";
+@import "reset.css";
 
 /* layout Style */
+
+@import "layout.css";
 
 @import "form.css";
 
