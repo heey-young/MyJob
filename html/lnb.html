@@ -5,36 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
     <meta name="format-detection" content="telephone=no">
-
-    <meta name="robots" content="index,follow">
-    <meta name="description" content="Liiv M 설명">
-
-    <!-- SNS -->
-    <meta property="og:title" content="Liiv M">
-    <meta property="og:description" content="Liiv M 설명">
-    <meta property="og:image" content="대표 이미지">
-    <meta property="og:url" content="URL">
-    <meta name="twitter:title" content="Liiv M">
-    <meta name="twitter:description" content="Liiv M 설명">
-    <meta name="twitter:image" content="대표 이미지">
-    <meta name="twitter:card" content="summary">
-
-    <!link rel="apple-touch-icon-precomposed" href="">
-
-    <title>레이아웃</title>
-    <link rel="stylesheet" type="text/css" href="../resource/css/lib/jquery-ui.min.css">
-    <link rel="stylesheet" type="text/css" href="../resource/css/common.css">
-	 <link rel="stylesheet" type="text/css" href="../resource/css/style.css">
+    <title>템플릿 목록</title>
+    <link rel="stylesheet" href="../resource/css/lib/jquery-ui.min.css">
+    <!link rel="stylesheet" href="../resource/css/style.css">
+    
  
     <style>
+		html,body {width: 100%; height: 100%; margin: 0; padding: 0;}
         body {
-             background-color: #2a3542;
-            min-width:100px;
+          background-color: #2a3542;
+         
         }
-        
-        .list {padding:20px 10px 0 35px;}
+
+body,
+h1,
+h2,
+h3,
+h4,
+input,
+button,
+textarea {
+    font-family: '맑은 고딕', 'Malgun Gothic', '굴림', 'Gulim', Helvetica, AppleSDGothicNeo, sans-serif;
+    font-size: 13px;
+    color: #fff;
+}        
+		*{-webkit-box-sizing: border-box; box-sizing: border-box}
+        .list {padding: 0;}
         a {
-            color: #111;
+            color: #fff;
         }
         
         a:hover,
@@ -44,56 +42,58 @@
         }
         
         a:visited {
-            color: #777;
+            color: #eee;
         }
         
-        ol {
-            margin:0;
-            padding:0;
-            color:#111;
-            
-        }
-        
-        ol li {margin:10px 0;}
-        ol li ol {margin:6px 0 16px 16px;}
-        ol li ol  ul{margin:6px 0 16px 0px; list-style-type: none;}
-        ol li ol  ul:after {content: ''; display:block; clear: both;}
-        ol li ol  ul li{margin:3px 5px 5px 0; float:left}
-        
-        .ie11 {background-color:#4692b5; color:#fff !important; font-weight: bold; text-decoration: none; border-radius: 10px; padding:0 8px 3px;}
-        .ie10 {background-color:#4692b5; color:#fff !important; font-weight: bold; text-decoration: none; border-radius: 10px; padding:0 8px 3px;}
-        .ie9 {background-color:#4692b5;  color:#fff !important; font-weight: bold; text-decoration: none; border-radius: 10px; padding:0 8px 3px;}
-        .ie8 {background-color:#4692b5;  color:#fff !important; font-weight: bold; text-decoration: none; border-radius: 10px; padding:0 8px 3px;}
-        .ie7 {background-color:#4692b5;  color:#fff !important; font-weight: bold; text-decoration: none; border-radius: 10px; padding:0 8px 3px;}
-
+		.name {height: 70px; margin: 0; padding: 15px 0; vertical-align: top; background-color: #ed1178; text-align: center; font-size: 20px; color: #fff; font-weight: 700;}
+		.ver {margin:0; padding: 0; font-size: 12px; color: #eee;}
+		ol {padding-left: 20px; color:#fff;}
+		ol li {padding-top: 5px;}
+		.ui_tabs {display: table; overflow: hidden; width: 100%; margin: 0; padding: 0;}
+		.ui_tabs li {display: table-cell; width: 50%; /*border: 1px solid #000;*/}
+		.ui_tabs a {position: relative; display: table; width: 100%; height: 45px; background-color: #000; color: #777; text-decoration: none; font-weight: 700; line-height: 45px; text-align: center;}
+		.ui_tabs>li.active a {background-color: #2a3542; color: #fff}
+		.tabs_content {padding: 0;}
+		.tc_box {display: none; padding: 0 20px;}
+		.tc_box.active {display: block;}
     </style>
 </head>
 
-<body>
-    <div class="list">
-    <ol type="1">
-        <li>레이아웃
+<body style="margin:0; padding: 0;">
+<div class="name">
+		<p style="margin:0; padding: 0;">
+		템플릿	
+		</p>
+		<p class="ver">
+		v2021.11	
+		</p>
+		
+		
+	</div>
+	
+	
+	<div class="">
+		<ul class="ui_tabs">
+			<li class="active"><a href="#tc-01" data-click="tab">WEB</a></li>
+			<li><a href="#tc-02" data-click="tab">MOBILE</a></li>
+		</ul>	
+	
+		<div class="tabs_content">
+			
+		
+    		<div id="tc-01" class="tc_box active">
+    			<ol type="1">
+	   			<li><a href="accordion.html" target="main">어코디언메뉴</a></li>
+				<li><a href="tab.html" target="main">탭</a></li>
+
+				<li>레이아웃
             
-            <ol>
-                <li>Type01
-                    <ul>
-                    <li><a href="layout-type01-01.html" target="_top" class="ie11">IE11</a></li>
-                    <li><a href="layout-type01-02.html" target="_top" class="ie10">IE10</a></li>
-                    <li><a href="layout-type01-03.html" target="_top" class="ie9">IE9</a></li>
-                    <li><a href="layout-type01-04.html" target="_top" class="ie8">IE8</a></li>
-                    <li><a href="layout-type01-05.html" target="_top" class="ie7">IE7</a></li>
-                    </ul>    
-                </li>   
+           		 <ol>
+		
+
+                <li>Type01</li>   
                 
-                <li>Type02
-                    <ul>
-                    <li><a href="layout-type02-01.html" target="_top" class="ie11">IE11</a></li>
-                    <!--<li><a href="layout-type02-02.html" target="_top" class="ie10">IE10</a></li>
-                    <li><a href="layout-type02-03.html" target="_top" class="ie9">IE9</a></li>
-                    <li><a href="layout-type02-04.html" target="_top" class="ie8">IE8</a></li>
-                    <li><a href="layout-type02-05.html" target="_top" class="ie7">IE7</a></li>-->
-                    </ul>    
-                </li>   
+                <li>Type02</li>   
                 
             </ol>
             
@@ -115,16 +115,27 @@
         <li><a href="toggle.html" target="_top">메뉴열고닫기</a></li>
         <li><a href="chart.html" target="_top">차트</a></li>
         <li><a href="progress.html" target="_top">진행상태</a></li>
-        <li><a href="accordion.html" target="_top">어코디언메뉴</a></li>
 
-    </ol>
-    </div>
+    			</ol>
+    		</div>
+			<div id="tc-02" class="tc_box">
+				mobile
+			</div>
+		</div>
+	</div>
 	
-    <script type="text/javascript" src="../resource/js/lib/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="../resource/js/lib/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="../resource/js/common_new.js"></script>
-
-
+    <script src="../resource/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="../resource/js/lib/jquery-ui.min.js"></script>
+    <!--<script src="../resource/js/design.js"></script>-->
+	<script>
+		$(document).on('click', '[data-click="tab"]', function(e) {
+			e.preventDefault();
+			var thisTab = $(this),
+				thisContents = $($(this).attr('href'));
+			thisTab.parent().addClass('active').siblings().removeClass('active');
+			thisContents.addClass('active').siblings().removeClass('active');		
+		});
+	</script>
 </body>
 
 </html>

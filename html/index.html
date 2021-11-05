@@ -1,45 +1,37 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
     <meta name="format-detection" content="telephone=no">
     <title>레이아웃</title>
-    <link rel="stylesheet" type="text/css" href="../resource/css/lib/jquery-ui.min.css">
-    <link rel="stylesheet" type="text/css" href="../resource/css/style.css">
-    <link rel="stylesheet" type="text/css" href="../resource/css/layout.css"> 
+    <link rel="stylesheet" href="../resource/css/lib/jquery-ui.min.css">
+    <link rel="stylesheet" href="../resource/css/style.css"> 
 </head>
-
 <body>
-    <div id="wrap">
-        <!-- skip navigation -->
-        <div id="go-skip">
-            <h2 class="hidden">바로가기 링크</h2>
-            <ul>
-                <li><a href="#gnb"><span>GNB메뉴 바로가기</span></a></li>
-                <li><a href="#lnb"><span>LNB메뉴 바로가기</span></a></li>
-                <li><a href="#container"><span>본문으로 바로가기</span></a></li>
-            </ul>
-        </div>
-        <!-- //skip navigation -->
+	<!-- skip navigation -->
+    <div id="go-skip">
+    	<p class="hidden">바로가기 링크</p>
+        <ul>
+        	<li><a href="#gnb"><span>GNB메뉴 바로가기</span></a></li>
+            <li><a href="#lnb"><span>LNB메뉴 바로가기</span></a></li>
+            <li><a href="#container"><span>본문으로 바로가기</span></a></li>
+        </ul>
+    </div>
+    <!-- //skip navigation -->
         
-        <div id="lnb">
-            <iframe src="lnb.html" frameborder="0"></iframe>
+    <div id="wrap">        
+        <div id="lnb">			
+            <iframe src="lnb.html" title="템플릿 작업 리스트"></iframe>
         </div>
         <div id="container">
-            <button type="button" class="btn-sidebar-toggle">MENU</button>
-            <div class="contents">
-                <div class="page-title">
-                    <h1>메뉴 열고닫기</h1></div>
-                <div class="page-wrap"> </div>
-            </div>
-        </div>
+			<iframe src="main.html" title="템플릿 작업 내용" name="main"></iframe>        
+		</div>
     </div>
-     <script type="text/javascript" src="../resource/js/lib/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="../resource/js/lib/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="../resource/js/design.js"></script>
+    <script src="../resource/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="../resource/js/lib/jquery-ui.min.js"></script>
+    <script src="../resource/js/design.js"></script>
 </body>
 
 </html>

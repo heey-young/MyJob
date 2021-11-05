@@ -5,68 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
     <meta name="format-detection" content="telephone=no">
-
-    <meta name="robots" content="index,follow">
-    <meta name="description" content="Liiv M 설명">
-
-    <!-- SNS -->
-    <meta property="og:title" content="Liiv M">
-    <meta property="og:description" content="Liiv M 설명">
-    <meta property="og:image" content="대표 이미지">
-    <meta property="og:url" content="URL">
-    <meta name="twitter:title" content="Liiv M">
-    <meta name="twitter:description" content="Liiv M 설명">
-    <meta name="twitter:image" content="대표 이미지">
-    <meta name="twitter:card" content="summary">
-
-    <!link rel="apple-touch-icon-precomposed" href="">
-
     <title>레이아웃</title>
-    <link rel="stylesheet" type="text/css" href="../resource/css/lib/jquery-ui.min.css">
-    <link rel="stylesheet" type="text/css" href="../resource/css/style.css">
-	
-
-    <style>
-         
-		
-				
-    </style>
+    <link rel="stylesheet" href="../resource/css/lib/jquery-ui.min.css">
+    <link rel="stylesheet" href="../resource/css/style.css">    
 </head>
-
 <body>
-	<div id="link_skip">
-    	<p class="hidden">바로가기 링크</p>
-        <ul>
-        	<li><a href="#gnb"><span>GNB메뉴 바로가기</span></a></li>
-            <li><a href="#lnb"><span>LNB메뉴 바로가기</span></a></li>
-            <li><a href="#container"><span>본문으로 바로가기</span></a></li>
-        </ul>
-	</div>
-    <div id="header">
-       	<header>
-       		<h1><a href="#url">Verson_2021.11<span class="blind">바로가기</span></a></h1>
-       		<nav>
-				<ul id="gnb">
-        			<li><a href="#">link 1</a>
-            			<ul class="sub">
-                			<li><a href="#">sub link 1</a></li>
-                    		<li><a href="#">sub link 1</a></li>
-                    		<li><a href="#">sub link 1</a></li>
-                    		<li><a href="#">sub link 1</a></li>
-                		</ul>
-					</li>
-				</ul>
-			</nav>
-		</header>
-	</div>
-            	
-	<div id="lnb">
-            <iframe src="lnb.html" frameborder="0"></iframe>     
-        </div>
-        <div id="container">
-            <button type="button" class="btn-sidebar-toggle">MENU</button>
-            <div class="contents">
-                <div class="page-title">
+	        	
+	            <div class="page-title">
                     <h1>어코디언메뉴</h1> 
 				</div>
 				
@@ -140,38 +85,14 @@
 					
 				</div>    
 				</div>
-            </div>
-        </div>
+    
 	
-	
-    <script type="text/javascript" src="../resource/js/lib/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="../resource/js/lib/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="../resource/js/design.js"></script>
+    <script src="../resource/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="../resource/js/lib/jquery-ui.min.js"></script>
+    <script src="../resource/js/design.js"></script>
 
 
-    <script type="text/javascript">       
-       
-        $(function () { //어코디언메뉴
-            $("#nav > li > a").on("click", function (e) {
-                if ($(this).parent().has("ul")) {
-                    e.preventDefault();
-                }
-                if (!$(this).hasClass("open")) {
-                    // hide any open menus and remove all other classes
-                    $("#nav li ul").slideUp(350);
-                    $("#nav li a").removeClass("open");
-                    // open our new menu and add the open class
-                    $(this).next("ul").slideDown(350);
-                    $(this).addClass("open");
-                }
-                else if ($(this).hasClass("open")) {
-                    $(this).removeClass("open");
-                    $(this).next("ul").slideUp(350);
-                }
-            });
-        });
-    </script>
-	
+    
 	<script>
 	  $(".ui_accordion").each(function (){
 		  if($(this).hasClass('t1') === true){

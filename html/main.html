@@ -18,14 +18,14 @@
 				
                 <div class="page-wrap">
                     <div class="tabsBox">
-                        <ul class="ui_tabs">
-                            <li class="active"><a href="#tc_01">Tab Menu01</a></li>
-                            <li><a href="#tc_02">Tab Menu02</a></li>
-                            <li><a href="#tc_03">Tab Menu03</a></li>
+                        <ul class="tabs-menu">
+                            <li><a href="#tabs01">Tab Menu01</a></li>
+                            <li><a href="#tabs02">Tab Menu02</a></li>
+                            <li><a href="#tabs03">Tab Menu03</a></li>
                         </ul>
-                        <div class="tabs_content">
+                        <div class="tabs-contents">
                             <!-- //탭1 -->
-                            <div class="tc_box active" id="tc_01_01">
+                            <div class="cont" id="tabs01">
                                 <p>혈액형 관련 대표적인 심리학 이론들</p>
                                 <br>
                                 <div class="tabsBox inner">
@@ -75,7 +75,7 @@
                             </div>
                             <!-- 탭1// -->
                             <!-- //탭2 -->
-                            <div class="tc_box" id="tc_02">
+                            <div class="cont" id="tabs02">
                                 <p>혈액형 성격유형가설의 유래와 역사</p>
                                 <br>
                                 <div class="tabsBox inner">
@@ -107,7 +107,7 @@
                             </div>
                             <!-- 탭2// -->
                             <!-- //탭3 -->
-                            <div class="tc_box" id="tc_03"> <strong>서울백병원 신경정신과 우종민 박사의 말</strong>
+                            <div class="cont" id="tabs03"> <strong>서울백병원 신경정신과 우종민 박사의 말</strong>
                                 <br>
                                 <br>
                                 <p>사람의 성격에 대해서는 정신과만큼 관심이 많은 과가 없겠지요.
@@ -124,7 +124,7 @@
 	
 	<script src="../resource/js/lib/jquery-3.3.1.min.js"></script>
     <script src="../resource/js/lib/jquery-ui.min.js"></script>
-    <!--<script src="../resource/js/design.js"></script>-->
+    <script src="../resource/js/design.js"></script>
 
     <script>
 		$(document).on('click', '[data-click="tab"]', function(e) {
