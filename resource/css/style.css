@@ -164,3 +164,4 @@ caption {
     overflow: hidden;
 }
 .txt-left {text-align:left !important;}
+* {box-sizing: border-box;}

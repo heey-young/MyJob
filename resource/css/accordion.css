@@ -1,12 +1,13 @@
 @charset "utf-8";
 
-/* accordion */
-
-      
-		.ui_accordion ul {border: 1px solid #ddd;}
-		.ui_accordion li {border-bottom: 1px solid #ddd;}
-		.ui_accordion li .btn_accordion {display: block; width: 100%; padding: 10px 20px; text-align: left;}
-		.btn_accordion.active {font-weight: 700;}
-		.accordion_cont {display: none; padding: 20px; background-color: #f5f5f5; border-top: 1px solid #ddd;}
-		.accordion_cont.active {display: block;}
+/* accordion */      
+.ui_accordion ul {border: 1px solid #ddd;}
+.ui_accordion li {border-bottom: 1px solid #ddd; display:block;}
+.ui_accordion .btn_accordion {display: table; width: 100%; padding: 10px 20px; }
+.ui_accordion .btn_accordion .a_title {display: table-cell; width: 70%; text-align: left;}
+.ui_accordion .btn_accordion .a_date  {display: table-cell; width: 15%; text-align: right;}
+.ui_accordion .btn_accordion .a_num {display: table-cell; width: 15%; text-align: right;}
+.ui_accordion .btn_accordion.active {font-weight: 700;}
+.ui_accordion .accordion_cont {display: none; padding: 20px; background-color: #f5f5f5; border-top: 1px solid #ddd;}
+.ui_accordion .accordion_cont.active {display: block;}
 		

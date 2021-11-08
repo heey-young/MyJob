@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /* layout */
-#wrap {display: table; width: 100%; height: 100%;}
+#wrap {postion: relative; display: table; width: 100%; height: 100%;}
 
 
 /* header */
@@ -147,21 +147,14 @@
 
 
 #container { 
-	position: relative;
-    display: table-cell;
-	width: calc(100% - 240px); height: 100%;
+	position: relative;    
+	width: 100%; height: 100%;
     background-color: #fff;
     margin: 0;
-    padding: 0;
-    
+    padding: 0;     
 }
 
-#container iframe {width: 100%; height: 100%; margin: 0; padding: 0; border: 0;}
-#container .contents {
-    margin: 0;
-    padding: 0;
-    position: relative;
-}
+#container iframe {position: absolute; left: 0; top: 0;   width: 100%; height: 100%; margin: 0; padding: 0; border: 0;}
 
 .page-title {
     margin: 20px 25px;
@@ -175,7 +168,11 @@
 }
 .page-title p {}
 .page-wrap {
+	display: block;
+	margin: 0;
     padding: 0 25px;
+	width: calc(100% - 50px);
+	height: calc(100% - 70px);
 }
 
 /* left menu */
