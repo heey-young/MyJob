@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -7,83 +8,64 @@
     <meta name="format-detection" content="telephone=no">
     <title>레이아웃</title>
     <link rel="stylesheet" href="../resource/css/lib/jquery-ui.min.css">
-    <link rel="stylesheet" href="../resource/css/style.css">    
+    <link rel="stylesheet" href="../resource/css/style.css"> 
 </head>
+
 <body>
-	        	
-	            <div class="page-title">
-                    <h1>탭</h1> 
-				</div>
-				
-				
-                <div class="page-wrap">
+    <div class="page-title">
+        <h1>Tabs</h1> 
+    </div>
+    <div class="page-wrap">
+        <div class="box">
+            <ul class="ui_tabs">
+                <li class="active"><a href="#tc_01" data-click="tab">Tab Menu01</a></li>
+                <li><a href="#tc_02" data-click="tab">Tab Menu02</a></li>
+                <li><a href="#tc_03" data-click="tab">Tab Menu03</a></li>
+            </ul>
+            <div class="tabs_content">
+                <!-- //탭1 -->
+                <div class="tc_box active" id="tc_01"> tab content 1
                     <div class="box">
                         <ul class="ui_tabs">
-                            <li class="active"><a href="#tc_01" data-click="tab">Tab Menu01</a></li>
-                            <li><a href="#tc_02" data-click="tab">Tab Menu02</a></li>
-                            <li><a href="#tc_03" data-click="tab">Tab Menu03</a></li>
+                            <li class="active"><a href="#tc_0101" data-click="tab">Tab Menu01</a></li>
+                            <li><a href="#tc_0202" data-click="tab">Tab Menu02</a></li>
+                            <li><a href="#tc_0303" data-click="tab">Tab Menu03</a></li>
                         </ul>
                         <div class="tabs_content">
                             <!-- //탭1 -->
-                            <div class="tc_box active" id="tc_01">
-                                tab content 1
-								<div class="box">
-									<ul class="ui_tabs">
-										<li class="active"><a href="#tc_0101" data-click="tab">Tab Menu01</a></li>
-										<li><a href="#tc_0202" data-click="tab">Tab Menu02</a></li>
-										<li><a href="#tc_0303" data-click="tab">Tab Menu03</a></li>
-									</ul>
-									<div class="tabs_content">
-										<!-- //탭1 -->
-										<div class="tc_box active" id="tc_0101">
-											tab content 11
-										</div>
-										<!-- 탭1// -->
-										<!-- //탭2 -->
-										<div class="tc_box" id="tc_0202">
-											tab content 22
-										</div>
-										<!-- 탭2// -->
-										<!-- //탭3 -->
-										<div class="tc_box" id="tc_0303"> 
-											tab content 33
-										</div>
-										<!-- 탭3// -->
-									</div>
-           				         </div>
-
-
-							</div>
+                            <div class="tc_box active" id="tc_0101"> tab content 11 </div>
                             <!-- 탭1// -->
                             <!-- //탭2 -->
-                            <div class="tc_box" id="tc_02">
-                                tab content 2
-                            </div>
+                            <div class="tc_box" id="tc_0202"> tab content 22 </div>
                             <!-- 탭2// -->
                             <!-- //탭3 -->
-                            <div class="tc_box" id="tc_03"> 
-                                tab content 3
-							</div>
+                            <div class="tc_box" id="tc_0303"> tab content 33 </div>
                             <!-- 탭3// -->
                         </div>
                     </div>
                 </div>
-    
-	
-	
-	
+                <!-- 탭1// -->
+                <!-- //탭2 -->
+                <div class="tc_box" id="tc_02"> tab content 2 </div>
+                <!-- 탭2// -->
+                <!-- //탭3 -->
+                <div class="tc_box" id="tc_03"> tab content 3 </div>
+                <!-- 탭3// -->
+            </div>
+        </div>
+    </div>
     <script src="../resource/js/lib/jquery-3.3.1.min.js"></script>
     <script src="../resource/js/lib/jquery-ui.min.js"></script>
     <!--<script src="../resource/js/design.js"></script>-->
-	<script>
-		$(document).on('click', '[data-click="tab"]', function(e) {
-			e.preventDefault();
-			var thisTab = $(this),
-				thisContents = $($(this).attr('href'));
-			thisTab.parent().addClass('active').siblings().removeClass('active');
-			thisContents.addClass('active').siblings().removeClass('active');		
-		});
-	</script>
+    <script>
+        $(document).on('click', '[data-click="tab"]', function (e) {
+            e.preventDefault();
+            var thisTab = $(this)
+                , thisContents = $($(this).attr('href'));
+            thisTab.parent().addClass('active').siblings().removeClass('active');
+            thisContents.addClass('active').siblings().removeClass('active');
+        });
+    </script>
 </body>
 
 </html>

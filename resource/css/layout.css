@@ -1,8 +1,8 @@
 @charset "utf-8";
 
 /* layout */
-#wrap {postion: relative; display: table; width: 100%; height: 100%;}
-
+#wrap {position: relative; display: table; width: 100%; height: 100%;}
+.main_wrap {width: 100%; height: 100%; background-color: #efefef;}
 
 /* header */
 #link_skip {
