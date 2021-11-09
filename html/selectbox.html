@@ -9,6 +9,18 @@
     <title>레이아웃</title>
     <link rel="stylesheet" href="../resource/css/lib/jquery-ui.min.css">
     <link rel="stylesheet" href="../resource/css/style.css">    
+	<style>
+	
+		.ui_select {position: relative; display: inline-block; width: auto; height: 40px; vertical-align: top;}
+		.ui_select .select_item {display: table; width: 100%; height: 40px;}
+		.ui_select .select_default {display: table-cell; height: 40px; margin: 0; padding: 0 10px; border:1px solid #ddd; line-height: 38px; vertical-align: top;}
+		.ui_select .btn_select_list_toggle {display: table-cell; width: 40px; height: 40px; border: 1px solid #ddd; text-align: center; vertical-align: middle;}
+		.ui_select .btn_select_list_toggle.active {background-color: #e2e2e2;}
+		.ui_select .select_list ul {position: absolute; z-index: 1; width: 100%; border: 1px solid #ddd; border-top: 0; border-bottom: 0;}
+		.ui_select .select_list li {position: relative; display: none; width: 100%; background-color: #fff;}
+		.ui_select .select_list li>a {display: inline-block; width: 100%; padding: 10px; background-color: #f5f5f5; border: 1px solid #ddd;}
+		.ui_select .select_list li.active>a {position: relative; width: 100%; background-color: #fff;}
+	</style>
 </head>
 <body>
 	        	
@@ -25,51 +37,89 @@
 						
                         
                         
-                        <div class="ui_select">
-                            <ul>
-                                <li><button type="button">선택하세요</button></li>
-                                <li><button type="button">Option 11</button></li>
-                                <li><button type="button" class="click">Option 12</button></li>
-                                <li><button type="button">Option 13</button></li>
-                            </ul>
+                    <div class="ui_select">
+                    	<h4 class="hidden">
+							아이템 선택하기			
+							
+						</h4>       
+						<div class="select_item">
+							<div class="select_default">
+								선택하세요
+							</div>
+							<button type="button" class="btn_select_list_toggle">
+								V
+							</button>
+						</div>
+						<div class="select_list">
+							<ul>
+								<li class="active">
+									<a href="#">
+										<div>
+											
+											<p>Liiv M LTE 1GB</p>
+											<p>월 기본료 10,000원</p>
+										</div>	
+									</a>								
+								</li>
+								
+								<li>
+									<a href="#">
+										<p>Liiv M LTE 2GB</p>
+										<p>월 기본료 20,000원</p>									
+									</a>								
+								</li>
+								<li>
+									<a href="#">
+										<p>Liiv M LTE 3GB</p>
+										<p>월 기본료 30,000원</p>									
+									</a>								
+								</li>
 
-                            <ul>
-                                <li><button type="button" class="click">선택하세요</button></li>
-                                <li><button type="button">Option 21</button></li>
-                                <li><button type="button">Option 22</button></li>
-                                <li><button type="button">Option 23</button></li>
-                            </ul>
 
-                            <ul>
-                                <li><button type="button" class="click">선택하세요</button></li>
-                                <li><button type="button">Option 31</button></li>
-                                <li><button type="button">Option 32</button></li>
-                                <li><button type="button">Option 33</button></li>
-                            </ul>
-
-                            <ul>
-                                <li><button type="button" class="click">선택하세요</button></li>
-                                <li><button type="button">Option 41</button></li>
-                                <li><button type="button">Option 42</button></li>
-                                <li><button type="button">Option 43</button></li>
-                            </ul>
-
-                            <ul>
-                                <li><button type="button" class="click">선택하세요</button></li>
-                                <li><button type="button">Option 51</button></li>
-                                <li><button type="button">Option 52</button></li>
-                                <li><button type="button">Option 53</button></li>
-                            </ul>
-                        </div>    
+								
+								
+							</ul>
+							
+							
+						</div>
+					</div>    
 
  
         </div>
  
     
-	 <script src="../resource/js/lib/jquery-3.3.1.min.js"></script>
+	<script src="../resource/js/lib/jquery-3.3.1.min.js"></script>
     <script src="../resource/js/lib/jquery-ui.min.js"></script>
-    <script src="../resource/js/design.js"></script>
-
+   <!-- <script src="../resource/js/design.js"></script>-->
+	<script>
+		$(".ul_select").each(function(){
+			var phone_idx = $(this);
+			var phone_li = phone_idx.find(".select_list li");
+			
+			phone_idx.on("click", ".btn_select_list_toggle", function(){
+				$(this).toggleClass("active");
+				phone_li.toggle();
+			});			
+			phone_idx.on("click", ".select_list li", function(){
+				phone_li.toggle();
+				phone_li.removeClass("active");
+				$(this).addClass("active");
+				phone_idx.find(".select_default").html($(this).html());
+				phone_idx.find(".btn_select_list_toggle").removeClass("active");					
+				
+			});
+			$(document).mouseup(function(e) {
+				if(phone_idx.has(e.target).length == 0){
+					phone_li.css("display", "none");
+					phone_idx.find(".btn_select_list_toggle").removeClass("active");
+				}
+				
+			});		
+			
+		}); 
+	
+	
+	</script>
 
 
 	

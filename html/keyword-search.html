@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>키워드검색</title>
+    <link rel="stylesheet" href="../resource/css/lib/jquery-ui.min.css">
+    <link rel="stylesheet" href="../resource/css/style.css">    
+	<style>
+	
+		.comm_search .form_group {position: relative;}
+		.comm_search .form_group input {width: 100%; height: 50px;}
+		.comm_search .form_group .btn_search_del {position: absolute; right: 39px; top: 0; width: 40px; height: 40px; border: 1px solid #ddd;}
+		.comm_search .form_group .btn_search {position: absolute; right: 0; top: 0; width: 40px; height: 40px; border: 1px solid #ddd;}
+		.btn_search_del, .keyword_list {display: none;}
+	
+	</style>
+</head>
+<body>
+	        	
+	<div class="page-title">
+		<h1>키워드 검색</h1> 
+	</div>
+				
+				
+	<div class="page-wrap">
+		<div class="comm_search">		
+			<div class="form_group">				
+				<label>
+					<input type="text" size="60" class="i_text" title="검색어 입력" placeholder="검색어를 입력해주세요."> 
+				</label>
+				<button type="button" class="btn_search_del">삭제</button>
+				<button type="submit" class="btn_search">검색</button>
+			</div>	
+			<ul class="keyword_list">
+				<li><a href="#url">검색어1</a></li>
+				<li><a href="#url">검색어2</a></li>
+				<li><a href="#url">검색어3</a></li>
+				<li><a href="#url">검색어4</a></li>
+				<li><a href="#url">검색어5</a></li>
+			</ul>
+		</div>
+						
+						
+						
+						
+                        
+                        
+                    
+	</div>
+ 
+    
+	<script src="../resource/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="../resource/js/lib/jquery-ui.min.js"></script>
+   <!-- <script src="../resource/js/design.js"></script>-->
+	<script>
+		$(".comm_search").each(function(){
+			var c_idx = $(this);
+			var c_frm = c_idx.find(".i_text");
+			var c_del = c_idx.find(".btn_search_del");
+			var c_lst = c_idx.find(".keyword_list");
+			c_frm.on("input", function(){
+				if($(this).val() == "") {
+					c_del.css("display","none");
+				}else {
+					c_del.css("display", "block");
+					c_lst.css("display", "block")
+					
+				
+				}
+				
+			});
+			c_del.on("click", function(){
+				c_frm.val("");
+				c_del.css("display", "none");
+				c_lst.css("display", "none");
+				
+			});
+		}); 
+	
+	
+	</script>
+
+
+	
+</body></html>

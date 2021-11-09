@@ -129,6 +129,8 @@
     <script>
         $(".ui_accordion").each(function () {
                 if ($(this).hasClass('t1') === true) {
+				 var acc_btn = $(this).find('.btn_accordion');
+                 acc_btn.click(function (e) {	
                     e.preventDefault();
                     if ($(this).hasClass('active')) {
                         slideUp();
