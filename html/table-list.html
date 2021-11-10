@@ -1,86 +1,26 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="ko">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>테이블-목록</title>
-    <!--<link rel="stylesheet" href="../../dist/css/bootstrap.min.css">-->
-    <link href="../../assets/css/style.css" rel="stylesheet">
-    <script src="../../assets/js/jquery/jquery.min.js"></script>
-    <script src="../../dist/js/bootstrap.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>키워드검색</title>
+    <link rel="stylesheet" href="../resource/css/lib/jquery-ui.min.css">
+    <link rel="stylesheet" href="../resource/css/style.css">    
+	<style>
+	
+	</style>
 </head>
-
 <body>
-    <div id="wrap">
-        <!-- skip navigation -->
-        <div id="go-skip">
-            <h2 class="hidden">바로가기 링크</h2>
-            <ul>
-                <li><a href="#gnb"><span>GNB메뉴 바로가기</span></a></li>
-                <li><a href="#lnb"><span>LNB메뉴 바로가기</span></a></li>
-                <li><a href="#container"><span>본문으로 바로가기</span></a></li>
-            </ul>
-        </div>
-        <!-- //skip navigation -->
-        <div id="header">
-            <header>
-                <h1><a href="#url">LOGO</a></h1>
-                <nav>
-                    <ul id="gnb">
-                        <li> <a href="#">link 1</a>
-                            <ul class="sub">
-                                <li><a href="#">sub link 1</a></li>
-                                <li><a href="#">sub link 1</a></li>
-                                <li><a href="#">sub link 1</a></li>
-                                <li><a href="#">sub link 1</a></li>
-                            </ul>
-                        </li>
-                        <li> <a href="#">link 2</a>
-                            <ul class="sub">
-                                <li><a href="#">sub link 2</a></li>
-                                <li><a href="#">sub link 2</a></li>
-                                <li><a href="#">sub link 2</a></li>
-                                <li><a href="#">sub link 2</a></li>
-                            </ul>
-                        </li>
-                        <li> <a href="#">link 3</a>
-                            <ul class="sub">
-                                <li><a href="#">sub link 3</a></li>
-                                <li><a href="#">sub link 3</a></li>
-                                <li><a href="#">sub link 3</a></li>
-                                <li><a href="#">sub link 3</a></li>
-                            </ul>
-                        </li>
-                        <li> <a href="#">link 4</a>
-                            <ul class="sub">
-                                <li><a href="#">sub link 4</a></li>
-                                <li><a href="#">sub link 4</a></li>
-                                <li><a href="#">sub link 4</a></li>
-                                <li><a href="#">sub link 4</a></li>
-                            </ul>
-                        </li>
-                        <li> <a href="#">link 5</a>
-                            <ul class="sub">
-                                <li><a href="#">sub link 5</a></li>
-                                <li><a href="#">sub link 5</a></li>
-                                <li><a href="#">sub link 5</a></li>
-                                <li><a href="#">sub link 5</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
-        </div>
-        <div id="lnb">
-            <iframe src="lnb.html" frameborder="0"></iframe>     
-        </div>
-        <div id="container">
-            <button type="button" class="btn-sidebar-toggle">MENU</button>
-            <div class="contents">
-                <div class="page-title">
-                    <h1>테이블-목록 샘플</h1> </div>
-                <div class="page-wrap">
+	<div class="page-title">
+		<h1>테이블</h1> 
+	</div>
+				
+				
+	<div class="page-wrap">
+	
+		
                     <div class="titleBlock">
                         <div class="text">
                             <h2>타이틀</h2></div>
@@ -98,8 +38,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="dataBlock">
-                        <table class="listTable">
+                    <div class="dataTable">
+                        <table class="list">
                             <caption>table caption</caption> 
                             <colgroup>
                                 <col style="width:60px" />
@@ -237,9 +177,9 @@
                             <h2>헤디고정 테이블-헤더1줄</h2></div>
                         <div class="button"> </div>
                     </div>
-                    <div class="dataBlock">
+                    <div class="dataTable">
                         <div class="fixedHeader">
-                            <table class="listTable">
+                            <table class="list">
                                 <colgroup>
                                     <col style="width:60px" />
                                     <col style="width:250px" />
@@ -258,7 +198,7 @@
                             </table>
                         </div>
                         <div class="fixedBody">
-                            <table class="listTable">
+                            <table class="list">
                                 <colgroup>
                                     <col style="width:60px" />
                                     <col style="width:250px" />
@@ -323,9 +263,9 @@
                             <h2>헤더고정 테이블-헤더1줄-높이조건보다 낮을 때(줄바꿈 없는 5줄이하)</h2></div>
                         <div class="button"> </div>
                     </div>
-                    <div class="dataBlock">
+                    <div class="dataTable">
                         <div class="fixedHeader">
-                            <table class="listTable">
+                            <table class="list">
                                 <colgroup>
                                     <col style="width:60px" />
                                     <col style="width:250px" />
@@ -344,7 +284,7 @@
                             </table>
                         </div>
                         <div class="fixedBody">
-                            <table class="listTable">
+                            <table class="list">
                                 <colgroup>
                                     <col style="width:60px" />
                                     <col style="width:250px" />
@@ -385,9 +325,9 @@
                             <h2>헤더고정 테이블-헤더2줄</h2></div>
                         <div class="button"> </div>
                     </div>
-                    <div class="dataBlock">
+                    <div class="dataTable">
                         <div class="fixedHeader">
-                            <table class="listTable">
+                            <table class="list">
                                 <colgroup>
                                     <col style="width:60px" />
                                     <col style="width:*" />
@@ -411,7 +351,7 @@
                             </table>
                         </div>
                         <div class="fixedBody" style=height:500px>
-                            <table class="listTable">
+                            <table class="list">
                                 <caption>table caption</caption> 
                                 <colgroup>
                                     <col style="width:60px" />
@@ -471,87 +411,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <script>
-        //슬라이드메뉴
-        $(function () {
-            $('.btn-sidebar-toggle').on('click', function () {
-                if ($('#lnb').is(':visible')) {
-                    $('#lnb').animate({
-                        'width': '0'
-                    }, 'slow', function () {
-                        $('#lnb').hide();
-                    });
-                    $('#container').animate({
-                        'margin-left': '0'
-                    }, 'slow');
-                    $('.btn-sidebar-toggle').addClass('close');
-                }
-                else {
-                    $('#lnb').show();
-                    $('#lnb').animate({
-                        'width': '200px'
-                    }, 'slow');
-                    $('#container').animate({
-                        'margin-left': '200px'
-                    }, 'slow');
-                    $('.btn-sidebar-toggle').removeClass('close');
-                }
-            });
-        });
-        var App = {
-            accessibleMenu: function () {
-                $menu = $('#gnb');
-                $menuItem = $menu.find('> li > a');
-                $subMenu = $('#gnb .sub');
-                $subMenuItem = $subMenu.find('> li > a');
-                $submenuLastItem = $subMenu.find('> li:last-child > a');
-                $menuItem.bind({
-                    focus: function () {
-                        $subMenu.removeClass('is-show');
-                        if ($(this).next($subMenu)) {
-                            $(this).next($subMenu).addClass('is-show');
-                        }
-                    }
-                    , blur: function () {
-                        $subMenu.removeClass('is-show');
-                    }
-                });
-                $subMenuItem.bind({
-                    focus: function () {
-                        $(this).parent().parent().addClass('is-show');
-                    }
-                });
-                $submenuLastItem.bind({
-                    blur: function () {
-                        $subMenu.removeClass('is-show');
-                    }
-                });
-            }
-            , cancelAccessibleMenu: function () {
-                $(document).click(function () {
-                    if ($subMenu.hasClass('is-show')) {
-                        $subMenu.removeClass('is-show');
-                    }
-                });
-            }
-        };
-        $(function () {
-            App.accessibleMenu();
-            App.cancelAccessibleMenu();
-        });
-        // 헤더고정 테이블 스크롤
-        $('.dataBlock').each(function () {
-            if ($(this).find('.fixedBody').height() > 180) {
-                $(this).addClass('scroll');
-            }
-            else {
-                $(this).removeClass('scroll');
-            }
-        });
-    </script>
-</body>
+	<script src="../resource/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="../resource/js/lib/jquery-ui.min.js"></script>
+	<script src="../resource/js/design.js"></script>
+	
+            </body>
 
 </html>
