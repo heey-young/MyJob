@@ -1,11 +1,3 @@
-@charset "utf-8";
-
-/*
-Header : z-index:20, TOP button : z-index:20, Left Slide Menu : z-index:30, mLayer/fLayer : z-index:100, Basic Layer:10 이하 사용
-Basic Font Size : 14px;
-Html Font Size : 10px(1rem) - margin, padding
-기준해상도 : 360px(최소해상도 320)
-*/
 
 /* 공통 SPRITE IMG */
 .sp_common:before, .sp_common:after {content: ""; display: inline-block; -webkit-appearance:none; appearance:none; -webkit-background-color:transparent; background-color:transparent; background-image: url(../image/sp_common.png); background-repeat: no-repeat; background-size: 200px auto; vertical-align: middle;}
@@ -17,7 +9,7 @@ input[type="search"],
 input[type="date"],input[type="file"],
 input[type="email"],input[type="tel"],
 input[type="url"],input[type="number"],
-input[type="password"] {height: 55px; padding: 14px 0; -webkit-appearance: none; -webkit-border-radius: 0; border: 0; border-bottom: 1px solid #e2e2e2; border-radius: 0; background: #fff; font-size: 1.6rem; color: inherit; font-weight: 700; vertical-align: middle;}
+input[type="password"] {height: 30px; padding: 5px 0; -webkit-appearance: none; -webkit-border-radius: 0; border: 1px solid #e2e2e2; border-radius: 0; background: #fff; font-size: 1.3rem; color: inherit; vertical-align: middle; line-height: 1;}
 input:focus, select:focus {border-bottom: 2px solid #31aae6; color: #31aae6;}
 input.error {border-bottom: 2px solid #ec4135; color: #ec4135;}/*에러표시*/
 
@@ -215,53 +207,6 @@ input[type="radio"]:focus,input[type="checkbox"]:focus {outline-width: 0; border
 /* 카드선택 */
 .card_selectbox {position: relative; width: 100%;}
 
-/* 카드선택>카드 이미지 */
-.sp_card {position: relative; display: inline-block; width: 40px; height: 40px; margin: 0;}
-.card_list .sp_card {width: 53px; height: 16px;}
-.sp_card:after {position: absolute; left: 0; top: 0; content: ""; display: inline-block; width: 40px; -webkit-appearance: none; appearance: none; -webkit-background-color: transparent; background-color: transparent; background-image: url(../image/sp_card.png); background-repeat: no-repeat; background-size: 550px auto; vertical-align: middle; overflow: hidden;}
-.c_none:after {height: 40px; background-position: 0 0;}       /* 기본이미지(circle형태) */
-.c_kb:after {height: 40px; background-position: 0 -55px;}     /* 국민카드(circle형태) */
-.c_sh:after {height: 40px; background-position: -55px  -55px;}/* 신한카드(circle형태) */
-.c_ss:after {height: 40px; background-position: -110px -55px;}/* 삼성카드(circle형태) */
-.c_hd:after {height: 40px; background-position: -165px -55px;}/* 현대카드(circle형태) */
-.c_bc:after {height: 40px; background-position: -220px -55px;}/* 비씨카드(circle형태) */
-.c_ha:after {height: 40px; background-position: -275px -55px;}/* 하나카드(circle형태) */
-.c_nh:after {height: 40px; background-position: -330px -55px;}/* NH카드(circle형태) */
-.c_lt:after {height: 40px; background-position: -385px -55px;}/* 롯데카드(circle형태) */
-.c_ct:after {height: 40px; background-position: -440px -55px;}/* 시티카드(circle형태) */
-.c_kk:after {height: 40px; background-position: -495px -55px;}/* 카카오뱅크(circle형태)*/
-.card_list .c_kb:after {width: 53px; height: 16px; background-position: 0 -110px;}     /* 국민카드 */
-.card_list .c_sh:after {width: 53px; height: 16px; background-position: -55px  -110px;}/* 신한카드 */
-.card_list .c_ss:after {width: 53px; height: 16px; background-position: -110px -110px;}/* 삼성카드 */
-.card_list .c_hd:after {width: 53px; height: 16px; background-position: -165px -110px;}/* 현대카드 */
-.card_list .c_bc:after {width: 53px; height: 16px; background-position: -220px -110px;}/* 비씨카드 */
-.card_list .c_ha:after {width: 53px; height: 16px; background-position: -275px -110px;}/* 하나카드 */
-.card_list .c_nh:after {width: 53px; height: 16px; background-position: -330px -110px;}/* NH카드 */
-.card_list .c_lt:after {width: 53px; height: 16px; background-position: -385px -110px;}/* 롯데카드 */
-.card_list .c_ct:after {width: 53px; height: 16px; background-position: -440px -110px;}/* 시티카드 */
-.card_list .c_kk:after {width: 53px; height: 16px; background-position: -495px -110px;}/* 카카오뱅크 */
-
-/* 카드선택>선택된 카드 */
-.card_selectbox .card_toggle {position: relative; z-index: 10; display: inline-block; width: 40px; height: 40px; margin-top: 8px; background-color: #fff; text-align: left;}
-.ic_card_mod {width: 32px; height: 32px; background-position: -55px 0;}/* 납부카드변경 */
-
-/* 카드선택>카드 목록 */
-.card_selectbox .card_list {display: none; position: relative; padding: 12px 0; border-radius: 0;}
-.card_selectbox .card_toggle.active+.card_list {display: block;}
-.card_selectbox .card_list.block {display: block !important;}
-.card_selectbox .card_list ul {width: calc(100% + 36px); margin-left: -18px; margin-right: -18px; padding: 16px 10px 12px; border-top: 1px solid #dedede; background-color: #eceff4;}
-.card_selectbox .card_list ul:after {content:""; display: block; clear: both;}
-.card_selectbox .card_list li {display: inline-block; float: left; width: 25%; padding: 3px; text-align: center;}
-.card_selectbox .card_list li button {width: 100%; padding: 11px 4px 12px; background-color: #fff; border: 1px solid #ddd; border-radius: 5px; text-align: center;}
-.card_selectbox .card_list li button i {display: inline-block; width: 53px; height: 16px; vertical-align: middle;}
-.card_selectbox .card_list li button p {font-size: 1.2rem; color: #5a5a5a; white-space: nowrap;}
-
-/* 카드선택>안내문 */
-.card_selectbox ul.info {padding: 0 18px 15px; border-top: 0; border-bottom: 1px solid #ddd;}
-.card_selectbox ul.info li {float: left; padding: 0 0 2px 0; font-size: 1.2rem; text-align: left;}
-.card_selectbox ul.info li:nth-child(2n) {width: calc(100% - 9px); font-weight: 700; color: #717171;}
-.card_selectbox ul.info li:nth-child(2n+1) {width: 9px; margin-top: 2.5px; color: #717171;}
-.card_selectbox ul.info li em {color: #31aae6; font-weight: 700;}
 
 /* 화살표 */
 .arrow_up {position: relative; display: block; overflow: hidden; width: 24px; height: 12px; margin-bottom: -1px; margin-left: 8px;}
@@ -315,42 +260,3 @@ input[type="radio"]:focus,input[type="checkbox"]:focus {outline-width: 0; border
 .layer_sbmenu .layer_toggle li .btn_layer_close {display: none; color: transparent;}
 .layer_sbmenu .layer_toggle li .btn_layer_close:focus {display: block; font-size: 1.4rem; color: #000; line-height: 3.8rem; height: 100px;}
 
-/* 전화번호 선택 레이어 */
-.phone_selectbox {position: relative; display: inline-block; margin-top: 1px; height: 40px; white-space: nowrap; vertical-align: top;}
-.btn_toggle_n {position: relative; width: 40px; height: 40px; background-color: transparent;}
-.btn_toggle_n:after {position: absolute; left: 8px; top: 10px; width: 20px; height: 20px; background-position: -50px -75px;}
-.phone_selectbox .num_using {display: inline-block; height: 20px; margin-top: 9px; margin-right: 8px; padding: 0 8px; border: 1px solid #8aa3b1; border-radius: 10px; background-color: #fff; font-size: 1.2rem; font-weight: 700; color: #8aa3b1; line-height: 1.9rem;}
-.phone_selectbox .num_using_wrap {display: table; width: 100%; height: 40px; padding-right: 40px;}
-.phone_selectbox .num_using_wrap p {display: table-cell; padding-top: 0;}
-.num_default {display: inline-block; height: 40px; font-size: 1.6rem; color: #111; font-weight: 700; line-height: 3.8rem; text-align: right; vertical-align: top;}
-.lyr_num_list ul {position: absolute; left: 0;  top: 0; z-index: 9; display: inline-block; width: 100%; height: 40px; white-space: nowrap;}
-.lyr_num_list ul:after {content:""; display: block; clear: both;}
-.lyr_num_list li {position: relative; padding-right: 20px; text-align: right;}
-.lyr_num_list li:nth-child(2) {margin-top: 22px;}
-.lyr_num_list li:not(.num_init) {display: none; width: 100%; position: relative;}
-.lyr_num_list li.num_init {border: 0; padding-right: 0; position: absolute; top: 50%; margin-top: -21.5px; right: 0;}
-.lyr_num_list li.num_init button {background-color: #fff; width: 40px; height: 40px; margin-top: 0; border: 0;}
-.lyr_num_list li button {display: inline-block; width: 78%; margin-top: -1px; padding: 9px 24px 9px 10px; background-color: #f1f1f1; border: 1px solid #e2e2e2; border-left-color: #ddd; border-right-color: #ddd; font-size: 1.6rem; font-weight: 700; color: #717171;}
-.lyr_num_list li:nth-child(2) button {border-top-left-radius: 2px; border-top-right-radius: 2px; border-top-color: #ddd;}
-.lyr_num_list li:last-child button {border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; border-bottom-color: #ddd;}
-.lyr_num_list li button:hover {background-color: #fff; color: #111; font-weight: 700;}
-.lyr_num_list li.selected button {position: relative; width: 78%; background-color: #fff; color: #111; font-weight: 700;}
-.lyr_num_list li.selected button:after {position: absolute; right: 10px; top: 50%; content: ""; display: inline-block; width: 10px; height: 7px; margin-top: -3.5px; background-color: #fff; background-image: url(../image/ico_selected.png); background-position: right 50%; background-repeat: no-repeat; background-size: 10px auto;}
-
-.phone_selectbox.type2 .num_using_wrap p {display: inline-block; height: 40px; padding-top: 0;}/*사이드메뉴*/
-.phone_selectbox.type2 .num_using_wrap a {display: inline-block; height: 40px;}
-.phone_selectbox.type2 .lyr_num_list {position: relative;}
-.phone_selectbox.type2 .lyr_num_list ul {left: auto; right: 0; width: 40px;}
-.phone_selectbox.type2 .lyr_num_list li {width: 195px; padding-left: 15px;}
-.phone_selectbox.type2 .lyr_num_list li.num_init {width: 40px; margin-top: -20px; right: 0; padding-left: 0;}
-.phone_selectbox.type2 .lyr_num_list li.num_init .btn_toggle_n {width: 40px; background-color: transparent;}
-.phone_selectbox.type2 .lyr_num_list li button {width: 100%;}
-.phone_selectbox.type2 .num_using {position: fixed; top: 65px; right: 18px; margin: 0;}
-.phone_selectbox.type2 .num_default {font-size: 2rem; color: #fff;}
-
-@media only screen and (max-device-width : 359px) {/* iPhone5 & 5S(320x454)) */   
-    /* 사이드메뉴 전화번호 선택 레이어 */   
-    .btn {padding: 0 6px;}
-    .phone_selectbox.type2 .lyr_num_list li {width: 160px;}
-    .phone_selectbox.type2 .lyr_num_list li button {font-size: 1.3rem;}
-}
