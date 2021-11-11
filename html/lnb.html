@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -8,29 +9,41 @@
     <title>템플릿 목록</title>
     <link rel="stylesheet" href="../resource/css/lib/jquery-ui.min.css">
     <!link rel="stylesheet" href="../resource/css/style.css">
-    
- 
     <style>
-		html,body {width: 100%; height: 100%; margin: 0; padding: 0;}
+        html,
         body {
-          background-color: #2a3542;
-         
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
         }
-
-body,
-h1,
-h2,
-h3,
-h4,
-input,
-button,
-textarea {
-    font-family: '맑은 고딕', 'Malgun Gothic', '굴림', 'Gulim', Helvetica, AppleSDGothicNeo, sans-serif;
-    font-size: 13px;
-    color: #fff;
-}        
-		*{-webkit-box-sizing: border-box; box-sizing: border-box}
-        .list {padding: 0;}
+        
+        body {
+            background-color: #2a3542;
+        }
+        
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        input,
+        button,
+        textarea {
+            font-family: '맑은 고딕', 'Malgun Gothic', '굴림', 'Gulim', Helvetica, AppleSDGothicNeo, sans-serif;
+            font-size: 13px;
+            color: #fff;
+        }
+        
+        * {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box
+        }
+        
+        .list {
+            padding: 0;
+        }
+        
         a {
             color: #fff;
         }
@@ -45,20 +58,82 @@ textarea {
             color: #eee;
         }
         
-		.name {height: 70px; margin: 0; padding: 15px 0; vertical-align: top; background-color: #ed1178; text-align: center; font-size: 20px; color: #fff; font-weight: 700;}
-		.ver {margin:0; padding: 0; font-size: 12px; color: #eee;}
-		ol {padding-left: 20px; color:#fff;}
-		ol li {padding-top: 5px;}
-		.ui_tabs {display: table; overflow: hidden; width: 100%; margin: 0; padding: 0;}
-		.ui_tabs li {display: table-cell; width: 50%; /*border: 1px solid #000;*/}
-		.ui_tabs a {position: relative; display: table; width: 100%; height: 45px; background-color: #000; color: #777; text-decoration: none; font-weight: 700; line-height: 45px; text-align: center;}
-		.ui_tabs>li.active a {background-color: #2a3542; color: #fff}
-		.tabs_content {padding: 0;}
-		.tc_box {display: none; padding: 0 20px;}
-		.tc_box.active {display: block;}
+        .name {
+            height: 70px;
+            margin: 0;
+            padding: 15px 0;
+            vertical-align: top;
+            background-color: #ed1178;
+            text-align: center;
+            font-size: 20px;
+            color: #fff;
+            font-weight: 700;
+        }
+        
+        .ver {
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+            color: #eee;
+        }
+        
+        ol {
+            padding-left: 20px;
+            color: #fff;
+        }
+        
+        ol li {
+            padding-top: 5px;
+        }
+        
+        .ui_tabs {
+            display: table;
+            overflow: hidden;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .ui_tabs li {
+            display: table-cell;
+            width: 50%;
+            /*border: 1px solid #000;*/
+        }
+        
+        .ui_tabs a {
+            position: relative;
+            display: table;
+            width: 100%;
+            height: 45px;
+            background-color: #000;
+            color: #777;
+            text-decoration: none;
+            font-weight: 700;
+            line-height: 45px;
+            text-align: center;
+        }
+        
+        .ui_tabs>li.active a {
+            background-color: #2a3542;
+            color: #fff
+        }
+        
+        .tabs_content {
+            padding: 0;
+        }
+        
+        .tc_box {
+            display: none;
+            padding: 0 20px;
+        }
+        
+        .tc_box.active {
+            display: block;
+        }
     </style>
 </head>
 
+<<<<<<< Updated upstream
 <body>
 <div class="name">
 		<p>
@@ -128,18 +203,61 @@ textarea {
 		</div>
 	</div>
 	
+=======
+<body style="margin:0; padding: 0;">
+    <div class="name">
+        <p style="margin:0; padding: 0;"> 템플릿 </p>
+        <p class="ver"> 2021년 v01 </p>
+    </div>
+    <div class="">
+        <ul class="ui_tabs">
+            <li class="active"><a href="#tc-01" data-click="tab">WEB</a></li>
+            <li><a href="#tc-02" data-click="tab">MOBILE</a></li>
+        </ul>
+        <div class="tabs_content">
+            <div id="tc-01" class="tc_box active">
+                <ol type="1">
+                    <li><a href="accordion.html" target="main">Accordion</a></li>
+                    <li><a href="tab.html" target="main">Tabs</a></li>
+                    <li><a href="select.html" target="main">Select Box</a></li>
+                    <li><a href="keyword-search.html" target="main">검색박스</a></li>
+                    <li>레이아웃
+                        <ol>
+                            <li>Type01</li>
+                            <li>Type02</li>
+                        </ol>
+                    </li>
+                    <li>컨포넌트</li>
+                    <li>드롭다운 2차메뉴</li>
+                    <li>레이어팝업</li>
+                    <li>데이타테이블-목록
+                        <ol>
+                            <li>Type 01</li>
+                            <li>Type 02</li>
+                        </ol>
+                    </li>
+                    <li>데이타테이블-입출력</li>
+                    <li>메뉴열고닫기</li>
+                    <li>차트</li>
+                    <li>진행상태</li>
+                </ol>
+            </div>
+            <div id="tc-02" class="tc_box"> mobile </div>
+        </div>
+    </div>
+>>>>>>> Stashed changes
     <script src="../resource/js/lib/jquery-3.3.1.min.js"></script>
     <script src="../resource/js/lib/jquery-ui.min.js"></script>
     <!--<script src="../resource/js/design.js"></script>-->
-	<script>
-		$(document).on('click', '[data-click="tab"]', function(e) {
-			e.preventDefault();
-			var thisTab = $(this),
-				thisContents = $($(this).attr('href'));
-			thisTab.parent().addClass('active').siblings().removeClass('active');
-			thisContents.addClass('active').siblings().removeClass('active');		
-		});
-	</script>
+    <script>
+        $(document).on('click', '[data-click="tab"]', function (e) {
+            e.preventDefault();
+            var thisTab = $(this)
+                , thisContents = $($(this).attr('href'));
+            thisTab.parent().addClass('active').siblings().removeClass('active');
+            thisContents.addClass('active').siblings().removeClass('active');
+        });
+    </script>
 </body>
 
 </html>
