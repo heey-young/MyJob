@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
     <meta name="format-detection" content="telephone=no">
-    <title>레이아웃</title>
+    <title>테이블</title>
     <link rel="stylesheet" href="../resource/css/lib/jquery-ui.min.css">
     <link rel="stylesheet" href="../resource/css/style.css"> 
 </head>
@@ -33,119 +33,89 @@
                             </div>
                         </div>
                     </div>
+					
+	
+ 
+
+
+
+
+     
+
+
                     <div class="dataTable">
-                        <table class="list">
-                            <caption>table caption</caption> 
-                            <colgroup>
-                                <col style="width:60px" />
-                                <col style="width:250px" />
-                                <col style="width:*" />
-                                <col style="width:100px" />
-                                <col style="width:100px" /> </colgroup>
-                            <thead>
-                                <tr>
-                                    <th>Num</th>
-                                    <th>구분</th>
-                                    <th>프로젝트명</th>
-                                    <th>상태</th>
-                                    <th>작성일</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>10</td>
-                                    <td>
-                                        <input type="text" class="w100p"> </td>
-                                    <td class="txt-left"><a href="#url">프로젝트명</a></td>
-                                    <td>진행</td>
-                                    <td>2017-01-01</td>
-                                </tr>
-                                <tr>
-                                    <td>9</td>
-                                    <td>
-                                        <input type="radio">
-                                        <label for="">체크1</label>
-                                        <input type="radio">
-                                        <label for="">체크2</label>
-                                    </td>
-                                    <td class="txt-left"><a href="#url">프로젝트명</a></td>
-                                    <td>진행</td>
-                                    <td>2017-01-01</td>
-                                </tr>
-                                <tr>
-                                    <td>8</td>
-                                    <td>
-                                        <input type="checkbox">
-                                        <label for="">체크1</label>
-                                        <input type="checkbox">
-                                        <label for="">체크2</label>
-                                    </td>
-                                    <td class="txt-left"><a href="#url">프로젝트명</a></td>
-                                    <td>진행</td>
-                                    <td>2017-01-01</td>
-                                </tr>
-                                <tr>
-                                    <td>7</td>
-                                    <td>
-                                        <div class="search-group">
-                                            <input type="text" name="" id="" readonly placeholder="검색...">
-                                            <button type="button"><i class="ico-search"></i>검색</button>
-                                        </div>
-                                    </td>
-                                    <td class="txt-left"><a href="#url">프로젝트명</a></td>
-                                    <td>진행</td>
-                                    <td>2017-01-01</td>
-                                </tr>
-                                <tr>
-                                    <td>6</td>
-                                    <td>
-                                        <select class="w100p">
-                                            <option>선택</option>
-                                        </select>
-                                    </td>
-                                    <td class="txt-left"><a href="#url">프로젝트명</a></td>
-                                    <td>진행</td>
-                                    <td>2017-01-01</td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>
-                                        <label for="load-file" class="hidden">Load a file:</label>
-                                        <input type="file" id="load-file"> </td>
-                                    <td class="txt-left"><a href="#url">프로젝트명</a></td>
-                                    <td>진행</td>
-                                    <td>2017-01-01</td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>구분</td>
-                                    <td class="txt-left"><a href="#url">프로젝트명</a></td>
-                                    <td>진행</td>
-                                    <td>2017-01-01</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>구분</td>
-                                    <td class="txt-left"><a href="#url">프로젝트명</a></td>
-                                    <td>진행</td>
-                                    <td>2017-01-01</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>구분</td>
-                                    <td class="txt-left"><a href="#url">프로젝트명</a></td>
-                                    <td>진행</td>
-                                    <td>2017-01-01</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>구분</td>
-                                    <td class="txt-left"><a href="#url">프로젝트명</a></td>
-                                    <td>진행</td>
-                                    <td>2017-01-01</td>
-                                </tr>
-                            </tbody>
-                        </table>
+						<table class="list">
+							
+					
+  <caption>상품에 따른 월별 판매현황</caption>
+
+       <colgroup>
+
+          <col width="20%" />
+
+          <col width="25%" />
+
+          <col width="25%" />
+
+          <col width="30%" />
+
+       </colgroup>
+
+       <thead>
+
+          <tr>
+
+             <th rowspan="2" scope="col">구분</th>
+
+             <th colspan= "3" scope="colgroup">상품종류</th>
+
+          </tr>
+
+          <tr>
+
+             <th scope="col">스마트폰</th>
+
+             <th scope="col">테블릿PC</th>
+
+             <th scope="col">데스크탑PC</th>
+
+          </tr>
+
+       </thead>
+
+       <tbody>
+
+          <tr>
+
+             <th scope="row">1월</th>
+
+             <td>5만대</td>
+
+             <td>3만대</td>
+
+             <td>1만대</td>
+
+          </tr>
+
+          <tr>
+
+             <th scope="row">2월</th>
+
+             <td>7만대</td>
+
+             <td>2만대</td>
+
+             <td>1만대</td>
+
+          </tr>
+
+       </tbody>
+
+    </table>
+
+ 
+
+
                     </div>
                     <div class="view-num"> 24/3 </div>
                     
@@ -173,237 +143,50 @@
                         <div class="button"> </div>
                     </div>
                     <div class="dataTable">
-                        <div class="fixedHeader">
-                            <table class="list">
-                                <colgroup>
-                                    <col style="width:60px" />
-                                    <col style="width:250px" />
-                                    <col style="width:*" />
-                                    <col style="width:80px" />
-                                    <col style="width:80px" /> </colgroup>
-                                <thead>
-                                    <tr>
-                                        <th>Num</th>
-                                        <th>구분</th>
-                                        <th>프로젝트명</th>
-                                        <th>상태</th>
-                                        <th>작성일</th>
-                                    </tr>
-                                </thead>
-                            </table>
-                        </div>
-                        <div class="fixedBody">
-                            <table class="list">
-                                <colgroup>
-                                    <col style="width:60px" />
-                                    <col style="width:250px" />
-                                    <col style="width:*" />
-                                    <col style="width:80px" />
-                                    <col style="width:80px" /> </colgroup>
-                                <tbody>
-                                    <tr>
-                                        <td>10</td>
-                                        <td>
-                                            <input type="text" class="w100p"> </td>
-                                        <td class="txt-left"><a href="#url">프로젝트명</a></td>
-                                        <td>진행</td>
-                                        <td>2017-01-01</td>
-                                    </tr>
-                                    <tr>
-                                        <td>9</td>
-                                        <td>
-                                            <input type="text" class="w100p"> </td>
-                                        <td class="txt-left"><a href="#url">프로젝트명</a></td>
-                                        <td>진행</td>
-                                        <td>2017-01-01</td>
-                                    </tr>
-                                    <tr>
-                                        <td>8</td>
-                                        <td>
-                                            <input type="text" class="w100p"> </td>
-                                        <td class="txt-left"><a href="#url">프로젝트명</a></td>
-                                        <td>진행</td>
-                                        <td>2017-01-01</td>
-                                    </tr>
-                                    <tr>
-                                        <td>8</td>
-                                        <td>
-                                            <input type="text" class="w100p"> </td>
-                                        <td class="txt-left"><a href="#url">프로젝트명</a></td>
-                                        <td>진행</td>
-                                        <td>2017-01-01</td>
-                                    </tr>
-                                    <tr>
-                                        <td>7</td>
-                                        <td>
-                                            <input type="text" class="w100p"> </td>
-                                        <td class="txt-left"><a href="#url">프로젝트명</a></td>
-                                        <td>진행</td>
-                                        <td>2017-01-01</td>
-                                    </tr>
-                                    <tr>
-                                        <td>6</td>
-                                        <td>
-                                            <input type="text" class="w100p"> </td>
-                                        <td class="txt-left"><a href="#url">프로젝트명</a></td>
-                                        <td>진행</td>
-                                        <td>2017-01-01</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="titleBlock">
-                        <div class="text">
-                            <h2>헤더고정 테이블-헤더1줄-높이조건보다 낮을 때(줄바꿈 없는 5줄이하)</h2></div>
-                        <div class="button"> </div>
-                    </div>
-                    <div class="dataTable">
-                        <div class="fixedHeader">
-                            <table class="list">
-                                <colgroup>
-                                    <col style="width:60px" />
-                                    <col style="width:250px" />
-                                    <col style="width:*" />
-                                    <col style="width:80px" />
-                                    <col style="width:80px" /> </colgroup>
-                                <thead>
-                                    <tr>
-                                        <th>Num</th>
-                                        <th>구분</th>
-                                        <th>프로젝트명</th>
-                                        <th>상태</th>
-                                        <th>작성일</th>
-                                    </tr>
-                                </thead>
-                            </table>
-                        </div>
-                        <div class="fixedBody">
-                            <table class="list">
-                                <colgroup>
-                                    <col style="width:60px" />
-                                    <col style="width:250px" />
-                                    <col style="width:*" />
-                                    <col style="width:80px" />
-                                    <col style="width:80px" /> </colgroup>
-                                <tbody>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>
-                                            <input type="text" class="w100p"> </td>
-                                        <td class="txt-left"><a href="#url">프로젝트명</a></td>
-                                        <td>진행</td>
-                                        <td>2017-01-01</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>
-                                            <input type="text" class="w100p"> </td>
-                                        <td class="txt-left"><a href="#url">프로젝트명</a></td>
-                                        <td>진행</td>
-                                        <td>2017-01-01</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>
-                                            <input type="text" class="w100p"> </td>
-                                        <td class="txt-left"><a href="#url">프로젝트명</a></td>
-                                        <td>진행</td>
-                                        <td>2017-01-01</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="titleBlock">
-                        <div class="text">
-                            <h2>헤더고정 테이블-헤더2줄</h2></div>
-                        <div class="button"> </div>
-                    </div>
-                    <div class="dataTable">
-                        <div class="fixedHeader">
-                            <table class="list">
-                                <colgroup>
-                                    <col style="width:60px" />
-                                    <col style="width:*" />
-                                    <col style="width:250px" />
-                                    <col style="width:250px" />
-                                    <col style="width:80px" />
-                                    <col style="width:80px" /> </colgroup>
-                                <thead>
-                                    <tr>
-                                        <th rowspan="2">Num</th>
-                                        <th rowspan="2">구분</th>
-                                        <th colspan="2">프로젝트명</th>
-                                        <th rowspan="2">상태</th>
-                                        <th rowspan="2">작성일</th>
-                                    </tr>
-                                    <tr>
-                                        <th>프로젝트명1<br>1<br>1</th>
-                                        <th>프로젝트명2</th>
-                                    </tr>
-                                </thead>
-                            </table>
-                        </div>
-                        <div class="fixedBody" style=height:500px>
-                            <table class="list">
-                                <caption>table caption</caption> 
-                                <colgroup>
-                                    <col style="width:60px" />
-                                    <col style="width:*" />
-                                    <col style="width:250px" />
-                                    <col style="width:250px" />
-                                    <col style="width:80px" />
-                                    <col style="width:80px" /> </colgroup>
-                                <tbody>
-                                    <tr>
-                                        <td>10</td>
-                                        <td>
-                                            <input type="text" class="w100p"> </td>
-                                        <td class="txt-left"><a href="#url">프로젝트명1</a></td>
-                                        <td class="txt-left"><a href="#url">프로젝트명2</a></td>
-                                        <td>진행</td>
-                                        <td>2017-01-01</td>
-                                    </tr>
-                                    <tr>
-                                        <td>9</td>
-                                        <td>
-                                            <input type="text" class="w100p"> </td>
-                                        <td class="txt-left"><a href="#url">프로젝트명1</a></td>
-                                        <td class="txt-left"><a href="#url">프로젝트명2</a></td>
-                                        <td>진행</td>
-                                        <td>2017-01-01</td>
-                                    </tr>
-                                    <tr>
-                                        <td>8</td>
-                                        <td>
-                                            <input type="text" class="w100p"> </td>
-                                        <td class="txt-left"><a href="#url">프로젝트명1</a></td>
-                                        <td class="txt-left"><a href="#url">프로젝트명2</a></td>
-                                        <td>진행</td>
-                                        <td>2017-01-01</td>
-                                    </tr>
-                                    <tr>
-                                        <td>7</td>
-                                        <td>
-                                            <input type="text" class="w100p"> </td>
-                                        <td class="txt-left"><a href="#url">프로젝트명1</a></td>
-                                        <td class="txt-left"><a href="#url">프로젝트명2</a></td>
-                                        <td>진행</td>
-                                        <td>2017-01-01</td>
-                                    </tr>
-                                    <tr>
-                                        <td>6</td>
-                                        <td>
-                                            <input type="text" class="w100p"> </td>
-                                        <td class="txt-left"><a href="#url">프로젝트명1</a></td>
-                                        <td class="txt-left"><a href="#url">프로젝트명2</a></td>
-                                        <td>진행</td>
-                                        <td>2017-01-01</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                   
+						<table class="list">
+<caption>본사 부서별 연락처</caption>
+<thead>
+<tr>
+<th id="org" colspan="2">부서명</th>
+<th id="tel">전화번호(02+)</th>
+<th id="fax">팩스번호(02+)</th>
+</tr>
+</thead>
+<tbody>
+  <tr>
+<th colspan="2" id="a">종합상황실</th>
+<td headers="tel a">310-1300~1304</td>
+<td headers="fax a">312-0019</td>
+</tr>
+<tr>
+<th rowspan="2" id="b">비서실</th>
+<th id="b1">비서실장</th>
+<td headers="tel b b1">310-1110</td>
+<td headers="fax b b1" rowspan="2">314-8184(사장)<br />312-1952(감사)</td>
+</tr>
+<tr>
+<th id="b2">비서실</th>
+<td headers="tel b b2"> 310-1112(사장)<br />310-1113(감사)</td>
+</tr>
+<tr>
+<th rowspan="3" id="c">홍보실</th>
+<th id="c1">홍보실장</th>
+<td headers="tel c c1">310-1220</td>
+<td rowspan="3" headers="fax c c1">313-3109</td>
+</tr>
+<tr>
+<th id="c2">홍보부</th>
+<td headers="tel c c2">310-1221~2,1224~5,1226~7,1229</td>
+</tr>
+<tr>
+<th id="c3">국제협력부</th>
+<td headers="tel c c3">310-1230~1234</td>
+</tr>
+</tbody>
+</table>
+						
+                   
                     </div>
                 </div>
             </div>
