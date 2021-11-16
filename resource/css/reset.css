@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 html {font-size: 10px; height: 100%;}
-body {position: relative; width: 100%; min-width: 320px; height: 100%; background-color: #fff; color: #111; word-break: break-all; -webkit-text-size-adjust: none;}
+body {position: relative; width: 100%; min-width: 320px; height: 100%; background-color: red; color: #111; word-break: break-all; -webkit-text-size-adjust: none;}
 body,ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,p,figure,form,fieldset,legend,input,
 label,textarea,legend,button,table,td,th,button, select 
 {margin: 0; padding: 0; font-family: "Roboto","Noto Sans","Apple SD Gothic Neo","맑은 고딕","Malgun Gothic",sans-serif; font-size: 14px; font-weight: 400; color: #111; line-height: 1.45;}
