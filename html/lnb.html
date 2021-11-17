@@ -10,7 +10,7 @@
    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
 
-    <link rel="stylesheet" href="../resource/css/style.css">
+    <!link rel="stylesheet" href="../resource/css/style.css">
 
     <style>
         html,
@@ -21,7 +21,7 @@
             padding: 0;
         }
 		div, p {margin:0; padding: 0;}
-
+		body {background-color: #2a3542;}
 body,
 h1,
 h2,
@@ -33,7 +33,47 @@ textarea {
     font-family: '맑은 고딕', 'Malgun Gothic', '굴림', 'Gulim', Helvetica, AppleSDGothicNeo, sans-serif;
     font-size: 13px;
     color: #fff;
-}        
+}      
+		
+		#wrap {display: table; width: 100%; height: 100%;}
+.main_wrap {width: 100%; height: 100%; background-color: #efefef;}
+#lnb {
+    display: table-cell;
+    margin: 0;
+    padding: 0;
+    width: 240px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+#lnb iframe {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 240px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    height: 100%;
+    overflow: hidden;
+}
+#container { 
+	position: relative;
+	display: table-cell; 
+	width: calc(100% - 240px); height: 500px;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+	border: 2px solid red;
+}
+
+#container iframe {position: absolute; left: 0; top: 0;   width: 100%; height: 100%; margin: 0; padding: 0; border: 0;}
+
+
+
+
 		*{-webkit-box-sizing: border-box; box-sizing: border-box}
         .list {padding: 0;}
 
@@ -84,50 +124,8 @@ textarea {
             padding-top: 5px;
         }
         
-        .ui_tabs {
-            display: table;
-            overflow: hidden;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .ui_tabs li {
-            display: table-cell;
-            width: 50%;
-            /*border: 1px solid #000;*/
-        }
-        
-        .ui_tabs a {
-            position: relative;
-            display: table;
-            width: 100%;
-            height: 45px;
-            background-color: #000;
-            color: #777;
-            text-decoration: none;
-            font-weight: 700;
-            line-height: 45px;
-            text-align: center;
-        }
-        
-        .ui_tabs>li.active a {
-            background-color: #2a3542;
-            color: #fff
-        }
-        
-        .tabs_content {
-            padding: 0;
-        }
-        
-        .tc_box {
-            display: none;
-            padding: 0 20px;
-        }
-        
-        .tc_box.active {
-            display: block;
-        }
+       
+		
     </style>
 </head>
 <body>
