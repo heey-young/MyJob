@@ -55,9 +55,16 @@
 
 <body>
                 <div class="page-title">
-                    <h1>레이어팝업</h1> </div>
-                <div class="page-wrap">
-					<a href="#pop1Layer" class="btn layer_open" onclick="modalLayer.show('pop1Layer')">예제-1 보기</a><br><br>
+                    <h1>레이어팝업</h1> 
+	
+	</div>
+    
+	<div class="page-wrap">
+	
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		
+		
+		<a href="#pop1Layer" class="btn layer_open" onclick="modalLayer.show('pop1Layer')">예제-1 보기</a><br><br>
                     <div  id="pop1Layer" class="mlayer_pop">
                         <div class="layer_content">
                             <div class="layer_header">
@@ -89,6 +96,43 @@
 							</button>
                         </div>
                     </div>
+					
+					<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+					
+					
+					<a href="#pop2Layer" class="btn layer_open" onclick="fullLayer.show('pop2Layer')">예제-2 보기</a><br><br>
+                    <div  id="pop2Layer" class="flayer_pop">
+                        <div class="layer_content">
+                            <div class="layer_header">
+								모달타이틀
+							</div>
+							<div class="layer_body">
+							
+                                
+                                <p class="ctxt mb20">레이어 1 - Thank you.
+                                    <br> Your registration was submitted successfully.
+                                    <br> Selected invitees will be notified by e-mail on JANUARY 24th.
+                                    <br>
+                                    <br> Hope to see you soon! </p>
+                               
+                            </div>
+							
+							<div class="layer_footer">
+								<div class="btn_area">
+									<button type="button" class="btn btn_white layer_close">
+										취소
+									</button>
+									<button type="button" class="btn btn_default">
+										확인
+									</button>
+								</div>
+							</div>
+							<button type="button" class="btn layer_close" data-dismiss="modal">
+								닫기
+							</button>
+                        </div>
+                    </div>
+					
 					
                 </div>
 	
@@ -149,7 +193,57 @@
 		};
 		modalLayer.init();
 	
-		
+		var fullLayer = {
+			init:function(){
+				this.closeBtnEvent();
+				this.clickBtnEvent();
+			},
+			closeBtnEvent:function(){
+				$(document).on('click', '.layer_close', function(e){
+					e.preventDefault();
+					$(this).closest('.flayer_pop');
+					fullLayer.hideEvent($(this).closest('.flayer_pop'));
+					$('body').find('.layer_open.focus').focus();
+										
+				});				
+				$(document).on('focus', '.layer_close', function(){					
+					$('.flayer_pop').append("<a href='javascript: void(0);' class='linkAppend'></div>");
+					$('.linkAppend').focus(function(){
+						$('.flayer_pop').attr('tabindex','0').focus();
+						$('.linkAppend').remove();
+					});				
+				});
+			},
+			clickBtnEvent:function(target){
+				$(document).on('click','.layer_open', function(e){
+					e.preventDefault();
+					if ($('.layer_open').hasClass('focus')){
+						$('body').find('.layer_open').removeClass('focus');						
+					}
+					$(this).addClass('focus');						
+				});			
+			},	
+			show:function(target){
+				var showLayer = $('#' + target);
+					$('body').addClass('scroll_off');
+					showLayer.attr('tabindex', 0).show();
+										
+			},
+				
+			hide:function(target) {
+				var hideLayer = $('#' + target);
+			
+					this.hideEvent(hideLayer);
+					
+			},
+					
+			hideEvent:function(target){
+				target.attr('tabindex', -1).hide();
+				$('body').removeClass('scroll_off');
+										
+			},		
+		};
+		fullLayer.init();
 	</script>
 	
 	
