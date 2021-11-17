@@ -7,42 +7,44 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
     <meta name="format-detection" content="telephone=no">
     <title>레이어팝업</title>
-    <link rel="stylesheet" href="resource/css/lib/jquery-ui.min.css">
-    <link rel="stylesheet" href="resource/css/style.css">
+    <link rel="stylesheet" href="../resource/css/lib/jquery-ui.min.css">
+    <!link rel="stylesheet" href="resource/css/style.css">
 	<style>
+		:focus {outline: green; outline-width: medium; outline-style: dashed;}
 	
 		.scroll_off {position: fixed; overflow: hidden; height: 100%;}
-		.mlayer_pop {display: none; overflow: hidden; position: fixed; left: 11%; right: 11%
-		top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); z-index: 200;
+		.mlayer_pop {display: none; overflow: hidden; position: fixed; left: 11%; right: 11%;
+		top: 0%; -webkit-transform: translateY(-50%); transform: translateY(-50%); z-index: 200;
 		border-radius: 15px; background-color: #fff; -webkit-backface-visibility: hidden;backface-visibility: hidden;
 		-webkit-animation-name: slideDown; -webkit-animation-duration: 1s; -webkit-animation-delay: 0s;
 		animation-name: slideDown; animation-duration: 1s; animation-delay: 0s; border:1px solid #eee; box-shadow: 0 0 20px rgba(0,0,0,.2);}
 		.mlayer_pop .layer_header {padding: 40px 0 0; text-align: center;}
 		.mlayer_pop .layer_body {padding: 20px;}
-		.mlayer_pop .layer_close {position: absolute; right: 10px; top: 10px;}
+		.mlayer_pop .layer_close {/*position: absolute; right: 10px; top: 10px;*/}
 		.mlayer_pop .layer_footer {padding: 0;}
-		.modal_up {top: 50%; -webkit-animation-name: slideUp; -webkit-animation-duration: 1s; -webkit-animation-delay: 0s;
+		.modal_up {display: block; top: 50%; -webkit-animation-name: slideUp; -webkit-animation-duration: 1s; -webkit-animation-delay: 0s;
 		animation-name: slideUp; animation-duration: 1s; animation-delay: 0s; -webkit-transform: translateY(-50%);
 		transform: translateY(-50%);}		
-		@keyframe slideUp {
-			0% {-webk-transform: translateY(200%);  transform: translateY(200%); opacity: 0;}
-			1% {-webk-transform: translateY(200%);  transform: translateY(200%); opacity: 1;}
+		
+		/*@keyframes slideUp {
+			0%   {-webk-transform: translateY(200%);  transform: translateY(200%); opacity: 0;}
+			1%   {-webk-transform: translateY(200%);  transform: translateY(200%); opacity: 1;}
 			100% {-webk-transform: translateY(-50%);  transform: translateY(-50%); opacity: 1;}
 		}
-		@keyframe slideDown {
-			0% {-webk-transform: translateY(-50%);  transform: translateY(-50%); -webkit-transition: transform .5s ease; transition: transform .5s ease;}			
-			100% {-webk-transform: translateY(200%);  transform: translateY(2000%); -webkit-transition: transform .5s ease; transition: transform .5s ease;}
-		}
+		@keyframes slideDown {
+			from {opacity: 1; -webk-transform: translateY(-50%);  transform: translateY(-50%); -webkit-transition: transform .5s ease; transition: transform .5s ease;}			
+			to   {opacity: 1; -webk-transform: translateY(200%);  transform: translateY(200%); -webkit-transition: transform .5s ease; transition: transform .5s ease;}
+		}*/
 		
 		.flayer_pop {display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: #fff; z-index: 150;}
 		.flayer_pop  .flayer_wrap {display: -webkit-flex; display: flex; flex-direction: column; width: 100%; height: 100%; 
-			-webkit-overflow-scrolling: touch;}
+			/*-webkit-overflow-scrolling: touch;*/}
 		
 		.flayer_pop .layer_header {background-color: #31aae6;}
 		.flayer_pop .layer_content {display: -webkit-flex; display: flex; flex-direction: column; width: 100%; height: 100%;}
 		.flayer_pop .layer_body {position: realtive; -webkit-flex: 1; flex: 1; overflow-x: hidden; overflow-y: auto;}
 
-		.dimmed {position: fixed; left: 0; top: 0; right: 0; bottom: 0; z-index: 150; width: 100%; height: 100%; background-color; rgba(0,0,0,0.7);}
+		.dimmed {position: fixed; left: 0; top: 0; right: 0; bottom: 0; z-index: 150; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7);}
 		
 		
 		
@@ -55,94 +57,104 @@
                 <div class="page-title">
                     <h1>레이어팝업</h1> </div>
                 <div class="page-wrap">
-                    <button type="button" class="btn-sm basic" onclick="layer_open('layer1')"><span>예제-1 보기</span></button>
-                    <div id="layer1" class="layer-popup">
-                        <div class="pop-container">
-                            <div class="pop-conts">
-                                <!--content //-->
+					<a href="#pop1Layer" class="btn layer_open" onclick="modalLayer.show('pop1Layer')">예제-1 보기</a><br><br>
+                    <div  id="pop1Layer" class="mlayer_pop">
+                        <div class="layer_content">
+                            <div class="layer_header">
+								모달타이틀
+							</div>
+							<div class="layer_body">
+							
+                                
                                 <p class="ctxt mb20">레이어 1 - Thank you.
                                     <br> Your registration was submitted successfully.
                                     <br> Selected invitees will be notified by e-mail on JANUARY 24th.
                                     <br>
                                     <br> Hope to see you soon! </p>
-                                <div class="btn-r">
-                                    <button type="button" class="btn-sm nega layer-close"><sppan>닫기</sppan></button>
-                                </div>
-                                <!-- content-->
+                               
                             </div>
+							
+							<div class="layer_footer">
+								<div class="btn_area">
+									<button type="button" class="btn btn_white layer_close">
+										취소
+									</button>
+									<button type="button" class="btn btn_default">
+										확인
+									</button>
+								</div>
+							</div>
+							<button type="button" class="btn layer_close" data-dismiss="modal">
+								닫기
+							</button>
                         </div>
                     </div>
-                    <button type="button" class="btn-sm basic" onclick="layer_open('layer2')"><span>예제-2 보기</span></button>
-                    <div id="layer2" class="layer-popup">
-                        <div class="pop-container">
-                            <div class="pop-conts">
-                                <!--content //-->
-                                <p class="ctxt mb20">레이어 2 - Thank you.
-                                    <br> Your registration was submitted successfully.
-                                    <br> Selected invitees will be notified by e-mail on JANUARY 24th.
-                                    <br>
-                                    <br> Hope to see you soon! </p>
-                                <div class="btn-r">
-                                    <button type="button" class="btn-sm nega layer-close"><sppan>닫기</sppan></button>
-                                </div>
-                                <!--// content-->
-                            </div>
-                        </div>
-                    </div>
-                    <button type="button" class="btn-sm basic" onclick="layer_open('layer3')"><span>예제-3 보기</span></button>
-                    <div class="layer-mask">
-                        <div class="dimmed"></div>
-                        <div id="layer3" class="layer-popup">
-                            <div class="pop-container">
-                                <div class="pop-conts">
-                                    <!--content //-->
-                                    <p class="ctxt mb20">레이어 3 - Thank you.
-                                        <br> Your registration was submitted successfully.
-                                        <br> Selected invitees will be notified by e-mail on JANUARY 24th.
-                                        <br>
-                                        <br> Hope to see you soon! </p>
-                                    <div class="btn-r">
-                                        <button type="button" class="btn-sm nega layer-close"><sppan>닫기</sppan></button>
-                                    </div>
-                                    <!--// content-->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+					
                 </div>
-   	<script src="resource/js/lib/jquery-3.3.1.min.js"></script>
-    <script src="resource/js/lib/jquery-ui.min.js"></script>
-    <script src="resource/js/design.js"></script>
-	<script>  
-        function layer_open(el) { //레이어팝업
-            var temp = $('#' + el);
-            var bg = temp.prev().hasClass('dimmed'); //dimmed 레이어를 감지하기 위한 boolean 변수
-            if (bg) {
-                $('.layer-mask').fadeIn(); //'bg' 클래스가 존재하면 레이어가 나타나고 배경은 dimmed 된다. 
-            }
-            else {
-                temp.fadeIn();
-            }
-            // 화면의 중앙에 레이어를 띄우기
-            if (temp.outerHeight() < $(document).height()) temp.css('margin-top', '-' + temp.outerHeight() / 2 + 'px');
-            else temp.css('top', '0');
-            if (temp.outerWidth() < $(document).width()) temp.css('margin-left', '-' + temp.outerWidth() / 2 + 'px');
-            else temp.css('left', '0');
-            temp.find('.layer-close').click(function (e) {
-                if (bg) {
-                    $('.layer-mask').fadeOut(); //'bg' 클래스가 존재하면 레이어를 사라지게 한다. 
-                }
-                else {
-                    temp.fadeOut();
-                }
-                e.preventDefault();
-            });
-            $('.layer-mask .dimmed').click(function (e) { //배경을 클릭하면 레이어를 사라지게 하는 이벤트 핸들러
-                $('.layer-mask').fadeOut();
-                e.preventDefault();
-            });
-        }
-    </script>
-</body>
+	
+   	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="../resource/js/lib/jquery-ui.min.js"></script>
+    <!--<script src="resource/js/design.js"></script>-->
+	<script>
+		var modalLayer = {
+			init:function(){
+				this.closeBtnEvent();
+				this.clickBtnEvent();
+			},
+			closeBtnEvent:function(){
+				$(document).on('click', '.layer_close', function(e){
+					e.preventDefault();
+					$(this).closest('.mlayer_pop');
+					modalLayer.hideEvent($(this).closest('.mlayer_pop'));
+					$('body').find('.layer_open.focus').focus();
+					$('.linkAppend').remove();					
+				});				
+				$(document).on('focus', '.layer_close', function(){					
+					$('.mlayer_pop').append("<a href='javascript: void(0);' class='linkAppend'></div>");
+					$('.linkAppend').focus(function(){
+						$('.mlayer_pop').attr('tabindex','0').focus();
+						$('.linkAppend').remove();
+					});				
+				});
+			},
+			clickBtnEvent:function(target){
+				$(document).on('click','.layer_open', function(e){
+					e.preventDefault();
+					if ($('.layer_open').hasClass('focus')){
+						$('body').find('.layer_open').removeClass('focus');						
+					}
+					$(this).addClass('focus');						
+				});			
+			},	
+			show:function(target){
+				var showLayer = $('#' + target);
+					$('body').addClass('scroll_off');
+					showLayer.attr('tabindex', 0).slideUp().fadeIn().focus();
+					showLayer.addClass('modal_up');
+					$('body').append('<div class="dimmed"></div>');					
+			},
+				
+			hide:function(target) {
+				var hideLayer = $('#' + target);
+					this.hideEvent(hideLayer);
+					
+			},
+					
+			hideEvent:function(target){
+				target.attr('tabindex', -1).slideDown().fadeOut();
+				$('body').removeClass('scroll_off');
+				$('body').find('.mlayer_pop').removeClass('modal_up');
+				$('.dimmed').length && $('.dimmed').remove();						
+			},		
+		};
+		modalLayer.init();
+	
+		
+	</script>
+	
+	
+	
+	
+	</body>
 
 </html>
