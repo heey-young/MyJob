@@ -46,9 +46,7 @@
 							<div class="select_default">
 								선택하세요
 							</div>
-							<button type="button" class="btn_select_list_toggle">
-								V
-							</button>
+							<button type="button" class="btn_select_list_toggle">V</button>
 						</div>
 						<div class="select_list">
 							<ul>
@@ -108,13 +106,13 @@
 				phone_idx.find(".btn_select_list_toggle").removeClass("active");					
 				
 			});
-			$(document).mouseup(function(e) {
-				if(phone_idx.has(e.target).length == 0){
-					phone_li.css("display", "none");
-					phone_idx.find(".btn_select_list_toggle").removeClass("active");
-				}
+			//$(document).mouseup(function(e) {
+				//if(phone_idx.has(e.target).length == 0){
+					//phone_li.css("display", "none");
+					//phone_idx.find(".btn_select_list_toggle").removeClass("active");
+				//}
 				
-			});		
+			//});		
 			
 		}); 
 	
