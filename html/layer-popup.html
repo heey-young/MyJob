@@ -9,7 +9,7 @@
     <title>레이어팝업 </title>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
-    <link rel="stylesheet" href="resource/css/style.css">
+    <link rel="stylesheet" href="../resource/css/style.css">
 	<style>
 		:focus { outline: green; outline-width: medium; outline-style: dashed;}
 	
@@ -20,6 +20,8 @@
 		-webkit-animation-name: slideDown; -webkit-animation-duration: 1s; -webkit-animation-delay: 0s;
 		animation-name: slideDown; animation-duration: 1s; animation-delay: 0s; border:1px solid #eee; box-shadow: 0 0 20px rgba(0,0,0,.2);}
 		.mlayer_pop .layer_header {padding: 40px 0 0; text-align: center;}
+		.mlayer_pop .layer_header h3 {font-size: 15px; font-weight: 700; text-align: center;}
+		
 		.mlayer_pop .layer_body {padding: 20px;}
 		.mlayer_pop .layer_close {/*position: absolute; right: 10px; top: 10px;*/}
 		.mlayer_pop .layer_footer {padding: 0;}
@@ -41,7 +43,9 @@
 		.flayer_pop  .flayer_wrap {display: -webkit-flex; display: flex; flex-direction: column; width: 100%; height: 100%; 
 			/*-webkit-overflow-scrolling: touch;*/}
 		
-		.flayer_pop .layer_header {background-color: #31aae6;}
+		.flayer_pop .layer_header {padding: 20px 0; text-align: center; background-color: #ed1178;font-size: 15px; font-weight: 700; text-align: center; color: #fff;}
+		.flayer_pop .layer_header h3 {font-size: 15px; font-weight: 700; text-align: center; color: #fff;}
+		
 		.flayer_pop .layer_content {display: -webkit-flex; display: flex; flex-direction: column; width: 100%; height: 100%;}
 		.flayer_pop .layer_body {position: realtive; -webkit-flex: 1; flex: 1; overflow-x: hidden; overflow-y: auto;}
 
@@ -102,6 +106,9 @@
 					
 					<a href="#pop2Layer" class="btn layer_open" onclick="fullLayer.show('pop2Layer')">예제-2 보기</a><br><br>
                     <div  id="pop2Layer" class="flayer_pop">
+						<div class="flayer_wrap">
+							
+						
                         <div class="layer_content">
                             <div class="layer_header">
 								모달타이틀
@@ -131,6 +138,7 @@
 								닫기
 							</button>
                         </div>
+						</div>
                     </div>
 					
 					
