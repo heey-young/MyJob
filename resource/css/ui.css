@@ -10,7 +10,7 @@ input[type="date"],input[type="file"],
 input[type="email"],input[type="tel"],
 input[type="url"],input[type="number"],
 input[type="password"] {height: 30px; padding: 5px 0; -webkit-appearance: none; -webkit-border-radius: 0; border: 1px solid #e2e2e2; border-radius: 0; background: #fff; font-size: 1.3rem; color: inherit; vertical-align: middle; line-height: 1;}
-input:focus, select:focus {border-bottom: 2px solid #31aae6; color: #31aae6;}
+/*input:focus, select:focus {border-bottom: 2px solid #31aae6; color: #31aae6;}*/
 input.error {border-bottom: 2px solid #ec4135; color: #ec4135;}/*에러표시*/
 
 /* 자동완성 배경 없애기 */
@@ -120,13 +120,15 @@ input[type="radio"]:focus,input[type="checkbox"]:focus {outline-width: 0; border
 
 /* BUTTON */
 .btn_area {display: -webkit-box; display: -ms-flexbox;  display: flex; flex-direction: row; width: calc(100% + 8px); margin: 20px -4px; text-align: center;}
-.btn_area .btn_default {position: relative; -webkit-flex: 1; -ms-flex: 1; flex: 1; margin: 0 4px}
-
+.btn_area .btn {position: relative; -webkit-flex: 1; -ms-flex: 1; flex: 1; margin: 0 4px}
 
 
 
 
 .btn_default {display: inline-block; height: 40px; margin: 0; padding: 0 10px; border: 1px solid #666; border-radius: 20px; background-color: #fff; text-align: center; color: #5a5a5a; line-height: 3.8rem; font-weight: 700;}
+
+
+.btn_gray {display: inline-block; height: 40px; margin: 0; padding: 0 10px; border: 1px solid #666; border-radius: 20px; background-color: #666; text-align: center; color: #fff; line-height: 3.8rem; font-weight: 700;}
 .btn_default {min-width: 100px; border: 1px solid #31aae6; background-color: #31aae6; color: #fff; font-weight: 700;}
 .btn_default.btn_white   {min-width: 100px; border: 1px solid #666; background-color: #fff; color: #5a5a5a; font-weight: 700;}
 

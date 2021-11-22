@@ -9,6 +9,10 @@
     <title>폼</title>
     <link rel="stylesheet" href="../resource/css/lib/jquery-ui.min.css">
     <link rel="stylesheet" href="../resource/css/style.css"> 
+	
+	<style>
+		ol li {margin: 10px 0;}
+	</style>
 </head>
 
 <body>
@@ -21,92 +25,95 @@
 		<ol>
 			<li>
 				
-				 라디오버튼
+				<label><input type="radio">라디오버튼</label>
 			
 			</li>
 			
 			<li>
 				
-				 체크박스
+				<label><input type="checkbox">체크박스</label>
 			
 			</li>
 			
+			<li><label><input type="text" placeholder="입력하세요..."></label></li>
 			
 			<li>
 				
-				트박스
+				<label for="selectbox">사이트선택</label>
+				<select id="selectbox" placeholder="선택하세요...">
+					<option value="">선택</option>
+					<option value="http://www.naver.com">네이버</option>
+					<option value="http://www.google.co.kr">구글</option>
+				</select>
+				<button type="button" class="btn_go">
+					이동
+				</button>
+			
+			</li>
+			<li>
+				<label for="textbox">텍스트 입력 :</label>
+				<textarea cols="10" rows="3" id="textbox" placeholder="텍스트입력...">
+				
+				</textarea>
+			
+			</li>
+			<li>
+			
+			<div class="btn_area">
+				
+				<button type="button" class="btn btn_gray">
+					취소
+				</button>
+				
+				<button type="button" class="btn btn_default">
+					확인
+				</button>
+				
+				
+				</div>
 			
 			</li>
 			
 			<li>
+			
+			<div class="btn_area">
 				
-				 라디오버튼
+				<button type="button" class="btn btn_gray">
+					취소
+				</button>
+				<button type="button" class="btn btn_default">
+					저장
+				</button>
+				
+				<button type="button" class="btn btn_default">
+					확인
+				</button>
+				
+				
+				</div>
 			
 			</li>
-			
-			
-			<li>
 				
-				 라디오버튼
-			
-			</li>
-			
-			
-			<li>
-				
-				 라디오버튼
-			
-			</li>
-			
-			
-			<li>
-				
-				 라디오버튼
-			
-			</li>
-			
-			
-			<li>
-				
-				 라디오버튼
-			
-			</li>
-			
-			
-			
+		
 		</ol>
-                    <div class="titleBlock">
-                        <div class="text">
-                            <h2></h2></div>
-                        <div class="button"> </div>
-                    </div>
-                    
-                    <dl class="dropdown">
-                        <dt><a href="#"><span>국가선택</span></a></dt>
-                        <dd>
-                            <ul>
-                                <li><a href="#">Brazil</a></li>
-                                <li><a href="#">France</a></li>
-                                <li><a href="#">Germany</a></li>
-                                <li><a href="#">India</a></li>
-                                <li><a href="#">Japan</a></li>
-                                <li><a href="#">Serbia</a></li>
-                                <li><a href="#">United Kingdom</a></li>
-                                <li><a href="#">United States</a></li>
-                            </ul>
-                        </dd>
-                    </dl>
                     
                     <div class="hrbar">hr 테스트1</div>
                     <div class="hrbar"><span style='font-size:2em; line-height: 1; vertical-align: middle;'>테스트2 <b>두껍게</b></span></div>
                     <div class="hrbar"><span style='font-size:3em; line-height:1;'>테스트3</span></div>
                     
                     
-             
-                  
-                    
-                    <script src='//cdn.rawgit.com/fgelinas/timepicker/master/jquery.ui.timepicker.js'></script>
-                    
+                <script type="text/javascript" src="../resource/js/lib/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../resource/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../resource/js/common_new.js"></script>
+
+		<script>
+			$('.btn_go').on('click', function(){
+				var site = $('#selectbox').val();
+				alert(site);
+			})
+		
+		</script>
+        
                     <script>
                         $(function () {
                             $("#datepicker").datepicker({
@@ -119,15 +126,9 @@
                     <input type="text" class='timepicker'>
                     
                 </div>
-            </div>
-        </div>
-    </div>
-    <script>        
-        $(function () {
-            App.accessibleMenu();
-            App.cancelAccessibleMenu();
-        });     
-    </script>
-</body>
+     
 
+
+	</body>
 </html>
+
