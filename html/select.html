@@ -7,21 +7,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
     <meta name="format-detection" content="telephone=no">
-    <title>레이어팝업 </title>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-
-    <link rel="stylesheet" href="resource/css/style.css">
-
-	<style>
-	
+    <title>Select</title>
+    <link rel="stylesheet" href="../resource/css/lib/jquery-ui.min.css">    
+    <!link rel="stylesheet" href="../resource/css/style.css">
+	<style>	
+		:focus {outline-color: green; outline-width: medium; outline-style: dashed;}
 		.ui_select {position: relative; display: inline-block; width: auto; height: 40px; vertical-align: top;}
 		.ui_select .select_item {display: table; width: 100%; height: 40px;}
 		.ui_select .select_default {display: table-cell; height: 40px; margin: 0; padding: 0 10px; border:1px solid #ddd; line-height: 38px; vertical-align: top;}
 		.ui_select .btn_select_list_toggle {display: table-cell; width: 40px; height: 40px; border: 1px solid #ddd; text-align: center; vertical-align: middle;}
-		.ui_select .btn_select_list_toggle.active {background-color: #e2e2e2;}
+		.ui_select .btn_select_list_toggle.active {background-color: red;}
+		
 		.ui_select .select_list ul {position: absolute; z-index: 1; width: 100%; border: 1px solid #ddd; border-top: 0; border-bottom: 0;}
 		.ui_select .select_list li {position: relative; display: none; width: 100%; background-color: #fff;}
 		.ui_select .select_list li>a {display: inline-block; width: 100%; padding: 10px; background-color: #f5f5f5; border: 1px solid #ddd;}
+		.ui_select .select_list li>a:hover {background-color: red;}
+		
+		
 		.ui_select .select_list li.active>a {position: relative; width: 100%; background-color: #fff;}
 	</style>
 </head>
@@ -41,10 +43,9 @@
                         
                         
                     <div class="ui_select">
-                    	<h4 class="hidden">
-							아이템 선택하기			
-							
-						</h4>       
+                    	<h1 class="blind">
+							아이템 선택하기								
+						</h1>       
 						<div class="select_item">
 							<div class="select_default">
 								선택하세요
@@ -55,8 +56,7 @@
 							<ul>
 								<li class="active">
 									<a href="#">
-										<div>
-											
+										<div>											
 											<p>Liiv M LTE 1GB</p>
 											<p>월 기본료 10,000원</p>
 										</div>	
@@ -87,17 +87,17 @@
 
  
         </div>
- 
-    
 	<script src="//code.jquery.com/jquery.min.js"></script>
-<script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 
-<!-- <script src="../resource/js/design.js"></script>-->
-	<script>
+ 
+	<!--<script src="../resource/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="../resource/js/lib/jquery-ui.min.js"></script>
+    <script src="../resource/js/design.js"></script>-->
+ 	<script>
 		$(".ul_select").each(function(){
 			var phone_idx = $(this);
-			var phone_li = phone_idx.find(".select_list li");
-			
+			var phone_li = phone_idx.find('.select_list li');			
 			phone_idx.on("click", ".btn_select_list_toggle", function(){
 				$(this).toggleClass("active");
 				phone_li.toggle();
@@ -110,19 +110,15 @@
 				phone_idx.find(".btn_select_list_toggle").removeClass("active");					
 				
 			});
-			//$(document).mouseup(function(e) {
-				//if(phone_idx.has(e.target).length == 0){
-					//phone_li.css("display", "none");
-					//phone_idx.find(".btn_select_list_toggle").removeClass("active");
-				//}
+			$(document).mouseup(function(e) {
+				 if(phone_idx.has(e.target).length == 0){
+					phone_li.css("display", "none");
+					phone_idx.find(".btn_select_list_toggle").removeClass("active");
+				}
 				
-			//});		
+			});		
 			
 		}); 
-	
-	
 	</script>
-
-
-	
-</body></html>
+</body>
+</html>

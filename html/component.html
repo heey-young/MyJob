@@ -103,38 +103,69 @@
 			
 			</li>
 				
-		
-		</ol>
+			<li>
+			<div data-div="receipt">
+				
+				<label><input type="radio" id="receipt_1" name="usim" checked>1</label>
+				
+				<label><input type="radio" id="receipt_2" name="usim">2</label>
+				<label><input type="radio" id="receipt_3" name="usim">3</label>
+				
+				</div>
+				
+				<div data-visible="receipt_1">
+					내용보이기1
+				</div>
+			
+				<div data-visible="receipt_2">
+					내용보이기2
+				</div>
+			
+				<div data-visible="receipt_3">
+					내용보이기3
+				</div>
+			
+			</li>
+			<li>
+			
+				<input type="text" id="datepicker">                    
+                <input type="text" class='timepicker'>
                     
-                    <div class="hrbar">hr 테스트1</div>
+			</li>
+		
+			<li>
+				 <div class="hrbar">hr 테스트1</div>
                     <div class="hrbar"><span style='font-size:2em; line-height: 1; vertical-align: middle;'>테스트2 <b>두껍게</b></span></div>
                     <div class="hrbar"><span style='font-size:3em; line-height:1;'>테스트3</span></div>
-                    
-                    
-                <script type="text/javascript" src="../resource/js/lib/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="../resource/js/lib/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="../resource/js/common_new.js"></script>
-
-		<script>
-			$('.btn_go').on('click', function(){
-				var site = $('#selectbox').val();
-				alert(site);
-			})
+			
+			</li>
+		</ol>
 		
-		</script>
-        
-                    <script>
-                        $(function () {
-                            $("#datepicker").datepicker({
-                                dateFormat: 'yy-mm-dd'
-                            });
-                            $('.timepicker').timepicker();
-                        });
-                    </script>
-                    <input type="text" id="datepicker">                    
-                    <input type="text" class='timepicker'>
+		<br><br>
                     
-                </div>
+                   
+	</div>        
+                  
+	<script src="../resource/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="../resource/js/lib/jquery-ui.min.js"></script>
+    <script src="../resource/js/common.js"></script>
+	<script>
+			$('[data-visible]').not(':first').hide();
+				const usimRdo = $('[data-div="receipt"] input[type="radio"]');
+				usimRdo.change(function(){
+				const usimId = $(this).attr('id');
+				$('[data-visible='+usimId+']').siblings('[data-visible]').hide();
+				$('[data-visible='+usimId+']').show();
+		
+			});
+	</script>
+        
+    <script>
+    	$("#datepicker").datepicker();
+        
+    </script>
+                    
+                
      
 
 

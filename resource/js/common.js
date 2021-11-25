@@ -180,70 +180,17 @@ $.datepicker.setDefaults({
     //firstDay: 0, 
     //isRTL: false, 
     showMonthAfterYear: true, 
-    yearSuffix: "년", 
-    
+    yearSuffix: "년",     
     changeYear:true,
     changeMonth:true,
     showOn: 'button',
     buttonText: "날짜선택",   
 });
 
-//신용카드선택 레이어박스(일반인증,앱인증 구분)
-var toggler = $(".card>.card_selectbox .card_toggle"),   
-    toggler_app = $(".card_selectbox.app .card_toggle"),
-    links = $(".card>.card_selectbox .card_list button"),   
-    links_app = $(".card_selectbox.app .card_list button"),
-    li = links.parent('li'),
-    count = links.length,
-    count_app = links_app.length;
-if ($(".card_selectbox").hasClass('app')) {    
-        links_app.parent("li").each(function (i) {
-        $(this).css("z-index", count_app - i);
-    }); 
-    links_app.parent("li").each(function (i) {
-        $(this).css("z-index", count_app - i);
-    }); 
-    links_app.on("click", function (e) {
-        var $this_app = $(this), 
-            label_app = $this_app.data("label"),
-            icon_app = $this_app.children("i").attr("class");        
-        toggler_app.children("span").text(label_app);
-        toggler_app.children("i").removeClass().addClass(icon_app);     
-    });    
-}       	
-links.parent("li").each(function (i) {
-    $(this).css("z-index", count - i);
-});
-function setClosed() {
-    li.addClass('closed');
-    toggler.removeClass("active");
-}
-setClosed();
-toggler.on("click", function () {
-    var $this = $(this);
-    if ($this.is(".active")) {
-        setClosed();
-    }
-    else {
-        $this.addClass("active");
-        li.removeClass('closed');
-    }
-});
-links.on("click", function (e) {
-    var $this = $(this), 
-        label = $this.data("label"),
-        icon = $this.children("i").attr("class");
-    li.removeClass('active');
-    if ($this.parent("li").is("active")) {
-        $this.parent('li').removeClass("active");
-    }
-    else {
-        $this.parent("li").addClass("active");
-    }
-    toggler.children("span").text(label);
-    toggler.children("i").removeClass().addClass(icon);
-    setClosed();
-});  
+//카드선택
+
+
+
 
 //카드,계좌선택 후 팝업 호출 레이어
 $(document).on("click", ".btn_toggle_c", function(){

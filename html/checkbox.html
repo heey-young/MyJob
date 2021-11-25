@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>Checkbox</title>
+    <link rel="stylesheet" href="../resource/css/lib/jquery-ui.min.css">    
+    <!link rel="stylesheet" href="../resource/css/style.css">
+	<style>	
+		:focus {outline-color: green; outline-width: medium; outline-style: dashed;}
+		
+		</style>
+</head>
+<body>
+	        	
+	<div class="page-title">
+		<h1>CheckBox</h1> 
+	</div>
+	<div class="page-wrap">
+		
+		<div class="testbox">
+        	<label><input type="checkbox" class="selectall"></label>
+			<ul>
+				<li><label><input type="checkbox" class="checkbox"></label></li>
+				<li><label><input type="checkbox" class="checkbox"></label></li>
+				<li><label><input type="checkbox" class="checkbox"></label></li>
+				<li><label><input type="checkbox" class="checkbox"></label></li>
+				<li><label><input type="checkbox" class="checkbox"></label></li>
+				<li><label><input type="checkbox" class="checkbox"></label></li>
+				<li><label><input type="checkbox" class="checkbox"></label></li>
+				<li><label><input type="checkbox" class="checkbox"></label></li>
+				<li><label><input type="checkbox" class="checkbox"></label></li>
+				<li><label><input type="checkbox" class="checkbox"></label></li>
+			</ul>
+		</div> 
+
+		<br><br><br><br><br>
+		
+		<div class="testbox">
+        	<label><input type="checkbox" class="selectall"></label>
+			<ul>
+				<li><label><input type="checkbox" class="checkbox"></label></li>
+				<li>
+
+					<label><input type="checkbox" class="checkbox"></label>
+					<div class="testbox">
+						<label><input type="checkbox" class="selectall"></label>
+						<ul>
+							<li><label><input type="checkbox" class="checkbox"></label></li>
+							<li><label><input type="checkbox" class="checkbox"></label></li>
+							<li><label><input type="checkbox" class="checkbox"></label></li>
+							<li><label><input type="checkbox" class="checkbox"></label></li>
+							<li><label><input type="checkbox" class="checkbox"></label></li>
+							<li><label><input type="checkbox" class="checkbox"></label></li>
+							<li><label><input type="checkbox" class="checkbox"></label></li>
+							<li><label><input type="checkbox" class="checkbox"></label></li>
+							<li><label><input type="checkbox" class="checkbox"></label></li>
+							<li><label><input type="checkbox" class="checkbox"></label></li>
+						</ul>
+					</div> 
+
+				</li>
+				
+				<li><label><input type="checkbox" class="checkbox"></label></li>
+				<li><label><input type="checkbox" class="checkbox"></label></li>
+				<li><label><input type="checkbox" class="checkbox"></label></li>
+				<li><label><input type="checkbox" class="checkbox"></label></li>
+				<li><label><input type="checkbox" class="checkbox"></label></li>
+				<li><label><input type="checkbox" class="checkbox"></label></li>
+				<li><label><input type="checkbox" class="checkbox"></label></li>
+				<li><label><input type="checkbox" class="checkbox"></label></li>
+			</ul>
+		</div> 
+
+
+	</div>
+	<script src="//code.jquery.com/jquery.min.js"></script>
+	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+
+ 
+	<!--<script src="../resource/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="../resource/js/lib/jquery-ui.min.js"></script>
+    <script src="../resource/js/design.js"></script>-->
+ 	<script>
+		$(".testbox").each(function(){
+			var c_idx = $(this);
+			var c_selectAll = c_idx.find('.selectall');
+			var c_selectAll2 = c_idx.find('.selectall .selectall');
+			var c_checkbox = c_idx.find('.checkbox');
+			c_selectAll.change(function(){
+				c_checkbox.prop('checked', c_selectAll.prop('checked'));
+			});
+			c_checkbox.change(function(){
+				if(false == $(this).prop('checked')){
+					c_selectAll.prop('checked',false);
+				}
+				if($('.checkbox:checked').length == $('.checkbox').length){
+					c_selectAll.prop('checked:true');
+				}
+				
+			});
+		}); 
+	</script>
+</body>
+</html>

@@ -55,11 +55,8 @@ a:active, a:hover {color: #ed1178;}
 address,caption,cite,code,dfn,em,i,var {font-style: normal; font-weight: normal;}
 strong, h1,h2,h3 {font-weight: 700;}
 
-
 :focus {outline-width: 1px; box-shadow: 3px 3px 6px rgba(0,0,0,0.2); border: 0; outline-color: red}
 input::placeholder {color: blue; opacity: 1;}
-
-
 
 li {list-style: none;}
 
@@ -69,8 +66,3 @@ legend,caption, .blind {position: absolute; clip: rect(0 0 0 0); clip-path: inse
 .txt_center {text-align: center !important;}
 .txt_left   {text-align: left !important;}
 .txt_right  {text-align: right !important;}
-.mlayer_pop {display: none; border:  22px solid red !important}
-
-
-
-
