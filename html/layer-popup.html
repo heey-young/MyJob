@@ -237,22 +237,17 @@
 			show:function(target){
 				var showLayer = $('#' + target);
 					$('body').addClass('scroll_off');
-					showLayer.attr('tabindex', 0).show();
-										
-			},
-				
+					showLayer.attr('tabindex', 0).show();									
+			},				
 			hide:function(target) {
-				var hideLayer = $('#' + target);
-			
-					this.hideEvent(hideLayer);
-					
-			},
-					
+				var hideLayer = $('#' + target);			
+					this.hideEvent(hideLayer);					
+			},					
 			hideEvent:function(target){
 				target.attr('tabindex', -1).hide();
 				$('body').removeClass('scroll_off');
 										
-			},		
+			}
 		};
 		fullLayer.init();
 	</script>

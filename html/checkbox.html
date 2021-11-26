@@ -87,10 +87,10 @@
     <script src="../resource/js/design.js"></script>-->
  	<script>
 		$(".testbox").each(function(){
-			var c_idx = $(this);
-			var c_selectAll = c_idx.find('.selectall');
-			var c_selectAll2 = c_idx.find('.selectall .selectall');
-			var c_checkbox = c_idx.find('.checkbox');
+			const c_idx = $(this);
+			const c_selectAll = c_idx.find('.selectall');
+			const c_selectAll2 = c_idx.find('.selectall .selectall');
+			const c_checkbox = c_idx.find('.checkbox');
 			c_selectAll.change(function(){
 				c_checkbox.prop('checked', c_selectAll.prop('checked'));
 			});
