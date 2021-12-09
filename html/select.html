@@ -38,9 +38,9 @@ ul {
     width: 150px;
     border: 1px #000 solid;
 }
-ul li { padding: 5px 10px; z-index: 2; }
-ul li:not(.init) { float: left; width: 130px; display: none; background: #ddd; }
-ul li:not(.init):hover, ul li.selected:not(.init) { background: #09f; }
+ul li { padding: 10px 10px; z-index: 2; }
+ul li:not(.init) { float: left; width: 130px; display: none; background: #ddd;}
+ul li:not(.init):hover, ul li.selected:not(.init) {background: #09f;}
 li.init { cursor: pointer; }
 
 a#submit { z-index: 1; }
@@ -63,46 +63,12 @@ a#submit { z-index: 1; }
     <div class="page-wrap">
 	
 		<div>
-			
-			
-<div>
-  <button id="prev">Previous</button>
-  <button id="next">Next</button>
-  &nbsp; &nbsp;
-  <span>Page: <span id="page_num"></span> / <span id="page_count"></span></span>
-	<button type="button" id="download">Download</button>
-
-	<button type="button" id="zoomIn">
-	zoomIn
-			</button>			
-
-
-	<button type="button" id="zoomOut">
-	zoomOut
-			</button>			
-
-
-	
-			</div>
-			
-			
-			
-
-			
-			
-			
-			
-
-<canvas id="the-canvas"></canvas>
-
-			
-			
-		</div>
 		
-		
-		<div>
-			<ul class="ui_select2 list-unstyled">
-				<li class="init">[SELECT]</li>
+			<div class="ui_select">
+				
+			
+			<ul>
+				<li class="init">선택하세요</li>
 				<li data-value="value 1">
 					<a href="#">
 						<div>											
@@ -114,245 +80,48 @@ a#submit { z-index: 1; }
 				<li data-value="value 2">Option 2</li>
 				<li data-value="value 3">Option 3</li>
 			</ul>
-						<br><br><br><br>
+			</div>	
+				
+				
 		</div>	
-		<div style="display:none">
 	
-			<div class="menu">
-  				<ul>
-     				<li class="active">메뉴1</li>
-     				<li>메뉴2</li>
-     				<li>메뉴3</li>
-   				</ul>
-			</div>
+		
+			
+			
+			
 
-			<div class="content">
-				<div class="content select">
-					<div class="detail_img">
-					<img src="1.jpg" alt="1번째이미지">
-					</div>
-				</div>
+			
+			
+			
+			
 
-				<div class="content2 select">
-					<div class="detail_img">
-					<img src="2.jpg" alt="2번째이미지">
-					</div>
-				</div>
-
-				<div class="content3 select">
-					<div class="detail_img">
-					<img src="3.jpg" alt="3번째이미지">
-					</div>
-				</div>
-			</div>
-		</div>		
+			
+			
+		
+		
+	</div>                    
                         
-                        
-        <div class="ui_select" style="display: none">
-                    	<h1 class="blind">
-							아이템 선택하기								
-						</h1>       
-						<div class="select_item">
-							<div class="select_default">
-								선택하세요
-							</div>
-							<button type="button" class="btn_select_list_toggle">V</button>
-						</div>
-						<div class="select_list">
-							<ul>
-								<li class="active">
-									<a href="#">
-										<div>											
-											<p>Liiv M LTE 1GB</p>
-											<p>월 기본료 10,000원</p>
-										</div>	
-									</a>								
-								</li>
-								
-								<li>
-									<a href="#">
-										<p>Liiv M LTE 2GB</p>
-										<p>월 기본료 20,000원</p>									
-									</a>								
-								</li>
-								<li>
-									<a href="#">
-										<p>Liiv M LTE 3GB</p>
-										<p>월 기본료 30,000원</p>									
-									</a>								
-								</li>
-
-
-								
-								
-							</ul>
-							
-							
-						</div>
-					</div>    
-
- 
-        </div>
 	<script src="https://code.jquery.com/jquery.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-		<script src="//mozilla.github.io/pdf.js/build/pdf.js"></script>
-
-
-	<script>
-// If absolute URL from the remote server is provided, configure the CORS
-// header on that server.
-var url = 'https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/web/compressed.tracemonkey-pldi-09.pdf';
-
-// Loaded via <script> tag, create shortcut to access PDF.js exports.
-//var pdfjsLib = window['pdfjs-dist/build/pdf'];
-
-// The workerSrc property shall be specified.
-pdfjsLib.GlobalWorkerOptions.workerSrc = '//mozilla.github.io/pdf.js/build/pdf.worker.js';
-
-var pdfDoc = null,
-    pageNum = ,
-    pageRendering = false,
-    pageNumPending = null,
-    scale = 0.8,
-    canvas = document.getElementById('the-canvas'),
-    ctx = canvas.getContext('2d');
-
-/**
- * Get page info from document, resize canvas accordingly, and render page.
- * @param num Page number.
- */
-function renderPage(num) {
-  pageRendering = true;
-  // Using promise to fetch the page
-  pdfDoc.getPage(num).then(function(page) {
-    var viewport = page.getViewport({scale: scale});
-    canvas.height = viewport.height;
-    canvas.width = viewport.width;
-
-    // Render PDF page into canvas context
-    var renderContext = {
-      canvasContext: ctx,
-      viewport: viewport
-    };
-    var renderTask = page.render(renderContext);
-
-    // Wait for rendering to finish
-    renderTask.promise.then(function() {
-      pageRendering = false;
-      if (pageNumPending !== null) {
-        // New page rendering is pending
-        renderPage(pageNumPending);
-        pageNumPending = null;
-      }
-    });
-  });
-
-  // Update page counters
-  document.getElementById('page_num').textContent = num;
-}
-
-/**
- * If another page rendering in progress, waits until the rendering is
- * finised. Otherwise, executes rendering immediately.
- */
-function queueRenderPage(num) {
-  if (pageRendering) {
-    pageNumPending = num;
-  } else {
-    renderPage(num);
-  }
-}
-
-/**
- * Displays previous page.
- */
-function onPrevPage() {
-  if (pageNum <= 1) {
-    return;
-  }
-  pageNum--;
-  queueRenderPage(pageNum);
-}
-document.getElementById('prev').addEventListener('click', onPrevPage);
-
-/**
- * Displays next page.
- */
-function onNextPage() {
-  if (pageNum >= pdfDoc.numPages) {
-    return;
-  }
-  pageNum++;
-  queueRenderPage(pageNum);
-}
-document.getElementById('next').addEventListener('click', onNextPage);
-
-/**
- * Asynchronously downloads PDF.
- */
-pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
-  pdfDoc = pdfDoc_;
-  document.getElementById('page_count').textContent = pdfDoc.numPages;
-
-  // Initial/first page rendering
-  renderPage(pageNum);
-});
-	
-	</script>
 	<script>
 		
-		$(".ui_select2").on("click", ".init", function() {
-			$(this).closest(".ui_select2").children('li:not(.init)').toggle();
+		$(".ui_select ul").on("click", ".init", function() {
+			$(this).closest(".ui_select ul").children('li:not(.init)').toggle();
 		});
 
-		const allOptions = $(".ui_select2").children('li:not(.init)');
-		$(".ui_select2").on("click", "li:not(.init)", function() {
+		const allOptions = $(".ui_select ul").children('li:not(.init)');
+		$(".ui_select ul").on("click", "li:not(.init)", function() {
 		allOptions.removeClass('selected');
 		$(this).addClass('selected');
-		$(".ui_select2").children('.init').html($(this).html());
+		$(".ui_select ul").children('.init').html($(this).html());
 		allOptions.toggle();
 		});
 		
 	</script>
  
-	<!--<script>
-	
-	
-	$('.menu ul li').click(function(){
-  	var i=$(this).index();  
-  	$('.select').removeClass('on').eq(i).addClass('on').removeClass('selected');
-  
- 	 });
       
 
 
 	
-	</script>-->
-	<script>
-		$(".ul_select").each(function(){
-			const phone_idx = $(this);
-			const phone_li = phone_idx.find('.select_list li');			
-			phone_idx.on("click", ".btn_select_list_toggle", function(){
-				$(this).toggleClass("active");
-				phone_li.toggle();
-			});			
-			phone_idx.on("click", ".select_list li", function(){
-				phone_li.toggle();
-				phone_li.removeClass("active");
-				$(this).addClass("active");
-				phone_idx.find(".select_default").html($(this).html());
-				phone_idx.find(".btn_select_list_toggle").removeClass("active");					
-				
-			});
-			$(document).mouseup(function(e) {
-				 if(phone_idx.has(e.target).length == 0){
-					phone_li.css("display", "none");
-					phone_idx.find(".btn_select_list_toggle").removeClass("active");
-				}
-				
-			});		
-			
-		}); 
-	</script>
-</body>
+	</body>
 </html>
