@@ -46,7 +46,7 @@ label,textarea,legend,button,table,td,th,button, select
 {margin: 0; padding: 0; font-family: "Roboto","Noto Sans","Apple SD Gothic Neo","맑은 고딕","Malgun Gothic",sans-serif; font-size: 14px; font-weight: 400; color: #111; line-height: 1.45;}
 fieldset,iframe,img {border: 0}
 img {vertical-align: top;}
-ol {list-style: none;}
+
 table {border-collapse: collapse; table-layout: fixed;}
 article,aside,footer,header,nav,main,sec,tion,summary,details,hgroup,figure,figcaption {display: block;}
 button {overflow: visible; border: 0; background: none; color: inherit; line-height: inherit; cursor: pointer;}
@@ -58,7 +58,7 @@ strong, h1,h2,h3 {font-weight: 700;}
 :focus {outline-width: 1px; box-shadow: 3px 3px 6px rgba(0,0,0,0.2); border: 0; outline-color: red}
 input::placeholder {color: blue; opacity: 1;}
 
-li {list-style: none;}
+ul li {list-style: none;}
 
 legend,caption, .blind {position: absolute; clip: rect(0 0 0 0); clip-path: inset(50%); width: 1px; height: 1px; margin: -1px; padding: 0; border: 0; overflow: hidden; white-space: nowrap;}
 *{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}

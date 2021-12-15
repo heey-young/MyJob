@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>기본폼</title>
+    <link rel="stylesheet" href="../resource/css/lib/jquery-ui.min.css">    
+    <link rel="stylesheet" href="../resource/css/style.css">
+	<style>	
+		:focus {outline-color: green; outline-width: medium; outline-style: dashed;}
+		ol li {margin: 8px; list-style: decimal;}
+		ol ol, ol ul {margin: 20px;}
+		ol ol li, ol ul li {list-style: decimal-leading-zero;}
+		
+	</style>
+</head>
+<body>
+
+	<div class="page-title">
+    	<h1>기본폼</h1> 
+	</div>
+				
+    <div class="page-wrap">
+	
+		<ol>
+			<li>
+				<p>
+				<strong>Radio</strong>
+				</p>
+				<ul>
+					<li>
+						<label><input type="radio" name="c-rdo1">라디오선택01</label>
+
+					</li>
+
+					<li>
+						<label><input type="radio" name="c-rdo1" checked>라디오선택02</label>
+
+					</li>
+
+					<li>
+						<label><input type="radio" name="c-rdo2" disabled>라디오선택03</label>
+
+					</li>
+					<li>
+						<label><input type="radio" name="c-rdo2" checked disabled>라디오선택04</label>
+
+					</li>
+
+				
+				</ul>
+			
+			
+			</li>
+			<li>
+				<p>
+				<strong>Checkbox</strong>
+				</p>
+					
+				<ul>
+					<li>
+						<label><input type="checkbox" name="c-chk1">체크박스선택01</label>
+
+					</li>
+
+					<li>
+						<label><input type="checkbox" name="c-chk2" checked>체크박스선택02</label>
+
+					</li>
+
+					<li>
+						<label><input type="checkbox" name="c-chk3" disabled>체크박스선택03</label>
+
+					</li>
+					<li>
+						<label><input type="checkbox" name="c-chk4" checked disabled>체크박스선택04</label>
+
+					</li>
+
+				
+				</ul>
+			
+			
+			</li>
+			<li>
+			  	<p>
+				<strong>Select</strong>
+				</p>
+				<ul>
+					<li>
+						<select>
+							<option>option01</option>
+							<option>option02</option>
+						</select>
+					</li>
+					
+					
+					<li>
+						<select class="txt_left">
+							<option>option01</option>
+							<option>option02</option>
+						</select>
+					</li>
+					
+
+
+				</ul>
+			</li>
+			<li>
+				<p>
+				<strong>Input</strong>
+				</p>
+				<ul>					
+					<li>
+						<div class="f_group">
+							<lable><input type="text"></lable>
+						</div>
+					</li>
+					<li>
+						<div class="f_group">
+							<lable><input type="text" class="txt_error" value="에러 텍스트"></lable>
+						</div>
+						<div class="txt_error">
+							<p>
+								<i class="sp_common ic_error"></i>에러텍스트 표시 
+							</p>
+						</div>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>
+				<strong>Textarea</strong>
+				</p>
+				<ul>					
+					<li>
+						<div class="f_group">
+							<textarea name="c-text" id="c-text" cols="10" rows="5" placeholder="내용입력"></textarea>
+						</div>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<div class="btn_area">
+					<button type="button" class="btn btn_default" disabled>
+						버튼 스타일1
+					</button>
+					<button type="button" class="btn btn_default">
+						버튼 스타일2
+					</button>
+					
+				</div>
+		
+			</li>
+
+
+		</ol>	
+			
+			
+
+			
+			
+			
+			
+
+			
+			
+		
+		
+	</div>                    
+                        
+	<script src="https://code.jquery.com/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+	<script>
+		
+		$(".ui_select ul").on("click", ".init", function() {
+			$(this).closest(".ui_select ul").children('li:not(.init)').toggle();
+		});
+
+		const allOptions = $(".ui_select ul").children('li:not(.init)');
+		$(".ui_select ul").on("click", "li:not(.init)", function() {
+		allOptions.removeClass('selected');
+		$(this).addClass('selected');
+		$(".ui_select ul").children('.init').html($(this).html());
+		allOptions.toggle();
+		});
+		
+	</script>
+ 
+      
+
+
+	
+	</body>
+</html>
