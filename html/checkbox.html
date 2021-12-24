@@ -22,60 +22,25 @@
 	</div>
 	<div class="page-wrap">
 		
-		<div class="testbox">
-        	<label><input type="checkbox" class="selectall"></label>
-			<ul>
-				<li><label><input type="checkbox" class="checkbox"></label></li>
-				<li><label><input type="checkbox" class="checkbox"></label></li>
-				<li><label><input type="checkbox" class="checkbox"></label></li>
-				<li><label><input type="checkbox" class="checkbox"></label></li>
-				<li><label><input type="checkbox" class="checkbox"></label></li>
-				<li><label><input type="checkbox" class="checkbox"></label></li>
-				<li><label><input type="checkbox" class="checkbox"></label></li>
-				<li><label><input type="checkbox" class="checkbox"></label></li>
-				<li><label><input type="checkbox" class="checkbox"></label></li>
-				<li><label><input type="checkbox" class="checkbox"></label></li>
-			</ul>
-		</div> 
-
-		<br><br><br><br><br>
 		
-		<div class="testbox">
-        	<label><input type="checkbox" class="selectall"></label>
+		<div class="chk_group">
+        	<label><input type="checkbox" class="selectall" id="check_all">전체선택</label>
 			<ul>
-				<li><label><input type="checkbox" class="checkbox"></label></li>
-				<li>
-
-					<label><input type="checkbox" class="checkbox"></label>
-					<div class="testbox">
-						<label><input type="checkbox" class="selectall"></label>
-						<ul>
-							<li><label><input type="checkbox" class="checkbox"></label></li>
-							<li><label><input type="checkbox" class="checkbox"></label></li>
-							<li><label><input type="checkbox" class="checkbox"></label></li>
-							<li><label><input type="checkbox" class="checkbox"></label></li>
-							<li><label><input type="checkbox" class="checkbox"></label></li>
-							<li><label><input type="checkbox" class="checkbox"></label></li>
-							<li><label><input type="checkbox" class="checkbox"></label></li>
-							<li><label><input type="checkbox" class="checkbox"></label></li>
-							<li><label><input type="checkbox" class="checkbox"></label></li>
-							<li><label><input type="checkbox" class="checkbox"></label></li>
-						</ul>
-					</div> 
-
-				</li>
-				
-				<li><label><input type="checkbox" class="checkbox"></label></li>
-				<li><label><input type="checkbox" class="checkbox"></label></li>
-				<li><label><input type="checkbox" class="checkbox"></label></li>
-				<li><label><input type="checkbox" class="checkbox"></label></li>
-				<li><label><input type="checkbox" class="checkbox"></label></li>
-				<li><label><input type="checkbox" class="checkbox"></label></li>
-				<li><label><input type="checkbox" class="checkbox"></label></li>
-				<li><label><input type="checkbox" class="checkbox"></label></li>
+				<li><label><input type="checkbox" class="checkbox">개별선택1</label></li>
+				<li><label><input type="checkbox" class="checkbox">개별선택2</label></li>
+				<li><label><input type="checkbox" class="checkbox">개별선택3</label></li>
+				<li><label><input type="checkbox" class="checkbox">개별선택4</label></li>
+				<li><label><input type="checkbox" class="checkbox">개별선택5</label></li>
+				<li><label><input type="checkbox" class="checkbox">개별선택6</label></li>
+				<li><label><input type="checkbox" class="checkbox">개별선택7</label></li>
+				<li><label><input type="checkbox" class="checkbox">개별선택8</label></li>
+				<li><label><input type="checkbox" class="checkbox">개별선택9</label></li>
+				<li><label><input type="checkbox" class="checkbox">개별선택10</label></li>
 			</ul>
 		</div> 
 
+		
+		
 
 	</div>
 	<script src="//code.jquery.com/jquery.min.js"></script>
@@ -86,24 +51,18 @@
     <script src="../resource/js/lib/jquery-ui.min.js"></script>
     <script src="../resource/js/design.js"></script>-->
  	<script>
-		$(".testbox").each(function(){
-			const c_idx = $(this);
-			const c_selectAll = c_idx.find('.selectall');
-			const c_selectAll2 = c_idx.find('.selectall .selectall');
-			const c_checkbox = c_idx.find('.checkbox');
-			c_selectAll.change(function(){
-				c_checkbox.prop('checked', c_selectAll.prop('checked'));
+		//체크박스 전체 선택
+		$('.chk_group').on('click', '#check_all', function(){
+			$(this).parents('.chk_group').find('input').prop('checked', $(this).is(':checked'));
+		});
+		//체크박스 개별 선택
+		$('.chk_group').on('click', '.checkbox', function(){
+			let is_checked = true;
+			$('.chk_group .checkbox').each(function(){
+				is_checked = is_checked && $(this).is(':checked');
 			});
-			c_checkbox.change(function(){
-				if(false == $(this).prop('checked')){
-					c_selectAll.prop('checked',false);
-				}
-				if($('.checkbox:checked').length == $('.checkbox').length){
-					c_selectAll.prop('checked:true');
-				}
-				
-			});
-		}); 
+			$('#check_all').prop('checked', is_checked);
+		});
 	</script>
 </body>
 </html>
