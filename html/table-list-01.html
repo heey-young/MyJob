@@ -6,30 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
     <meta name="format-detection" content="telephone=no">
-    <title>테이블</title>
-    <link rel="stylesheet" href="../resource/css/lib/jquery-ui.min.css">
-    <link rel="stylesheet" href="../resource/css/style.css"> 
-</head>
+    <title>테이블-목록</title>
+    <link rel="stylesheet" href="../resource/css/lib/jquery-ui.min.css">    
+    <link rel="stylesheet" href="../resource/css/style.css">
+	<style>
+		.sc_head {display: table; width: 100%;}
+		.sc_head .title {border:1px solid red; display: inline-block; min-height: 40px; margin: 10px 0; font-size: 24px; font-weight 700;}
+		.sc_head .left_area {display: table-cell;}
+		
+		.sc_head .right_area {display: table-cell; text-align: right;}
+		.btn_group {display: inline-block;}
+	</style>
+	</head>
 
 <body>
     <div class="page-title">
         <h1>테이블 목록</h1> 
+	</div>
                     
-                <div class="page-wrap">
-                    <div class="titleBlock">
-                        <div class="text">
-                            <h2>타이틀</h2></div>
-                        <div class="button">
-                            <div class="button-group">
-                                <button type="button" class="btn-sm em"><span>신규</span></button>
-                                <button type="button" class="btn-sm"><span>수정</span></button>
-                                <button type="button" class="btn-sm nega"><span>삭제</span></button>
-                                <button type="button" class="btn-sm"><span>저장</span></button>
+    <div class="page-wrap">
+		<section>				
+					
+        	<div class="sc_head">
+				<div class="left_area">
+					<h2 class="title">테이블 제목</h2>
+				</div>	
+				<div class="right_area">
+                            <div class="btn_group">
+                                <button type="button" class="btn btn_default"><span>신규</span></button>
+                                <button type="button" class="btn btn_default"><span>수정</span></button>
+                                <button type="button" class="btn btn_default"><span>삭제</span></button>
+                                <button type="button" class="btn btn_default"><span>저장</span></button>
                             </div>
-                            <div class="vLine"></div>
-                            <div class="button-group">
-                                <button type="button" class="btn-sm"><span>엑셀</span></button>
-                                <button type="button" class="btn-sm"><span>View</span></button>
+                           
+                            <div class="btn_group">
+                                <button type="button" class="btn btn_default"><span>엑셀</span></button>
+                                <button type="button" class="btn btn_default"><span>View</span></button>
                             </div>
                         </div>
                     </div>
@@ -188,7 +200,7 @@
 						
                    
                     </div>
-                </div>
+                </section>
             </div>
         <script src="../resource/js/lib/jquery-3.3.1.min.js"></script>
     <script src="../resource/js/lib/jquery-ui.min.js"></script>

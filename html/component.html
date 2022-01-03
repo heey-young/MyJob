@@ -21,24 +21,29 @@
     </div>
     <div class="page-wrap">
 
-
 		<ol>
 			<li>
-				
-				<label><input type="radio">라디오버튼</label>
-			
+				<p><strong>Radio</strong></p>
+				<label><input type="radio" name="c-rdo">라디오버튼</label>
+				<label><input type="radio" name="c-rdo" checked>라디오버튼</label>
+				<label><input type="radio" name="c-rdo" disabled>라디오버튼</label>
+				<label><input type="radio" name="c-rdo2" checked disabled>라디오버튼</label>
 			</li>
-			
+
 			<li>
-				
+				<p><strong>Checkbox</strong></p>
 				<label><input type="checkbox">체크박스</label>
-			
+				<label><input type="checkbox" checked>체크박스</label>
+				<label><input type="checkbox" disabled>체크박스</label>
+				<label><input type="checkbox" checked disabled>체크박스</label>
 			</li>
-			
-			<li><label><input type="text" placeholder="입력하세요..."></label></li>
-			
+
 			<li>
-				
+				<p><strong>Text</strong></p><br>
+				<label><input type="text" placeholder="입력하세요..."></label></li>
+
+			<li>
+				<p><strong>Select</strong></p><br>
 				<label for="selectbox">사이트선택</label>
 				<select id="selectbox" placeholder="선택하세요...">
 					<option value="">선택</option>
@@ -46,116 +51,95 @@
 					<option value="http://www.google.co.kr">구글</option>
 				</select>
 				<button type="button" class="btn_go">
-					이동
+						이동
 				</button>
-			
+
 			</li>
 			<li>
+				<p><strong>Textarea</strong></p>
 				<label for="textbox">텍스트 입력 :</label>
 				<textarea cols="10" rows="3" id="textbox" name="textbox" placeholder="텍스트입력...">
-				
 				</textarea>
-				
-				
-				<fieldset>
-   <legend>메일 보내기</legend>
-   <p><label>이름: <input type="text" name="name" placeholder="이름을 입력하세요"></label></p>
-   <p><label>이메일: <input type="email" name="mail" placeholder="cma@example.com"></label></p>
-   <p><label>홈페이지: <input type="url" name="hp" placeholder="http://example.com"></label></p>
-   <p><label>내용: <textarea name="content" style="width:98%;height:50px;" placeholder="내용을 입력하세요"></textarea></label></p>
- </fieldset>
-			
+			</li>			
+			<li>		
+				<p><strong>기본폼</strong></p>
+					<fieldset>
+	   <legend>메일 보내기</legend>
+	   <p><label>이름: <input type="text" name="name" placeholder="이름을 입력하세요"></label></p>
+	   <p><label>이메일: <input type="email" name="mail" placeholder="cma@example.com"></label></p>
+	   <p><label>홈페이지: <input type="url" name="hp" placeholder="http://example.com"></label></p>
+	   <p><label>내용: <textarea name="content" style="width:98%;height:50px;" placeholder="내용을 입력하세요"></textarea></label></p>
+	 </fieldset>
+
 			</li>
 			<li>
-			
-			<div class="btn_area">
-				
-				<button type="button" class="btn btn_gray">
-					취소
-				</button>
-				
-				<button type="button" class="btn btn_default">
-					확인
-				</button>
-				
-				
+
+				<div class="btn_area">
+					<button type="button" class="btn btn_gray">취소</button>
+					<button type="button" class="btn btn_default">확인</button>
 				</div>
-			
+
 			</li>
-			
+
 			<li>
-			
-			<div class="btn_area">
-				
-				<button type="button" class="btn btn_gray">
-					취소
-				</button>
-				<button type="button" class="btn btn_default">
-					저장
-				</button>
-				
-				<button type="button" class="btn btn_default">
-					확인
-				</button>
-				
-				
+
+				<div class="btn_area">
+					<button type="button" class="btn btn_gray">취소</button>
+					<button type="button" class="btn btn_default">저장</button>
+					<button type="button" class="btn btn_default">확인</button>
 				</div>
-			
+
 			</li>
-				
+
 			<li>
-			<div data-div="receipt">
-				
-				<label><input type="radio" id="receipt_1" name="usim" checked>1</label>
-				
-				<label><input type="radio" id="receipt_2" name="usim">2</label>
-				<label><input type="radio" id="receipt_3" name="usim">3</label>
-				
-				</div>
-				
-				<div data-visible="receipt_1">
-					내용보이기1
-				</div>
-			
-				<div data-visible="receipt_2">
-					내용보이기2
-				</div>
-			
-				<div data-visible="receipt_3">
-					내용보이기3
-				</div>
-			
+				<div data-rdo="select">
+
+					<label><input type="radio" id="receipt_1" name="usim" checked>1</label>
+
+					<label><input type="radio" id="receipt_2" name="usim">2</label>
+					<label><input type="radio" id="receipt_3" name="usim">3</label>
+
+					</div>
+
+					<div data-show="receipt_1">
+						내용보이기1
+					</div>
+
+					<div data-show="receipt_2">
+						내용보이기2
+					</div>
+
+					<div data-show="receipt_3">
+						내용보이기3
+					</div>
+
 			</li>
 			<li>
-			
-				<input type="text" id="datepicker">                    
-                <input type="text" class='timepicker'>
-                    
+
+					<input type="text" id="datepicker">                    
+					<input type="text" class='timepicker'>
+
 			</li>
-		
+
 			<li>
-				 <div class="hrbar">hr 테스트1</div>
-                    <div class="hrbar"><span style='font-size:2em; line-height: 1; vertical-align: middle;'>테스트2 <b>두껍게</b></span></div>
-                    <div class="hrbar"><span style='font-size:3em; line-height:1;'>테스트3</span></div>
-			
+				<div class="hrbar">hr 테스트1</div>
+				<div class="hrbar"><span style='font-size:2em; line-height: 1; vertical-align: middle;'>테스트2 <b>두껍게</b></span></div>
+				<div class="hrbar"><span style='font-size:3em; line-height:1;'>테스트3</span></div>
+
 			</li>
 		</ol>
-		
-		<br><br>
-                    
-                   
 	</div>        
                   
 	<script src="../resource/js/lib/jquery-3.3.1.min.js"></script>
     <script src="../resource/js/lib/jquery-ui.min.js"></script>
     <script src="../resource/js/common.js"></script>
 	<script>
-			$('[data-visible]').not(':first').hide();
-				const usimRdo = $('[data-div="receipt"] input[type="radio"]');
+			$('[data-show]').not(':first').hide();
+				const usimRdo = $('[data-rdo="select"] input[type="radio"]');
 				usimRdo.change(function(){
 				const usimId = $(this).attr('id');
-				$('[data-visible='+usimId+']').siblings('[data-visible]').hide();
-				$('[data-visible='+usimId+']').show();
+				$('[data-show='+usimId+']').siblings('[data-show]').hide();
+				$('[data-show='+usimId+']').show();
 		
 			});
 	</script>
@@ -164,11 +148,6 @@
     	$("#datepicker").datepicker();
         
     </script>
-                    
-                
-     
-
 
 	</body>
 </html>
-

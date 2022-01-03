@@ -1,68 +1,14 @@
 @charset "utf-8";
 
-/*@import "reset.css";*/
-
-/* layout Style */
-@import "layout.css";
-
+@import "reset.css";
 @import "ui.css";
-
-/* form Style */
-
 @import "button.css";
-
-/* button Style */
-
 @import "table.css";
-
-/* table Style */
-
 @import "tabs.css";
-
-/* tabs Style */
-
-@import "chart.css";
-
-/* chart Style */
-
-@import "progress.css";
-
-/* 진행단계 Style */
-
 @import "accordion.css";
+@import "icons.css";
 
-/* accordion Style */
 
-/*@import "chk-rdx.css";
-
-체크박스, 라디오박스 Style 
-
-@import "component.css";*/
-
-html {font-size: 10px; width: 100%; height: 100%;}
-body {position: relative; display: block; width: 100%; height: 100%; background-color: #fff; color: #111; word-break: break-all; -webkit-text-size-adjust: none;}
-body,ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,p,figure,form,fieldset,legend,input,
-label,textarea,legend,button,table,td,th,button, select 
-{margin: 0; padding: 0; font-family: "Roboto","Noto Sans","Apple SD Gothic Neo","맑은 고딕","Malgun Gothic",sans-serif; font-size: 14px; font-weight: 400; color: #111; line-height: 1.45;}
-fieldset,iframe,img {border: 0}
-img {vertical-align: top;}
-
-table {border-collapse: collapse; table-layout: fixed;}
-article,aside,footer,header,nav,main,sec,tion,summary,details,hgroup,figure,figcaption {display: block;}
-button {overflow: visible; border: 0; background: none; color: inherit; line-height: inherit; cursor: pointer;}
-a {color: #111; text-decoration: underline;}
-a:active, a:hover {color: #ed1178;}
-address,caption,cite,code,dfn,em,i,var {font-style: normal; font-weight: normal;}
-strong, h1,h2,h3 {font-weight: 700;}
-
-:focus {outline-width: 1px; box-shadow: 3px 3px 6px rgba(0,0,0,0.2); border: 0; outline-color: red}
-input::placeholder {color: blue; opacity: 1;}
-
-ul li {list-style: none;}
-
-legend,caption, .blind {position: absolute; clip: rect(0 0 0 0); clip-path: inset(50%); width: 1px; height: 1px; margin: -1px; padding: 0; border: 0; overflow: hidden; white-space: nowrap;}
-*{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
-
-.txt_center {text-align: center !important;}
-.txt_left   {text-align: left !important;}
-.txt_right  {text-align: right !important;}
+/*@import "chart.css";
+@import "progress.css";*/
+@import "layout.css";

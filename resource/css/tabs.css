@@ -2,81 +2,9 @@
 
 /* Tabs */
 .ui_tabs {display: table; overflow: hidden; width: 100%; margin: 0; padding: 0;}
-		.ui_tabs li {display: table-cell;}
-		.ui_tabs a {position: relative; display: table; width: 100%; height: 45px; background-color: #000; color: #777; text-decoration: none; font-weight: 700; line-height: 45px; text-align: center;}
-		.ui_tabs>li.active a {background-color: #2a3542; color: #fff}
-		.tabs_content {padding: 0;}
-		.tc_box {display: none; padding: 0 20px;}
-		.tc_box.active {display: block;}
-
-.tabsBox {   
-    margin: 0;
-}
-
-.tabsBox:after {
-    content: "";
-    display: block;
-    clear: both
-}
-
-.tabsBox>.tabs-menu li {
-    float: left;
-    display: inline-block;
-    text-align: center;
-    border: 1px solid #c1c1c1;
-    padding: 5px 30px;
-    font-weight: bold;
-    background-color: #eee;
-    cursor: pointer;
-    border-bottom: none;
-}
-
-.tabsBox>.tabs-menu li.active {
-    position: relative;
-    background-color: #fff;
-}
-
-.tabsBox>.tabs-contents {
-    float: left;
-    width: 100%;
-    clear: both;
-    margin-top: -1px;
-}
-
-.tabsBox>.tabs-contents .cont {
-    padding: 10px;
-    border: 1px solid #c1c1c1;
-}
-
-
-/* inner tabs contents */
-
-.tabsBox.inner > .tabs-menu li {
-    float: left;
-    text-align: center;
-    white-space: nowrap;
-    padding: 5px 30px;
-    font-weight: bold;
-    color: #45494f;
-    border: 1px solid #c1c1c1;
-    background-color: #eeee;
-    cursor: pointer;
-    border-bottom: none;
-}
-
-.tabsBox.inner>.tabs-menu li.active {
-    position: relative;
-    background-color: #fff;
-}
-
-.tabsBox.inner>.tabs-contents {
-    float: left;
-    width: 100%;
-    clear: both;
-    margin-top: -1px;
-}
-
-.tabsBox.inner>.tabs-contents .cont {
-    padding: 15px;
-    border: 1px solid #c1c1c1;
-}
+.ui_tabs li {display: table-cell;}
+.ui_tabs a {position: relative; display: table; width: 100%; height: 45px; background-color: #000; color: #777; text-decoration: none; font-weight: 700; line-height: 45px; text-align: center;}
+.ui_tabs>li.active a {background-color: #2a3542; color: #fff}
+.tabs_content {padding: 0;}
+.tc_box {display: none; padding: 0 20px;}
+.tc_box.active {display: block;}

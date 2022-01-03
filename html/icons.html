@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>Icons</title>
+    <link rel="stylesheet" href="../resource/css/lib/jquery-ui.min.css">    
+    <link rel="stylesheet" href="../resource/css/style.css">
+	<style>	
+		
+	
+	</style>
+</head>
+<body>
+
+	<div class="page-title">
+    	<h1>ICONS</h1> 
+	</div>
+				
+    <div class="page-wrap">
+	
+		<div class="txt_help">
+			<p class="dot">
+				가까운 KB국민은행 지점에서 유심수령이 가능합니다. 가까운 KB국민은행 지점에서 유심수령이 가능합니다.  
+				가까운 KB국민은행 지점에서 유심수령이 가능합니다. 가까운 KB국민은행 지점에서 유심수령이 가능합니다.  
+				설명글 리스트1
+			</p>
+			<p class="bar">
+				가까운 KB국민은행 지점에서 유심수령이 가능합니다. 가까운 KB국민은행 지점에서 유심수령이 가능합니다.  
+				가까운 KB국민은행 지점에서 유심수령이 가능합니다. 가까운 KB국민은행 지점에서 유심수령이 가능합니다.  
+				설명글 리스트1
+			</p>
+			<p class="dot">
+				설명글 리스트2
+			</p>
+
+
+		</div>
+		
+			
+			
+			
+
+			
+			
+			
+			
+
+			
+			
+		
+		
+	</div>                    
+                        
+	<script src="https://code.jquery.com/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+	<script>
+		
+		$(".ui_select ul").on("click", ".init", function() {
+			$(this).closest(".ui_select ul").children('li:not(.init)').toggle();
+		});
+
+		const allOptions = $(".ui_select ul").children('li:not(.init)');
+		$(".ui_select ul").on("click", "li:not(.init)", function() {
+		allOptions.removeClass('selected');
+		$(this).addClass('selected');
+		$(".ui_select ul").children('.init').html($(this).html());
+		allOptions.toggle();
+		});
+		
+	</script>
+ 
+      
+
+
+	
+	</body>
+</html>

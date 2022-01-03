@@ -1,238 +1,287 @@
 <!DOCTYPE html>
-<html>
-  <head>
-<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">    
-    <title>검색</title>
-    <!--<link href="../../dist/css/bootstrap.min.css" rel="stylesheet">-->
-    
-    <link href="../../assets/css/jquery/jquery-ui.css" rel="stylesheet">
-    <link href="../../assets/css/style.css" rel="stylesheet">
-    
-    <script src="../../assets/js/jquery/jquery.js"></script>
-    <script src="../../assets/js/jquery/jquery-ui.js"></script>  
-    <script src="../../dist/js/bootstrap.js"></script>    
-    <script src="../../assets/js/design.js"></script>
+<html lang="ko">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>검색박스</title>
+    <link rel="stylesheet" href="../resource/css/lib/jquery-ui.min.css">    
+    <link rel="stylesheet" href="../resource/css/style.css">
+	<style>
+		.cs_search {position: relative; padding: 15px; background-color: #f5f5f5; border: 2px solid #ed1178;}
+		.search_more {position: absolute; bottom: 0; right: 0; width: 20px; height: 20px;}
+		.btn_toggle {display: inline-block; width: 20px; height: 20px; border: 2px solid #ed1178; background-color: #ed1178; font-weight: 700;}
+	
+		
+		.btn_toggle.expend .ico-plus-minus {
+    color: #fff;
+    position: absolute;
+    margin-left: 2px;
+    margin-top: 7px;
+    width: 12px;
+    height: 2px;
+    background-color: currentColor;
+}
+
+
+		.btn_toggle.expend .ico-plus-minus:after,
+
+		.btn_toggle.expend .ico-plus-minus:before {
+    width: 0;
+    height: 0;
+}
+
+
+		.search_items.expend {
+    display: none;
+    padding-top: 0;
+}
+		.search_button {position: absolute; right: 50px; top: 50%; margin-top: -20px;}
+
+.btn_search,
+.btn_search span {
+    position: relative;
+    margin: 0;
+    display: -moz-inline-stack;
+    display: inline-block;
+    text-decoration: none !important;
+    white-space: nowrap;
+    overflow: visible;
+    font-weight: 700;
+    border-radius: 20px;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+.btn_search {
+    border: 1px solid #64676d;
+    background: #64676d;
+    color: #fff;
+    height: 40px;
+    min-width: 100px;
+}
+
+.btn_search span {
+    height: 23px;
+    line-height: 19px;
+    padding: 0 6px;
+}
+
+.ico-plus-minus {
+    font-size: 0;
+    line-height: 0;
+    color: #fff;
+    position: absolute;
+    margin-left: 2px;
+    margin-top: 7px;
+}
+
+.ico-plus-minus:before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 2px;
+    background-color: currentColor;
+}
+
+.ico-plus-minus:after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 2px;
+    background-color: currentColor;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+
+	</style>
 </head>
 
 <body>
-    <div id="wrap">
-        <!-- skip navigation -->
-        <div id="go-skip">
-            <h2 class="hidden">바로가기 링크</h2>
-            <ul>
-                <li><a href="#gnb"><span>GNB메뉴 바로가기</span></a></li>
-                <li><a href="#lnb"><span>LNB메뉴 바로가기</span></a></li>
-                <li><a href="#container"><span>본문으로 바로가기</span></a></li>
-            </ul>
-        </div>
-        <!-- //skip navigation -->
-        <div id="header">
-            <header>
-                <h1><a href="#url">LOGO</a></h1>
-                <nav>
-                    <ul id="gnb">
-                        <li> <a href="#">link 1</a>
-                            <ul class="sub">
-                                <li><a href="#">sub link 1</a></li>
-                                <li><a href="#">sub link 1</a></li>
-                                <li><a href="#">sub link 1</a></li>
-                                <li><a href="#">sub link 1</a></li>
-                            </ul>
-                        </li>
-                        <li> <a href="#">link 2</a>
-                            <ul class="sub">
-                                <li><a href="#">sub link 2</a></li>
-                                <li><a href="#">sub link 2</a></li>
-                                <li><a href="#">sub link 2</a></li>
-                                <li><a href="#">sub link 2</a></li>
-                            </ul>
-                        </li>
-                        <li> <a href="#">link 3</a>
-                            <ul class="sub">
-                                <li><a href="#">sub link 3</a></li>
-                                <li><a href="#">sub link 3</a></li>
-                                <li><a href="#">sub link 3</a></li>
-                                <li><a href="#">sub link 3</a></li>
-                            </ul>
-                        </li>
-                        <li> <a href="#">link 4</a>
-                            <ul class="sub">
-                                <li><a href="#">sub link 4</a></li>
-                                <li><a href="#">sub link 4</a></li>
-                                <li><a href="#">sub link 4</a></li>
-                                <li><a href="#">sub link 4</a></li>
-                            </ul>
-                        </li>
-                        <li> <a href="#">link 5</a>
-                            <ul class="sub">
-                                <li><a href="#">sub link 5</a></li>
-                                <li><a href="#">sub link 5</a></li>
-                                <li><a href="#">sub link 5</a></li>
-                                <li><a href="#">sub link 5</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
-        </div>
-        <div id="lnb">
-            <iframe src="lnb.html" frameborder="0"></iframe>
-        </div>
-        <div id="container">
-            <button type="button" class="btn-sidebar-toggle">MENU</button>
-            <div class="contents">
-                <div class="page-title">
-                    <h1>검색박스</h1> </div>
-                <div class="page-wrap">
-                    <div class="searchBlock">
-                    <fieldset>
-                        <legend class="hidden">검색</legend>
-                        <div class="search-condition">
-                            <table class="formTable">
-                                <colgroup>
-                                    <col style="width:80px" />
-                                    <col style="width:*" />
-                                    <col style="width:80px" />
-                                    <col style="width:20%" />
-                                    <col style="width:*" />
-                                    <col style="width:*" /> </colgroup>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">
-                                            <label for="c-1-1">프로젝트명</label>
-                                        </th>
-                                        <td>
-                                            <input type="text" class="required" required name="c-1-1" id="c-1-1" placeholder="ddd프로젝트명..."> </td>
-                                        <th scope="row">
-                                            <label for="c-1-2">서비스명</label>
-                                        </th>
-                                        <td>
-                                            <input type="text" name="c-1-2" id="c-1-2"> </td>
-                                        <th scope="row">
-                                            <label for="c-1-3">검증여부</label>
-                                        </th>
-                                        <td>
-                                            <select name="c-1-3" id="c-1-3">
-                                                <option>선택</option>
-                                                <option selected>Yes</option>
-                                                <option>No</option>
-                                            </select>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">
-                                            <label for="c-2-1">검색일</label>
-                                        </th>
-                                        <td>
-                                            <select name="c-2-1" id="c-2-1" title="검색년도 선택">
-                                                <option>선택</option>
-                                                <option selected>2017년</option>
-                                            </select>
-                                            <select name="c-2-1" id="c-2-1" title="검색월 선택">
-                                                <option>선택</option>
-                                                <option selected>3년</option>
-                                            </select>
-                                        </td>
-                                        <th scope="row">
-                                            <label for="c-2-2">검색구분1</label>
-                                        </th>
-                                        <td>
-                                          
-                                            <input type="checkbox" name="t" id="t">
-                                            <label for="t">전체</label>
+
+	<div class="page-title">
+    	<h1>검색박스</h1> 
+	</div>
+				
+    <div class="page-wrap">
+		
+    	<div class="cs_search">
+			<fieldset>
+				<legend>검색</legend>
+				<div class="search_items">
+                <table>
+                	
+					<tr>
+                    
+						<th>
+                        
+							<label for="c-1-1">프로젝트명</label>
+                       	
+						</th>
+                        <td>
+                        
+							<input type="text" required name="c-1-1" id="c-1-1" placeholder="프로젝트명..."> 
+										
+						</td>
+                        
+						<th>
+                            
+							<label for="c-1-2">서비스명</label>
+                            
+						</th>
+                        
+						<td>
+                          
+							<input type="text" name="c-1-2" id="c-1-2"> </td>
+                                      
+                            
+					</tr>
+                    
+					<tr>
+                    
+						<th>
+                        
+							<label for="c-2-1">검색일</label>
+                            
+						</th>
+                        
+						<td>
+                        
+							<select name="c-2-1" id="c-2-1" title="검색년도 선택">
+                            
+								<option>선택</option>
+                                
+								<option selected>2017년</option>
+                                
+							</select>
+                            
+							<select name="c-2-1" id="c-2-1" title="검색월 선택">
+                            
+								<option>선택</option>
+                                
+								<option selected>3년</option>
+                                
+							</select>
+                            
+						</td>
+                        
+						<th>
+                        
+							<label for="c-2-2">검색구분1</label>
+                            
+						</th>
+                        
+						<td>
+                        
+							
+                            
+							<input type="checkbox" name="t" id="t">
+                            
+							<label for="t">전체</label>
                                          
                                           
-                                                <input type="checkbox" name="c" id="c">
-                                                <label for="c">신규</label>
+                            
+							<input type="checkbox" name="c" id="c">
+                            
+							<label for="c">신규</label>
                                             
-                                        </td>
-                                        <th scope="row">
-                                            <label for="c-2-3">검색구분2</label>
-                                        </th>
-                                        <td>
-                                            <input type="radio" name="dd" id="d">
-                                            <label for="d">전체</label>
-                                            <input type="radio" name="ff" id="e">
-                                            <label for="e">신규</label>
-                                          
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">
-                                            <label for="검색조건4">검색조건4</label>
-                                        </th>
-                                        <td>
-                                            <div class="search-group">
-                                                <input type="text" name="" id="" readonly placeholder="검색...">
-                                                <button type="button"><i class="ico-search"></i>검색</button>
-                                            </div>
-                                        </td>
-                                        <th scope="row"><label for="검색조건5">검색조건5</label></th>
-                                        <td>
-                                            <select name="검색조건5" id="검색조건5">
-                                                <option>선택</option>
-                                            </select>
-                                        </td>
-                                        <th scope="row">
-                                            <label for="검색조건6">검색조건6</label>
-                                        </th>
-                                        <td>
-                                            <input type="text" name="검색조건6" id="검색조건6" value="검색조건6"> </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="search-more"><a class="btn-toggle" href="#expend"><i class="ico-plus-minus">검색조건 추가</i></a></div>
-                        <div class="search-condition expend" id="expend">
-                            <table class="formTable">
-                                <colgroup>
-                                    <col style="width:80px" />
-                                    <col style="width:*" />
-                                    <col style="width:80px" />
-                                    <col style="width:20%" />
-                                    <col style="width:*" />
-                                    <col style="width:*" /> </colgroup>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">
-                                            <label for="검색조건4">검색조건4</label>
-                                        </th>
-                                        <td>
-                                            <div class="search-group">
-                                                <input type="text" name="" id="">
-                                                <button type="button"><i class="ico-search"></i>검색</button>
-                                            </div>
-                                        </td>
-                                        <th scope="row"> 검색조건5 </th>
-                                        <td>
-                                            <select name="검색조건5" id="검색조건5">
-                                                <option>선택</option>
-                                            </select>
-                                        </td>
-                                        <th scope="row">
-                                            <label for="검색조건6">검색조건6</label>
-                                        </th>
-                                        <td>
-                                            <input type="text" name="검색조건6" id="검색조건6" value="검색조건6"> </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="search-button">
-                            <button type="button" class="btn-search"><span>검색</span></button>
-                        </div>
-                    </fieldset>
-                    </div>    
-                </div>
-            </div>
-        </div>
-    </div>
+                            
+						</td>
+                                      
+					</tr>
+                    
+					<tr>
+                    
+						<th>
+                            
+							<label for="검색조건4">검색조건4</label>
+                            
+						</th>
+                        
+						<td>
+                        
+							<div class="search-group">
+                            
+								<input type="text" name="" id="" readonly placeholder="검색...">
+                                
+								<button type="button"><i class="ico-search"></i>검색</button>
+                                
+							</div>
+                            
+						</td>
+                        
+						<th scope="row"><label for="검색조건5">검색조건5</label></th>
+                        
+						<td>
+                        
+							<select name="검색조건5" id="검색조건5">
+                            
+								<option>선택</option>
+                                
+							</select>
+                            
+						</td>
+					</tr>       
+					</table>
+				</div>
+                        
+				<div class="search_more"><a class="btn_toggle" href="#expend"><i class="ico-plus-minus"></i><span class="blind">검색조건 더보기</span></a></div>
+                        
+					<div class="search_items expend" id="expend">
+						<table>
+                        
+							<tr>
+                            
+								<th>
+                                
+									<label for="검색조건4">검색조건4</label>
+                                    
+								</th>
+                                
+								<td>
+                                
+									<div class="search-group">
+                                    
+										<input type="text" name="" id="">
+                                        
+										<button type="button"><i class="ico-search"></i>검색</button>
+                                       
+									</div>
+                                    
+								</td>
+                                
+								<th> 검색조건5 </th>
+                                
+								<td>
+                                    
+									<select name="검색조건5" id="검색조건5">
+                                    
+										<option>선택</option>
+                                        
+									</select>
+                                    
+								</td>
+							</tr>
+						</table>
+				</div>
+				<div class="search_button">
+					<button type="submit" class="btn_search">조회</button>
+				</div>
+			</fieldset>
+            
+		</div>    
+	</div>
+       
+	<script src="https://code.jquery.com/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+	
     <script>
         //검색박스 토글
         $(function () {
-            $('.btn-toggle').click(function (e) {
+            $('.btn_toggle').click(function (e) {
                 e.preventDefault();
                 var collapse_content_selector = $(this).attr('href');
                 var toggle_switch = $(this);

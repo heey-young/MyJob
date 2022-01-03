@@ -6,61 +6,46 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
     <meta name="format-detection" content="telephone=no">
     <title>템플릿</title>
-    <link rel="stylesheet" href="resource/css/lib/jquery-ui.min.css">
-    <link rel="stylesheet" href="resource/css/layout.css"> 
 	<style>
-	
-			#wrap {display: table; width: 100%; height: 100%;}
-.main_wrap {width: 100%; height: 100%; background-color: #efefef;}
-#lnb {
-    display: table-cell;
-    margin: 0;
-    padding: 0;
-    width: 240px;
-    overflow: hidden;
-    z-index: 2;
-}
+		html, body {margin: 0; padding: 0; width: 100%; height: 100%;}
+		#wrap {display: table; width: 100%; height: 100%; margin: 0; padding: 0;}
 
-#lnb iframe {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    width: 240px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    height: 100%;
-    overflow: hidden;
-}
-#container { 
-	position: relative;
-	display: table-cell; 
-	width: calc(100% - 240px); height: 500px;
-    background-color: #fff;
-    margin: 0;
-    padding: 0;
-	}
+		#lnb {
+			display: table-cell;
+			margin: 0;
+			padding: 0;
+			width: 240px;
+			overflow: hidden;
+			z-index: 2;
+		}
 
-#container iframe {position: absolute; left: 0; top: 0;   width: 100%; height: 100%; margin: 0; padding: 0; border: 0;}
+		#lnb iframe {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			width: 240px;
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			top: 0;
+			height: 100%;
+			overflow: hidden;
+		}
+		#container { 
+			position: relative;
+			display: table-cell; 
+			width: calc(100% - 240px); height: 500px;
+			background-color: #fff;
+			margin: 0;
+			padding: 0;
+			}
 
-
-
+		#container iframe {position: absolute; left: 0; top: 0;   width: 100%; height: 100%; margin: 0; padding: 0; border: 0;}
 	</style>
 </head>
 <body>
-	<!-- skip navigation -->
-    <!--<div id="go-skip">
-    	<p class="hidden">바로가기 링크</p>
-        <ul>
-        	<li><a href="#gnb"><span>GNB메뉴 바로가기</span></a></li>
-            <li><a href="#lnb"><span>LNB메뉴 바로가기</span></a></li>
-            <li><a href="#container"><span>본문으로 바로가기</span></a></li>
-        </ul>
-    </div>-->
-    <!-- //skip navigation -->
-        
+	    
     <div id="wrap">        
         <div id="lnb">			
             <iframe src="html/lnb.html" title="템플릿 작업 리스트"></iframe>

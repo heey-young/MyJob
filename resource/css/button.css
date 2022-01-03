@@ -1,11 +1,20 @@
 @charset "utf-8";
 
 /* button */
+.btn_area {display: -webkit-box; display: -ms-flexbox;  display: flex; flex-direction: row; width: calc(100% + 8px); margin: 20px -4px; text-align: center;}
+.btn_area .btn {position: relative; -webkit-flex: 1; -ms-flex: 1; flex: 1; margin: 0 4px}
+.btn {display: inline-block; height: 40px; margin: 0; padding: 0 10px; border: 1px solid #666; border-radius: 20px; background-color: #fff; text-align: center; font-size: 15px; 
+	color: #5a5a5a; line-height: 38px; font-weight: 700;}
+.btn.btn_default {border: 1px solid #31aae6; background-color: #31aae6; color: #fff;}
+.btn.btn_gray {border: 1px solid #666; background-color: #666; color: #fff;}
+.btn.btn_line   {border: 1px solid #666; background-color: #fff; color: #5a5a5a;}
 
-.button-group {
-    float:left;
-    display:inline-block;
-}
+.btn.btn_small {height: 28px; padding: 0 8px; background-color: #fff; border: 1px solid #858585; border-radius: 14px; font-size: 1.3rem; color: #333; font-weight: 400; line-height: 2.6rem;}
+.btn.btn_small:focus {border-color: #31aae6; color: #31aae6;}
+.btn.btn_small:disabled,.btn.btn_small.disabled {border-color:#dddddd; background-color: #fff; color: #ddd; cursor: default;}
+.btn.btn_default:disabled,.btn.btn_default.disabled,.btn.btn_white:disabled,.btn.btn_white.disabled {border-color: #dadada; background-color: #dadada; color: #666; cursor: default;}
+.btn.btn_default:focus.disabled, .btn.btn_small:focus.disabled {outline: none;}
+.btn.btn_txt {border: 0; font-size: 1.5rem; color: #111;}
 
 .vLine {
     float:left;
@@ -17,57 +26,9 @@
     vertical-align: top;
 }
 
-.btn-sm,
-.btn-sm span {
-    position: relative;
-    margin: 0;
-    display: -moz-inline-stack;
-    display: inline-block;
-    text-decoration: none !important;
-    white-space: nowrap;
-    overflow: visible;
-    font-weight: 700;
-    border-radius: 4px;
-    box-sizing: border-box;
-    vertical-align: top;
-}
-
-.btn-sm {
-    margin:2px;
-    border: 1px solid #ccc;
-    background: #eee;
-    color: #333;
-    height: 23px;
-}
-
-.btn-sm span {  
-    height: 21px;
-    line-height: 18px;
-    padding:0 6px !important;
-}
-
-.btn-sm.em {
-    border: 1px solid #ed1178;
-    background: #ed1178;
-    color: #fff;
-    height: 23px;
-}
-
-.btn-sm.nega {
-    border: 1px solid #777;
-    background: #888;
-    color: #fff;
-    height: 23px;
-}
-.btn-sm span:hover {background-color:#e0e0e0;}
-.btn-sm.em span:hover {background-color:#dc0c6d;}
-.btn-sm.nega span:hover {background-color:#666;}
-
 /* css icons */
-i {display:inline-block;}
 .ico-arrow-left {
   color: #666;
-  
   width: 8px;
    height:16px;
    margin:0;
